@@ -1,0 +1,97 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;width:960px;height:540px;background:#fff;font-family:"IBM Plex Sans",sans-serif;color:#000;overflow:hidden}
+.top{display:flex;justify-content:space-between;align-items:center;padding:22px 40px 14px;border-bottom:1px solid #000;font-family:"Barlow Condensed";font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:14px}
+.dots{display:flex;gap:8px}.dots i{width:28px;height:4px;background:#e5e5e5}.dots i.on{background:#000}
+.stage{position:relative;height:470px}
+.scene{position:absolute;inset:0;padding:30px 40px;opacity:0}
+.k{font-family:"Barlow Condensed";font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:14px;color:#666}
+h1{font-family:"Barlow Condensed";font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:54px;line-height:1;margin:6px 0 22px}
+.url{display:flex;align-items:center;justify-content:space-between;background:#f7f7f7;border:1px solid #e5e5e5;padding:22px 26px;font-family:"IBM Plex Mono",monospace;font-size:24px}
+.br{font-family:"Barlow Condensed";font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:18px}
+.br:before{content:"[ "}.br:after{content:" ]"}
+.cursor{position:absolute;width:22px;height:22px;z-index:9}
+.cursor svg{width:22px;height:22px}
+.toast{margin-top:16px;font-size:16px;color:#666}
+.win{border:1px solid #000;background:#fff;height:330px;display:flex;flex-direction:column}
+.bar{display:flex;align-items:center;gap:10px;border-bottom:1px solid #e5e5e5;padding:10px 16px;font-family:"Barlow Condensed";font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:#666}
+.bar b{width:10px;height:10px;border:1px solid #999;border-radius:50%;display:inline-block}
+.set{display:flex;flex:1}.side{width:200px;border-right:1px solid #e5e5e5;padding:16px;font-size:15px;color:#666;line-height:2.1}
+.side .on{color:#000;font-weight:600;background:#f7f7f7;margin:0 -8px;padding:0 8px}
+.pane{flex:1;padding:20px 24px}.field{border:1px solid #000;padding:12px 14px;font-family:"IBM Plex Mono";font-size:17px;height:48px;margin:10px 0 16px}
+.btn{display:inline-block;background:#000;color:#fff;padding:8px 16px;font-family:"Barlow Condensed";font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:15px}
+.chat{flex:1;padding:18px 22px;display:flex;flex-direction:column;gap:12px;overflow:hidden}
+.msg{align-self:flex-end;background:#000;color:#fff;padding:10px 14px;font-size:17px;max-width:70%}
+.att{align-self:flex-end;border:1px solid #000;padding:6px 12px;font-family:"IBM Plex Mono";font-size:14px}
+.ai{align-self:flex-start;font-size:15px;color:#666}
+.input{border-top:1px solid #e5e5e5;padding:12px 18px;font-size:17px;display:flex;justify-content:space-between;color:#000}
+table{border-collapse:collapse;width:100%;font-size:15px}td,th{text-align:left;padding:5px 8px;border-bottom:1px solid #e5e5e5}
+th{font-family:"Barlow Condensed";letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:#666}
+.c{font-family:"Barlow Condensed";font-weight:700;letter-spacing:.08em;display:inline-block;width:38px;text-align:center;padding:1px 0}
+.P1{background:#000;color:#fff}.P2{background:#444;color:#fff}.P3{background:#999;color:#fff}.P4{border:1px solid #000;padding:0}
+.focus{display:flex;gap:18px;margin-top:6px}.fc{flex:1;border-top:2px solid #000;padding-top:12px}
+.fc .n{font-family:"Barlow Condensed";font-weight:700;font-size:34px;text-transform:uppercase;letter-spacing:.04em}
+.fc .m{color:#666;font-size:15px}
+.foot{position:absolute;bottom:14px;left:40px;right:40px;display:flex;justify-content:space-between;color:#666;font-size:13px}
+.raw{border:1px solid #000;height:262px;display:flex;flex-direction:column}
+.addr{border-bottom:1px solid #e5e5e5;padding:9px 14px;font-family:"IBM Plex Mono";font-size:13px;color:#666}
+.txt{padding:14px 16px;font-family:"IBM Plex Mono";font-size:13px;line-height:1.55;white-space:pre-wrap;flex:1;overflow:hidden}
+.txt.sel{background:#000;color:#fff}
+.keys{display:flex;gap:10px;margin-top:14px;align-items:center}.key{border:1px solid #000;padding:4px 10px;font-family:"Barlow Condensed";font-weight:700;letter-spacing:.08em;font-size:18px;min-width:52px;text-align:center}
+.key.on{background:#000;color:#fff}
+.ai{align-self:flex-start;font-size:15px;color:#000;background:#f7f7f7;padding:10px 14px;max-width:80%;line-height:1.45}
+.ai.dim{color:#666;background:none;padding:0}
+.paste{align-self:flex-end;border:1px solid #000;padding:8px 12px;font-family:"IBM Plex Mono";font-size:13px;color:#666;max-width:70%}
+td.why{color:#666;font-size:13px}
+</style></head><body>
+<div class="top"><span>A-GPS · Any AI chat, no setup</span><span class="dots"><i></i><i></i><i></i><i></i><i></i></span></div>
+<div class="stage">
+ <div class="scene" id="s0"><div class="k">Step 1</div><h1 style="font-size:44px;margin-bottom:14px">Open the prompt &amp; copy it all</h1>
+  <div class="raw"><div class="addr">raw.githubusercontent.com/christianwagar/agps/main/integrations/any-llm/agps-prompt.txt</div>
+  <div class="txt" id="txt">You are my A-GPS assistant. A-GPS (Account Growth Propensity Scoring) is a free, open framework by Christian Wagar that ranks customer accounts by how likely they are to grow.
+
+HOW TO TALK TO ME
+- I may not be technical. Use plain, friendly English.
+- Keep each message short. Ask one thing at a time.
+
+STEP 1 - GREET ME
+"Hi! I'll score your customer accounts with A-GPS..."
+
+STEP 2 - FIGURE OUT MY COLUMNS (you do the work)
+- Match my columns to the A-GPS signals...</div></div>
+  <div class="keys"><span class="key" id="ka">⌘A</span><span class="key" id="kc">⌘C</span><span class="toast" id="t0" style="margin:0"></span></div></div>
+ <div class="scene" id="s1"><div class="k">Step 2 · Claude, Grok, ChatGPT, Gemini</div><h1 style="font-size:44px;margin-bottom:14px">Paste into a new chat</h1>
+  <div class="win" style="height:300px"><div class="bar"><b></b><b></b><b></b>&nbsp; Any AI chat · New chat</div>
+  <div class="chat" id="c1"></div><div class="input"><span id="i1"></span><span class="br" id="e1">Enter</span></div></div></div>
+ <div class="scene" id="s2"><div class="k">Step 3</div><h1 style="font-size:44px;margin-bottom:14px">Attach your spreadsheet</h1>
+  <div class="win" style="height:300px"><div class="bar"><b></b><b></b><b></b>&nbsp; Any AI chat · A-GPS</div>
+  <div class="chat" id="c2"></div><div class="input"><span id="i2"></span><span class="br">Enter</span></div></div></div>
+ <div class="scene" id="s3"><div class="k">Step 4 · Ranked, with the why</div><h1 style="font-size:40px;margin-bottom:8px">P1 to P4, lower is better</h1>
+  <table id="tbl"></table></div>
+ <div class="scene" id="s4"><div class="k">Step 5</div><h1>Focus this week</h1>
+  <div class="focus" id="focus"></div>
+  <div style="margin-top:34px" class="br">Get the prompt</div></div>
+</div>
+<div class="foot"><span>Built by Christian Wagar · 26-W</span><span>Sample data is fictional</span></div>
+<script>
+const rows=[["Northwind",1.698,"P1","Great timing, light on pipeline"],["Litware",2.353,"P1","Strong success, product light"],["Woodgrove",2.814,"P2","Great timing, light on pipeline"],["Contoso",3.269,"P2","Good timing, pipeline to build"],["Proseware",5.259,"P3","Engaged, product usage weak"],["Fabrikam",6.152,"P3","Product OK, success gaps"],["Tailspin",7.107,"P4","Some engagement, product weak"],["Adatum",7.164,"P4","Product OK, success gaps"]];
+const focus=[["Northwind","P1 · 1.698 · renews in 75 days"],["Woodgrove","P2 · 2.814 · renews in 30 days"],["Fabrikam","P3 · 6.152 · renews in 20 days"]];
+const L=3,N=5,T=L*N;const $=id=>document.getElementById(id);const cl=x=>Math.max(0,Math.min(1,x));
+function type(str,u,a,b){return str.slice(0,Math.floor(cl((u-a)/(b-a))*str.length))}
+function render(t){t=((t%T)+T)%T;const s=Math.floor(t/L),u=t-s*L;
+ for(let i=0;i<N;i++){const e=$("s"+i);let o=0;if(i===s)o=Math.min(cl(u/.3),cl((L-u)/.3));e.style.opacity=o;e.style.transform=`translateY(${(1-o)*8}px)`;document.querySelectorAll(".dots i")[i].className=i<=s?"on":""}
+ if(s===0){$("txt").className="txt"+(u>1.0?" sel":"");$("ka").className="key"+(u>0.8&&u<1.4?" on":"");$("kc").className="key"+(u>1.6&&u<2.2?" on":"");$("t0").textContent=u>1.8?"✓ Copied":""}
+ if(s===1){let h="";if(u>1.1)h+='<div class="paste">You are my A-GPS assistant. A-GPS (Account Growth…  [pasted prompt]</div>';
+  if(u>1.7)h+='<div class="ai">'+type("Hi! I'll score your customer accounts with A-GPS and show you which ones to focus on. Please attach your account spreadsheet. Any columns are fine.",u,1.7,2.7)+'</div>';
+  $("c1").innerHTML=h;$("i1").textContent=u<1.1?(u>.5?"⌘V  You are my A-GPS assistant…":"Message…"):"";$("e1").style.background=u>0.95&&u<1.2?"#000":"";$("e1").style.color=u>0.95&&u<1.2?"#fff":""}
+ if(s===2){let h='';if(u>.6)h+='<div class="att">📎 accounts.csv</div>';
+  if(u>.9)h+='<div class="ai">'+type("Got 8 accounts. One optional question: should a renewal soon count as good (act now) or should more runway win? Or type 'skip'.",u,.9,1.7)+'</div>';
+  if(u>2.2)h+='<div class="msg">skip</div>';if(u>2.5)h+='<div class="ai dim">Scoring with the defaults…</div>';
+  $("c2").innerHTML=h;$("i2").textContent=u<.6?"📎 Attach accounts.csv":(u>1.8&&u<2.2?type("skip",u,1.8,2.1):"")}
+ if(s===3){const n=Math.floor(cl((u-.2)/1.4)*rows.length+.001);let h='<tr><th>#</th><th>Account</th><th>Score</th><th>Cluster</th><th>Why</th></tr>';
+  rows.slice(0,n).forEach((r,i)=>h+=`<tr><td>${i+1}</td><td><b>${r[0]}</b></td><td>${r[1].toFixed(3)}</td><td><span class="c ${r[2]}">${r[2]}</span></td><td class="why">${r[3]}</td></tr>`);$("tbl").innerHTML=h}
+ if(s===4){const n=Math.floor(cl((u-.2)/1.0)*3+.001);$("focus").innerHTML=focus.slice(0,n).map(f=>`<div class="fc"><div class="n">${f[0]}</div><div class="m">${f[1]}</div></div>`).join("")}
+}
+window.render=render;render(0);
+</script></body></html>
