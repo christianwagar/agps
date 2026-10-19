@@ -32,14 +32,14 @@ All the settings live in one file: [`config/agps.v2.yaml`](config/agps.v2.yaml).
 5. **Data quality.** If a signal is patchy or self-reported, give its bucket less weight or leave the field blank.
 6. **Check the result.** Rescore and ask: do the P1s look like accounts your team would actually bet on? If not, adjust and repeat.
 
-Using an LLM instead of code? Just tell it your thresholds in plain English (see [the universal prompt](integrations/any-llm/PROMPT.md)).
+Using an LLM instead of code? Just tell it your thresholds in plain English (see [the 3-step guide](integrations/any-llm/PROMPT.md)).
 
 ## Start here
 
 | You are… | Start with | What you get |
 |---|---|---|
 | **CS / RevOps leader** | [METHODOLOGY.md](METHODOLOGY.md) · [DECISIONS.md](DECISIONS.md) | Every signal, band, and weight in plain English. Tune it in a spreadsheet. |
-| **Using Claude, ChatGPT, Gemini, Grok or any LLM** | [integrations/any-llm/PROMPT.md](integrations/any-llm/PROMPT.md) | One copy-paste prompt. Paste it plus your account CSV, get scores, P1–P4, and the why. |
+| **Using Claude, ChatGPT, Gemini, Grok or any AI chat** | [3 easy steps](integrations/any-llm/PROMPT.md) · [copy the prompt](https://raw.githubusercontent.com/christianwagar/agps/main/integrations/any-llm/agps-prompt.txt) | No coding. Copy, paste into a new chat, attach your spreadsheet when it asks. Get P1–P4 and the why. |
 | **Claude or Grok power user** | [integrations/claude-skill](integrations/claude-skill/) · [integrations/grok-skill](integrations/grok-skill/) | Installable skills that do the same thing. |
 | **Developer / builder** | [Quickstart](#quickstart) · [MCP server](integrations/mcp-server/) | Zero-dependency Python package, CLI, and an MCP server. |
 
