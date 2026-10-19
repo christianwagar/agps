@@ -39,7 +39,7 @@ footer{padding:2rem 0;border-top:1px solid var(--border);color:var(--muted);font
 <div class="url"><code id="u">${u}</code><button id="b" type="button">Copy</button></div>
 <p class="two"><b>Two ways in.</b> No setup? Use the <a class="cta" style="margin:0" href="https://github.com/christianwagar/agps/blob/main/integrations/any-llm/PROMPT.md">Copy-paste prompt</a> in any AI chat. Want the exact calculator inside your AI app? Add this link.</p>
 </section>
-<section><span class="label">See it in 15 seconds</span>
+<section><span class="label">See it in 25 seconds</span>
 <video class="demo" autoplay muted loop playsinline preload="metadata" poster="/agps-walkthrough-poster.png" aria-label="Walkthrough: copy the link, add it to your AI app, ask it to score your accounts, get P1 to P4 and a focus-this-week list">
 <source src="/agps-walkthrough.webm" type="video/webm"><source src="/agps-walkthrough.mp4" type="video/mp4">
 <img src="/agps-walkthrough.gif" alt="A-GPS walkthrough"></video></section>
