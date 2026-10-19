@@ -2,6 +2,16 @@
 # Golf-style: 1 = best, 8 = worst, blank = 8. Bands: min (inclusive), max_exclusive or max (inclusive); null = open.
 # The first band that contains the value wins. Ordinal 'levels' map a label straight to a score ('na' = not applicable).
 # After editing, regenerate the JSON twin: agps convert config/agps.v2.yaml config/agps.v2.json
+#
+# THIS IS A FRAMEWORK, NOT A ONE-SIZE ANSWER. Every band and weight below was tuned for one
+# book of business. Dial them in for yours: customer spend levels, deal sizes, risk appetite,
+# sales motion, and data quality. How to tune it:
+#   1. Move the ARR / NBEC / pipeline $ bands so your biggest customers score 1-2 and smallest 7-8.
+#   2. Shift win-rate bands to what "good" looks like for your sales motion.
+#   3. Pick renewal_direction (sooner_is_better | runway_is_better | sweet_spot).
+#   4. Set bucket_weights to what drives growth for you (must add up to 1.0).
+#   5. Lower the weight of buckets whose data is patchy or self-reported.
+#   6. Rescore and sanity-check: do your P1s look like accounts your team would bet on?
 
 name: "A-GPS v2 (Account Growth Propensity Scoring)"
 version: "2.0.0"

@@ -2,6 +2,8 @@
 
 Generated from `config/agps.v2.json` by `tools/gen_methodology.py`. Do not edit by hand.
 
+> **This is a framework, not a one-size-fits-all answer.** Every band and weight below must be dialed in for your business: customer spend levels, deal sizes, risk appetite, sales motion, and data quality. Tune them in `config/agps.v2.yaml` (see the How to tune it checklist in the README).
+
 ## Scale
 
 - Every field scores 1 (best) to 8 (worst), like strokes in golf. Blank = 8.

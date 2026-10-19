@@ -18,12 +18,29 @@ A-GPS ranks a book of customer accounts by how ready each one is to grow. It tur
 
 It was designed by **Christian Wagar**. Live demo with 40 fictional accounts: **https://26-w.com/notes/account-growth-propensity/**
 
+> [!IMPORTANT]
+> **This is a framework, not a one-size-fits-all answer.** The bands and weights here (ARR thresholds, win rates, renewal timing, bucket weights) were tuned for one book of business. Dial them in for yours: your customer spend levels, deal sizes, risk appetite, sales motion, and how clean your data is. A $250K account is "big" for some companies and "small" for others.
+
+### How to tune it
+
+All the settings live in one file: [`config/agps.v2.yaml`](config/agps.v2.yaml). Work through this list:
+
+1. **ARR and $ bands.** Move the ARR, NBEC and pipeline ladders so your biggest customers land in bands 1–2 and your smallest in 7–8.
+2. **Win rates.** If a 40% win rate is great in your world, shift the win-rate bands down.
+3. **Renewal timing.** Pick `renewal_direction`: `sooner_is_better`, `runway_is_better`, or `sweet_spot`.
+4. **Bucket weights.** Change `bucket_weights` to match what drives growth for you (they should add up to 1.0).
+5. **Data quality.** If a signal is patchy or self-reported, give its bucket less weight or leave the field blank.
+6. **Check the result.** Rescore and ask: do the P1s look like accounts your team would actually bet on? If not, adjust and repeat.
+
+Using an LLM instead of code? Just tell it your thresholds in plain English (see [the universal prompt](integrations/any-llm/PROMPT.md)).
+
 ## Start here
 
 | You are… | Start with | What you get |
 |---|---|---|
 | **CS / RevOps leader** | [METHODOLOGY.md](METHODOLOGY.md) · [DECISIONS.md](DECISIONS.md) | Every signal, band, and weight in plain English. Tune it in a spreadsheet. |
-| **Claude or Grok user** | [integrations/claude-skill](integrations/claude-skill/) · [integrations/grok-skill](integrations/grok-skill/) | Drop-in skills: paste in an account export, get P1–P4 and a focus list. |
+| **Using Claude, ChatGPT, Gemini, Grok or any LLM** | [integrations/any-llm/PROMPT.md](integrations/any-llm/PROMPT.md) | One copy-paste prompt. Paste it plus your account CSV, get scores, P1–P4, and the why. |
+| **Claude or Grok power user** | [integrations/claude-skill](integrations/claude-skill/) · [integrations/grok-skill](integrations/grok-skill/) | Installable skills that do the same thing. |
 | **Developer / builder** | [Quickstart](#quickstart) · [MCP server](integrations/mcp-server/) | Zero-dependency Python package, CLI, and an MCP server. |
 
 ---
