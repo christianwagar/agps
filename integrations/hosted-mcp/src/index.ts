@@ -68,8 +68,7 @@ function createServer() {
   return server;
 }
 
-// For a custom domain add: allowedHostnames: ["mcp.26-w.com"]
-const mcp = createMcpHandler(createServer, { route: "/mcp" });
+const mcp = createMcpHandler(createServer, { route: "/mcp", allowedHostnames: ["mcp.26-w.com", "localhost", "127.0.0.1"] });
 
 export default {
   async fetch(request: Request, env: unknown, ctx: ExecutionContext): Promise<Response> {

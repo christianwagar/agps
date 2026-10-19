@@ -42,6 +42,7 @@ Using an LLM instead of code? Just tell it your thresholds in plain English (see
 | **Using Claude, ChatGPT, Gemini, Grok or any AI chat** | [3 easy steps](integrations/any-llm/PROMPT.md) · [copy the prompt](https://raw.githubusercontent.com/christianwagar/agps/main/integrations/any-llm/agps-prompt.txt) | No coding. Copy, paste into a new chat, attach your spreadsheet when it asks. Get P1–P4 and the why. |
 | **Claude or Grok power user** | [integrations/claude-skill](integrations/claude-skill/) · [integrations/grok-skill](integrations/grok-skill/) | Installable skills that do the same thing. |
 | **Developer / builder** | [Quickstart](#quickstart) · [MCP server](integrations/mcp-server/) | Zero-dependency Python package, CLI, and an MCP server. |
+| **Want it inside Claude, ChatGPT or Cursor?** | **Hosted MCP: https://mcp.26-w.com/mcp** · [how to add it](integrations/hosted-mcp/) | Add this one URL as a connector. No install, nothing stored. |
 
 ---
 

@@ -4,8 +4,8 @@
   "main": "src/index.ts",
   "compatibility_date": "2026-05-01",
   "compatibility_flags": ["nodejs_compat"],
-  "workers_dev": true,
+  "workers_dev": false,
   // Privacy: no Workers Logs / payload logging. Turn on only if you need debugging, and never log request bodies.
-  "observability": { "enabled": false }
-  // Custom domain (optional, after deploy): "routes": [{ "pattern": "mcp.26-w.com", "custom_domain": true }]
+  "observability": { "enabled": false },
+  "routes": [{ "pattern": "mcp.26-w.com", "custom_domain": true }]
 }

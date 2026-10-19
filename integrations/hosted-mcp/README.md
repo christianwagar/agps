@@ -2,10 +2,10 @@
 
 # A-GPS · Hosted MCP server
 
-**[ ADD THIS ONE URL TO YOUR AI ]**
+**[ ADD THIS ONE URL TO YOUR AI ]** · live at [mcp.26-w.com](https://mcp.26-w.com)
 
 ```
-https://agps-mcp.<your-subdomain>.workers.dev/mcp     ← placeholder until it goes live
+https://mcp.26-w.com/mcp
 ```
 
 That's the whole setup. Once it's added, your AI can score your accounts with A-GPS. Golf rules: lower is better. Every account lands in P1 to P4, with the why and a focus-this-week list.
@@ -63,11 +63,11 @@ If you change the Python engine or the config, run `npm run fixtures` (it needs 
 
 ```bash
 npx wrangler login     # opens a browser to sign in to your Cloudflare account
-npm run deploy         # prints https://agps-mcp.<your-subdomain>.workers.dev
-npm run smoke -- https://agps-mcp.<your-subdomain>.workers.dev/mcp
+npm run deploy         # live at https://mcp.26-w.com
+npm run smoke -- https://mcp.26-w.com/mcp
 ```
 
-Optional custom domain (for example `mcp.26-w.com`) if the domain is on the same Cloudflare account: uncomment the `routes` line in `wrangler.jsonc` and deploy again. Then add `allowedHostnames: ["mcp.26-w.com"]` to `createMcpHandler` in `src/index.ts`.
+Forking it? Change the `routes` pattern in `wrangler.jsonc` and `allowedHostnames` in `src/index.ts` to your own domain (or set `workers_dev: true` and add your `*.workers.dev` hostname).
 
 Endpoints: `/` landing page · `/mcp` Streamable HTTP MCP (stateless) · `/health`.
 
