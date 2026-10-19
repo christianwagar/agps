@@ -75,7 +75,7 @@ export default {
     const url = new URL(request.url);
     if (url.pathname === "/mcp") return mcp(request, env, ctx);
     if (url.pathname === "/" && (request.method === "GET" || request.method === "HEAD"))
-      return new Response(landingPage(`${url.origin}/mcp`), { headers: {
+      return new Response(landingPage(/^(localhost|127\.0\.0\.1)$/.test(url.hostname) ? `${url.origin}/mcp` : `https://${url.host}/mcp`), { headers: {
         "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=300",
         "content-security-policy": "default-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'unsafe-inline'; img-src 'self' data:; media-src 'self'",
       } });

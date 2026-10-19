@@ -31,18 +31,20 @@ button{background:none;border:0;padding:0;cursor:pointer;color:var(--text)}butto
 .chip{flex:none;font-family:var(--d);font-weight:700;letter-spacing:.1em;width:3rem;height:3rem;display:grid;place-items:center;box-sizing:border-box}
 .links{margin-top:2rem}
 ul{color:var(--muted);padding-left:1.1rem}
-.two{color:var(--muted);max-width:70ch;margin-top:2.5rem}.two b{color:var(--text)}.demo{width:100%;max-width:960px;display:block;border:1px solid var(--border)}
+.two{color:var(--muted);max-width:70ch;margin-top:2.5rem}.two b{color:var(--text)}.demo{width:100%;max-width:960px;display:block;border:1px solid var(--border);margin:0 0 2.5rem}
 footer{padding:2rem 0;border-top:1px solid var(--border);color:var(--muted);font-size:.85rem}
 </style></head><body><div class="c">
 <header><a href="https://26-w.com">26-W / Notes</a><span>Christian Wagar</span></header>
 <section class="hero"><span class="label">MCP server · free · no sign-up</span><h1>A-GPS</h1>
-<p class="sub">Account Growth Propensity Scoring</p></section>
+<p class="sub">Account Growth Propensity Scoring</p>
+<p class="intro">Score your book of customer accounts right inside your AI. Golf rules: lower is better. Every account lands in P1 to P4 with the why and a focus-this-week list.</p></section>
 <section><span class="label">Read this first</span><h2>A framework, not a formula</h2>
 <p class="intro">The weights and bands were tuned for one book of business. Yours is different. Just tell your AI in plain English, like "use 25% GTM and 15% marketing" or "ARR band 1 is $200K+", and it passes the tweak along.</p>
-<ul><li>Nothing you send is stored or logged. Each request is scored and forgotten.</li><li>No account or sign-up needed.</li></ul></section>
-<section><span class="label">Score your book</span>
-<p class="lead">Score your book of customer accounts right inside your AI. Golf rules: lower is better. Every account lands in P1 to P4 with the why and a focus-this-week list.</p></section>
-<section><span class="label">Three steps</span><h2>Two minutes, no code</h2><div class="g">
+<ul><li>Nothing you send is stored or logged. Each request is scored and forgotten.</li><li>No account or sign-up needed.</li></ul><p class="links"><a class="cta" href="https://26-w.com/notes/account-growth-propensity/">Read the writeup</a><a class="cta" href="https://github.com/christianwagar/agps">View on GitHub</a></p></section>
+<section><span class="label">Three steps</span><h2>Two minutes, no code</h2>
+<video class="demo" autoplay muted loop playsinline preload="metadata" poster="/agps-walkthrough-poster.png" aria-label="Walkthrough: copy the link, add it to your AI app, ask it to score your accounts, get P1 to P4 and a focus-this-week list">
+<source src="/agps-walkthrough.webm" type="video/webm"><source src="/agps-walkthrough.mp4" type="video/mp4">
+<img src="/agps-walkthrough.gif" alt="A-GPS walkthrough" style="width:100%"></video><div class="g">
 <div class="card"><div class="n">1</div><span class="label">Copy the URL</span><p>Add this one URL:</p>
 <div class="url"><code id="u">${u}</code><button id="b" type="button">Copy</button></div></div>
 <div class="card"><div class="n">2</div><span class="label">Add it to your AI</span><p><b>Claude:</b> Settings → Connectors → Add custom connector.<br><b>ChatGPT:</b> Settings → Connectors (developer mode) → Create.<br><b>Cursor:</b> Settings → MCP → Add server.</p></div>
@@ -56,10 +58,6 @@ footer{padding:2rem 0;border-top:1px solid var(--border);color:var(--muted);font
 <div class="p"><span class="chip" style="border:1px solid #000">P4</span><div><span class="label">Scale and monitor</span><p>Digital or pooled CS, watch for signals.</p></div></div>
 </div>
 <p class="links"><a class="cta" href="https://26-w.com/notes/account-growth-propensity/">Read the writeup</a><a class="cta" href="https://github.com/christianwagar/agps">View on GitHub</a></p></section>
-<section><span class="label">See it in 25 seconds</span>
-<video class="demo" autoplay muted loop playsinline preload="metadata" poster="/agps-walkthrough-poster.png" aria-label="Walkthrough: copy the link, add it to your AI app, ask it to score your accounts, get P1 to P4 and a focus-this-week list">
-<source src="/agps-walkthrough.webm" type="video/webm"><source src="/agps-walkthrough.mp4" type="video/mp4">
-<img src="/agps-walkthrough.gif" alt="A-GPS walkthrough" style="width:100%"></video></section>
 <footer>Built by <a href="https://26-w.com">Christian Wagar · 26-W</a> · MIT License · Sample data is fictional.</footer>
 </div><script>
 document.getElementById("b").onclick=function(){var b=this;navigator.clipboard.writeText(document.getElementById("u").textContent).then(function(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1600)})};
