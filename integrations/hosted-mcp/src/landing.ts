@@ -14,44 +14,52 @@ body{margin:0;font-family:var(--b);color:var(--text);background:var(--bg);line-h
 header{display:flex;justify-content:space-between;padding:1.5rem 0;border-bottom:1px solid #000;font-family:var(--d);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:.85rem}
 .label{font-family:var(--d);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:.8125rem}
 h1,h2{font-family:var(--d);font-weight:700;text-transform:uppercase;letter-spacing:.04em;line-height:1.05;margin:0 0 1rem}
-h1{font-size:clamp(3rem,9vw,6.5rem)}h2{font-size:clamp(1.75rem,4vw,2.5rem)}
+h1{font-size:clamp(3rem,9vw,6.5rem)}@media(max-width:600px){section{padding:2.5rem 0}.cta{display:inline-block;margin-bottom:.5rem}}h2{font-size:clamp(1.75rem,4vw,2.5rem)}
 .sub{font-family:var(--d);font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:1.1rem;margin:-.5rem 0 1rem}
-.intro{color:var(--muted);max-width:56ch}section{padding:4rem 0;border-top:1px solid var(--border)}
+.intro{color:var(--muted);max-width:56ch}section{padding:3.5rem 0;border-top:1px solid var(--border)}
 .cta,button{font-family:var(--d);font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-right:1.5rem;font-size:1rem}
 .cta:before,button:before{content:"[ "}.cta:after,button:after{content:" ]"}
-.url{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;background:var(--bg-soft);border:1px solid var(--border);padding:1.25rem 1.5rem;margin:1.5rem 0}
-.url code{font-size:1.05rem;word-break:break-all;flex:1}
+.url{display:flex;flex-wrap:wrap;gap:.75rem 1rem;align-items:center;justify-content:space-between;background:var(--bg-soft);border:1px solid var(--border);padding:1rem 1.1rem;margin:.75rem 0 0}
+.url code{font-size:1rem;word-break:break-all}.url button{margin:0}
 button{background:none;border:0;padding:0;cursor:pointer;color:var(--text)}button:hover{opacity:.55}
 .g{display:grid;gap:2rem;grid-template-columns:repeat(3,1fr)}@media(max-width:800px){.g{grid-template-columns:1fr}}
 .card{border-top:1px solid #000;padding-top:1rem}.card p{color:var(--muted);margin:.5rem 0 0}
 .n{font-family:var(--d);font-weight:700;font-size:2.5rem;line-height:1}
-.chips{display:flex;gap:.5rem;margin:1.5rem 0}.chips span{font-family:var(--d);font-weight:700;letter-spacing:.1em;width:3rem;height:3rem;display:grid;place-items:center}
+.hero{border:0;padding-bottom:2rem}.lead{font-size:1.25rem;max-width:48ch;margin:.75rem 0 0}
+.pg{display:grid;gap:1.5rem 2rem;grid-template-columns:repeat(2,1fr)}@media(max-width:700px){.pg{grid-template-columns:1fr}}
+.p{display:flex;gap:1rem;align-items:flex-start;border-top:1px solid var(--border);padding-top:1rem}.p p{color:var(--muted);margin:.25rem 0 0}
+.chip{flex:none;font-family:var(--d);font-weight:700;letter-spacing:.1em;width:3rem;height:3rem;display:grid;place-items:center;box-sizing:border-box}
+.links{margin-top:2rem}
 ul{color:var(--muted);padding-left:1.1rem}
-.two{color:var(--muted);max-width:70ch}.two b{color:var(--text)}.demo{width:100%;max-width:960px;display:block;border:1px solid var(--border)}
+.two{color:var(--muted);max-width:70ch;margin-top:2.5rem}.two b{color:var(--text)}.demo{width:100%;max-width:960px;display:block;border:1px solid var(--border)}
 footer{padding:2rem 0;border-top:1px solid var(--border);color:var(--muted);font-size:.85rem}
 </style></head><body><div class="c">
 <header><a href="https://26-w.com">26-W / Notes</a><span>Christian Wagar</span></header>
-<section style="border:0"><span class="label">MCP server · free · no sign-up</span><h1>A-GPS</h1>
-<p class="sub">Account Growth Propensity Scoring</p>
-<p class="intro">Score your book of customer accounts right inside your AI. Golf rules: lower is better. Every account lands in P1 to P4 with the why and a focus-this-week list.</p>
-<div class="chips"><span style="background:#000;color:#fff">P1</span><span style="background:#444;color:#fff">P2</span><span style="background:#999;color:#fff">P3</span><span style="border:1px solid #000">P4</span></div>
-<span class="label">Add this one URL</span>
-<div class="url"><code id="u">${u}</code><button id="b" type="button">Copy</button></div>
-<p class="two"><b>Two ways in.</b> No setup? Use the <a class="cta" style="margin:0" href="https://github.com/christianwagar/agps/blob/main/integrations/any-llm/PROMPT.md">Copy-paste prompt</a> in any AI chat. Want the exact calculator inside your AI app? Add this link.</p>
-</section>
+<section class="hero"><span class="label">MCP server · free · no sign-up</span><h1>A-GPS</h1>
+<p class="sub">Account Growth Propensity Scoring</p></section>
+<section><span class="label">Read this first</span><h2>A framework, not a formula</h2>
+<p class="intro">The weights and bands were tuned for one book of business. Yours is different. Just tell your AI in plain English, like "use 25% GTM and 15% marketing" or "ARR band 1 is $200K+", and it passes the tweak along.</p>
+<ul><li>Nothing you send is stored or logged. Each request is scored and forgotten.</li><li>No account or sign-up needed.</li></ul></section>
+<section><span class="label">Score your book</span>
+<p class="lead">Score your book of customer accounts right inside your AI. Golf rules: lower is better. Every account lands in P1 to P4 with the why and a focus-this-week list.</p></section>
+<section><span class="label">Three steps</span><h2>Two minutes, no code</h2><div class="g">
+<div class="card"><div class="n">1</div><span class="label">Copy the URL</span><p>Add this one URL:</p>
+<div class="url"><code id="u">${u}</code><button id="b" type="button">Copy</button></div></div>
+<div class="card"><div class="n">2</div><span class="label">Add it to your AI</span><p><b>Claude:</b> Settings → Connectors → Add custom connector.<br><b>ChatGPT:</b> Settings → Connectors (developer mode) → Create.<br><b>Cursor:</b> Settings → MCP → Add server.</p></div>
+<div class="card"><div class="n">3</div><span class="label">Ask it</span><p>Attach your account spreadsheet and say "Score these with A-GPS and tell me who to focus on this week."</p></div>
+</div>
+<p class="two"><b>Two ways in.</b> No setup? Use the <a class="cta" style="margin:0" href="https://github.com/christianwagar/agps/blob/main/integrations/any-llm/PROMPT.md">Copy-paste prompt</a> in any AI chat. Want the exact calculator inside your AI app? Add this link.</p></section>
+<section><span class="label">The clusters</span><h2>P1 to P4</h2><div class="pg">
+<div class="p"><span class="chip" style="background:#000;color:#fff">P1</span><div><span class="label">Expand now</span><p>Exec-aligned expansion, multi-thread, bring in AE + SE.</p></div></div>
+<div class="p"><span class="chip" style="background:#444;color:#fff">P2</span><div><span class="label">Grow into it</span><p>Land-and-expand, programs, close the weakest bucket first.</p></div></div>
+<div class="p"><span class="chip" style="background:#999;color:#fff">P3</span><div><span class="label">Protect and re-ignite</span><p>Retention first, fix health, find the next use case.</p></div></div>
+<div class="p"><span class="chip" style="border:1px solid #000">P4</span><div><span class="label">Scale and monitor</span><p>Digital or pooled CS, watch for signals.</p></div></div>
+</div>
+<p class="links"><a class="cta" href="https://26-w.com/notes/account-growth-propensity/">Read the writeup</a><a class="cta" href="https://github.com/christianwagar/agps">View on GitHub</a></p></section>
 <section><span class="label">See it in 25 seconds</span>
 <video class="demo" autoplay muted loop playsinline preload="metadata" poster="/agps-walkthrough-poster.png" aria-label="Walkthrough: copy the link, add it to your AI app, ask it to score your accounts, get P1 to P4 and a focus-this-week list">
 <source src="/agps-walkthrough.webm" type="video/webm"><source src="/agps-walkthrough.mp4" type="video/mp4">
-<img src="/agps-walkthrough.gif" alt="A-GPS walkthrough"></video></section>
-<section><span class="label">Three steps</span><h2>Two minutes, no code</h2><div class="g">
-<div class="card"><div class="n">1</div><span class="label">Copy the URL</span><p>Hit [ COPY ] above.</p></div>
-<div class="card"><div class="n">2</div><span class="label">Add it to your AI</span><p><b>Claude:</b> Settings → Connectors → Add custom connector.<br><b>ChatGPT:</b> Settings → Connectors (developer mode) → Create.<br><b>Cursor:</b> Settings → MCP → Add server.</p></div>
-<div class="card"><div class="n">3</div><span class="label">Ask it</span><p>Attach your account spreadsheet and say "Score these with A-GPS and tell me who to focus on this week."</p></div>
-</div></section>
-<section><span class="label">Read this first</span><h2>A framework, not a formula</h2>
-<p class="intro">The weights and bands were tuned for one book of business. Yours is different. Just tell your AI in plain English, like "use 25% GTM and 15% marketing" or "ARR band 1 is $200K+", and it passes the tweak along.</p>
-<ul><li>Nothing you send is stored or logged. Each request is scored and forgotten.</li><li>No account or sign-up needed.</li></ul>
-<a class="cta" href="https://26-w.com/notes/account-growth-propensity/">Read the writeup</a><a class="cta" href="https://github.com/christianwagar/agps">View on GitHub</a></section>
+<img src="/agps-walkthrough.gif" alt="A-GPS walkthrough" style="width:100%"></video></section>
 <footer>Built by <a href="https://26-w.com">Christian Wagar · 26-W</a> · MIT License · Sample data is fictional.</footer>
 </div><script>
 document.getElementById("b").onclick=function(){var b=this;navigator.clipboard.writeText(document.getElementById("u").textContent).then(function(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1600)})};
