@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A-GPS | Account Growth Propensity Scoring</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--bg-soft:#f7f7f7;--text:#000;--muted:#666;--border:#e5e5e5;--d:"Barlow Condensed","Arial Narrow",sans-serif;--b:"IBM Plex Sans",system-ui,sans-serif}
+body{margin:0;font-family:var(--b);color:var(--text);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+.c{width:min(100% - 2.5rem,1200px);margin-inline:auto}a{color:var(--text);text-decoration:none}a:hover{opacity:.55}
+header{display:flex;justify-content:space-between;padding:1.5rem 0;border-bottom:1px solid #000;font-family:var(--d);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:.85rem}
+.label{font-family:var(--d);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:.8125rem}
+h1,h2{font-family:var(--d);font-weight:700;text-transform:uppercase;letter-spacing:.04em;line-height:1.05;margin:0 0 1rem}
+h1{font-size:clamp(3rem,9vw,6.5rem)}h2{font-size:clamp(1.75rem,4vw,2.5rem)}
+.intro{color:var(--muted);max-width:52ch}section{padding:5rem 0;border-top:1px solid var(--border)}
+.cta{font-family:var(--d);font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-right:1.5rem}.cta:before{content:"[ "}.cta:after{content:" ]"}
+.g{display:grid;gap:2rem;grid-template-columns:repeat(3,1fr)}@media(max-width:800px){.g{grid-template-columns:1fr}}
+.card{border-top:1px solid #000;padding-top:1rem}.card p{color:var(--muted)}
+pre{background:var(--bg-soft);padding:1.25rem;overflow:auto;font-size:.9rem}
+table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:.6rem 0;border-bottom:1px solid var(--border)}th{font-family:var(--d);letter-spacing:.12em;text-transform:uppercase}
+footer{padding:2rem 0;border-top:1px solid var(--border);color:var(--muted);font-size:.85rem}
+</style></head><body><div class="c">
+<header><a href="https://26-w.com">26-W</a><span>Christian Wagar</span></header>
+<section style="border:0"><span class="label">Account Growth Propensity Scoring</span><h1>A-GPS</h1>
+<p class="intro">Ranks a book of customer accounts by how ready each one is to grow. Golf-style: lower is better. Signals band 1–8, roll into five weighted buckets, and land in clusters P1–P4.</p>
+<a class="cta" href="https://26-w.com/notes/account-growth-propensity/">Read the writeup</a><a class="cta" href="https://github.com/christianwagar/agps">View on GitHub</a></section>
+<section><span class="label">Start here</span><h2>Three ways in</h2><div class="g">
+<div class="card"><span class="label">CS / RevOps</span><p>Every signal, band, and weight in plain English. Tune it like a spreadsheet.</p><a class="cta" href="https://github.com/christianwagar/agps/blob/main/METHODOLOGY.md">Methodology</a></div>
+<div class="card"><span class="label">Claude / Grok</span><p>Drop-in skills. Paste in an account export, get P1–P4 and a focus list.</p><a class="cta" href="https://github.com/christianwagar/agps/tree/main/integrations">Skills</a></div>
+<div class="card"><span class="label">Developers</span><p>Zero-dependency Python package, CLI, and MCP server.</p><a class="cta" href="#quickstart">Quickstart</a></div></div></section>
+<section><span class="label">The model</span><h2>Five buckets</h2><table><tr><th>Bucket</th><th>Weight</th></tr>
+<tr><td>GTM propensity</td><td>30%</td></tr><tr><td>Post-sales</td><td>25%</td></tr><tr><td>Down-and-distance</td><td>25%</td></tr><tr><td>Marketing &amp; programs</td><td>10%</td></tr><tr><td>Product</td><td>10%</td></tr></table></section>
+<section id="quickstart"><span class="label">Developers</span><h2>Quickstart</h2><pre>git clone https://github.com/christianwagar/agps && cd agps
+pip install -e .
+agps score examples/v2_small_accounts.csv -o scored.csv
+agps focus examples/v2_small_accounts.csv</pre></section>
+<footer>MIT License · Built by <a href="https://26-w.com">Christian Wagar</a> · All sample data is fictional.</footer>
+</div></body></html>

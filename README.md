@@ -1,8 +1,32 @@
+<p align="center"><img src="docs/assets/banner.svg" alt="A-GPS | Account Growth Propensity Scoring" width="100%"></p>
+
+<p align="center">
+<a href="https://26-w.com/notes/account-growth-propensity/"><img src="https://img.shields.io/badge/LIVE_DEMO-26--W.COM-000000?style=flat-square" alt="Live demo"></a>
+<img src="https://img.shields.io/badge/TESTS-46_PASSING-000000?style=flat-square" alt="Tests">
+<img src="https://img.shields.io/badge/PYTHON-3.9+-666666?style=flat-square" alt="Python">
+<img src="https://img.shields.io/badge/MCP-READY-666666?style=flat-square" alt="MCP">
+<a href="LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-e5e5e5?style=flat-square&labelColor=000000" alt="MIT"></a>
+</p>
+
+<p align="center"><b>[ <a href="https://26-w.com/notes/account-growth-propensity/">READ THE WRITEUP</a> ]</b> &nbsp; <b>[ <a href="METHODOLOGY.md">METHODOLOGY</a> ]</b> &nbsp; <b>[ <a href="integrations/">SKILLS + MCP</a> ]</b></p>
+
+---
+
 # A-GPS: Account Growth Propensity Scoring
 
 A-GPS ranks a book of customer accounts by how ready each one is to grow. It turns CRM and customer-success signals into one score per account, groups accounts into P1–P4, and suggests which few to focus on this week.
 
 It was designed by **Christian Wagar**. Live demo with 40 fictional accounts: **https://26-w.com/notes/account-growth-propensity/**
+
+## Start here
+
+| You are… | Start with | What you get |
+|---|---|---|
+| **CS / RevOps leader** | [METHODOLOGY.md](METHODOLOGY.md) · [DECISIONS.md](DECISIONS.md) | Every signal, band, and weight in plain English. Tune it in a spreadsheet. |
+| **Claude or Grok user** | [integrations/claude-skill](integrations/claude-skill/) · [integrations/grok-skill](integrations/grok-skill/) | Drop-in skills: paste in an account export, get P1–P4 and a focus list. |
+| **Developer / builder** | [Quickstart](#quickstart) · [MCP server](integrations/mcp-server/) | Zero-dependency Python package, CLI, and an MCP server. |
+
+---
 
 ## How the scoring works
 
@@ -69,6 +93,12 @@ tools/           build_config.py (sheet → config), gen_methodology.py
 
 Edit `config/agps.v2.yaml`, run `agps convert config/agps.v2.yaml config/agps.v2.json`, then re-score. Check how much the cluster mix moved and gut-check a few accounts you know well.
 
+---
+
 ## License
 
 MIT. See [LICENSE](LICENSE). All sample data is fictional.
+
+---
+
+<p align="center"><sub>BUILT BY <a href="https://26-w.com">CHRISTIAN WAGAR</a> · 26-W</sub></p>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <rect width="1200" height="300" fill="#ffffff"/>
+  <rect x="0.5" y="0.5" width="1199" height="299" fill="none" stroke="#e5e5e5"/>
+  <line x1="60" y1="70" x2="1140" y2="70" stroke="#000" stroke-width="1"/>
+  <text x="60" y="55" font-family="'Barlow Condensed','Arial Narrow',Arial,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#000">26-W  /  NOTES</text>
+  <text x="1140" y="55" text-anchor="end" font-family="'Barlow Condensed','Arial Narrow',Arial,sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#666">CHRISTIAN WAGAR</text>
+  <text x="56" y="175" font-family="'Barlow Condensed','Arial Narrow',Arial,sans-serif" font-size="104" font-weight="700" letter-spacing="4" fill="#000">A-GPS</text>
+  <text x="60" y="215" font-family="'Barlow Condensed','Arial Narrow',Arial,sans-serif" font-size="24" font-weight="600" letter-spacing="5" fill="#000">ACCOUNT GROWTH PROPENSITY SCORING</text>
+  <text x="60" y="255" font-family="'IBM Plex Sans',Helvetica,Arial,sans-serif" font-size="17" fill="#666">Tunable account-growth logic for Claude, Grok, and developers. Lower is better.</text>
+  <g font-family="'Barlow Condensed','Arial Narrow',Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="2" text-anchor="middle">
+    <rect x="860" y="120" width="60" height="60" fill="#000"/><text x="890" y="157" fill="#fff">P1</text>
+    <rect x="930" y="120" width="60" height="60" fill="#444"/><text x="960" y="157" fill="#fff">P2</text>
+    <rect x="1000" y="120" width="60" height="60" fill="#999"/><text x="1030" y="157" fill="#fff">P3</text>
+    <rect x="1070" y="120" width="60" height="60" fill="#fff" stroke="#000"/><text x="1100" y="157" fill="#000">P4</text>
+  </g>
+</svg>
