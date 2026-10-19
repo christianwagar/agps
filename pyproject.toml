@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agps"
+version = "0.2.0"
+description = "A-GPS: golf-style account growth propensity scoring (1 = best, 8 = worst) with P1-P4 clusters."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Christian Wagar" }]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+yaml = ["PyYAML>=6"]
+mcp = ["mcp>=1.2,<2"]
+dev = ["pytest>=7", "PyYAML>=6"]
+
+[project.scripts]
+agps = "agps.cli:main"
+
+[project.urls]
+"Live demo" = "https://26-w.com/notes/account-growth-propensity/"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+agps = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

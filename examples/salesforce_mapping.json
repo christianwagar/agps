@@ -1,0 +1,16 @@
+{
+  "_comment": "Left side: your Salesforce report header. Right side: the A-GPS field name. Keys starting with _ are ignored.",
+  "Account Name": "account_name",
+  "Annual Recurring Revenue": "arr",
+  "Net Revenue Retention %": "nrr",
+  "New Business / Expansion Pipeline": "nbec",
+  "Opportunity Win Rate %": "opp_win_rate",
+  "Closed Opportunities (24m)": "opp_closed_count",
+  "Days Since Last Activity": "gtm_days_since_activity",
+  "Success Plan Tier": "success_plan_tier",
+  "Health (RAG)": "csm_pulse_rag",
+  "Cases (12m)": "support_cases_12m",
+  "SLA Breaches (12m)": "sla_breaches_12m",
+  "Days to Next Renewal": "days_to_next_event",
+  "Customer Since (years)": "tenure_years"
+}

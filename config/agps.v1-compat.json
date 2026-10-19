@@ -1,0 +1,1336 @@
+{
+  "name": "A-GPS (Account Growth Propensity Scoring)",
+  "version": "1.0.0",
+  "scale": {
+    "best": 1,
+    "worst": 8,
+    "missing_score": 8,
+    "note": "Golf-style: lower is better. Bands use min (inclusive) and max_exclusive; null = open-ended."
+  },
+  "boolean_values": {
+    "true": [
+      "true",
+      "t",
+      "yes",
+      "y",
+      "1"
+    ],
+    "false": [
+      "false",
+      "f",
+      "no",
+      "n",
+      "0"
+    ]
+  },
+  "bucket_weights": {
+    "gtm_propensity": 0.3,
+    "marketing_programmatic_engagement": 0.1,
+    "post_sales": 0.25,
+    "product": 0.1,
+    "down_and_distance": 0.25
+  },
+  "rounding": {
+    "bucket_scores": 2,
+    "overall_score": 3
+  },
+  "cluster": {
+    "method": "quartile",
+    "quartile": {
+      "order": "overall_score ascending",
+      "tiebreak": "higher arr first, then input order",
+      "labels": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "note": "Same as Postgres ntile(4): P1 = best 25%."
+    },
+    "growth_arr_2x2": {
+      "arr_high_max_band": 4,
+      "growth_split": "median",
+      "note": "Growth = overall excluding the arr field. P1 high growth+high ARR, P2 high growth, P3 high ARR, P4 neither."
+    }
+  },
+  "focus": {
+    "count": 3,
+    "window_days": 120,
+    "rule": "The lowest overall scores among accounts renewing within window_days; ties break toward sooner renewal, then name. If fewer than count qualify, the next-soonest renewals fill the list."
+  },
+  "plays": {
+    "P1": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
+    "P2": "Grow into it: land-and-expand motions, programs, scale CS",
+    "P3": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "P4": "Scale & monitor: digital/pooled CS, watch for signals"
+  },
+  "fields": {
+    "arr": {
+      "bucket": "gtm_propensity",
+      "type": "number",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "Annual recurring revenue ($)",
+      "bands": [
+        {
+          "min": 1000000,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 750000,
+          "max_exclusive": 1000000,
+          "score": 2
+        },
+        {
+          "min": 500000,
+          "max_exclusive": 750000,
+          "score": 3
+        },
+        {
+          "min": 250000,
+          "max_exclusive": 500000,
+          "score": 4
+        },
+        {
+          "min": 150000,
+          "max_exclusive": 250000,
+          "score": 5
+        },
+        {
+          "min": 100000,
+          "max_exclusive": 150000,
+          "score": 6
+        },
+        {
+          "min": 75000,
+          "max_exclusive": 100000,
+          "score": 7
+        },
+        {
+          "min": null,
+          "max_exclusive": 75000,
+          "score": 8
+        }
+      ]
+    },
+    "nrr": {
+      "bucket": "gtm_propensity",
+      "type": "number",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "Net revenue retention (%)",
+      "bands": [
+        {
+          "min": 130,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 120,
+          "max_exclusive": 130,
+          "score": 2
+        },
+        {
+          "min": 110,
+          "max_exclusive": 120,
+          "score": 3
+        },
+        {
+          "min": 105,
+          "max_exclusive": 110,
+          "score": 4
+        },
+        {
+          "min": 100,
+          "max_exclusive": 105,
+          "score": 5
+        },
+        {
+          "min": 95,
+          "max_exclusive": 100,
+          "score": 6
+        },
+        {
+          "min": 90,
+          "max_exclusive": 95,
+          "score": 7
+        },
+        {
+          "min": null,
+          "max_exclusive": 90,
+          "score": 8
+        }
+      ]
+    },
+    "nbec": {
+      "bucket": "gtm_propensity",
+      "type": "number",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "NBEC ($; definition to confirm)",
+      "bands": [
+        {
+          "min": 250000,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 150000,
+          "max_exclusive": 250000,
+          "score": 2
+        },
+        {
+          "min": 100000,
+          "max_exclusive": 150000,
+          "score": 3
+        },
+        {
+          "min": 50000,
+          "max_exclusive": 100000,
+          "score": 4
+        },
+        {
+          "min": 25000,
+          "max_exclusive": 50000,
+          "score": 5
+        },
+        {
+          "min": 10000,
+          "max_exclusive": 25000,
+          "score": 6
+        },
+        {
+          "min": 1,
+          "max_exclusive": 10000,
+          "score": 7
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 8
+        }
+      ]
+    },
+    "attach_rate": {
+      "bucket": "gtm_propensity",
+      "type": "number",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "Attach rate (% of eligible add-ons)",
+      "bands": [
+        {
+          "min": 80,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 65,
+          "max_exclusive": 80,
+          "score": 2
+        },
+        {
+          "min": 50,
+          "max_exclusive": 65,
+          "score": 3
+        },
+        {
+          "min": 40,
+          "max_exclusive": 50,
+          "score": 4
+        },
+        {
+          "min": 30,
+          "max_exclusive": 40,
+          "score": 5
+        },
+        {
+          "min": 20,
+          "max_exclusive": 30,
+          "score": 6
+        },
+        {
+          "min": 10,
+          "max_exclusive": 20,
+          "score": 7
+        },
+        {
+          "min": null,
+          "max_exclusive": 10,
+          "score": 8
+        }
+      ]
+    },
+    "attach_dollars": {
+      "bucket": "gtm_propensity",
+      "type": "number",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "Attach $",
+      "bands": [
+        {
+          "min": 500000,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 250000,
+          "max_exclusive": 500000,
+          "score": 2
+        },
+        {
+          "min": 100000,
+          "max_exclusive": 250000,
+          "score": 3
+        },
+        {
+          "min": 50000,
+          "max_exclusive": 100000,
+          "score": 4
+        },
+        {
+          "min": 25000,
+          "max_exclusive": 50000,
+          "score": 5
+        },
+        {
+          "min": 10000,
+          "max_exclusive": 25000,
+          "score": 6
+        },
+        {
+          "min": 1,
+          "max_exclusive": 10000,
+          "score": 7
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 8
+        }
+      ]
+    },
+    "pct_opps_closed_won": {
+      "bucket": "gtm_propensity",
+      "type": "number",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "% of opps closed-won",
+      "bands": [
+        {
+          "min": 60,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 50,
+          "max_exclusive": 60,
+          "score": 2
+        },
+        {
+          "min": 40,
+          "max_exclusive": 50,
+          "score": 3
+        },
+        {
+          "min": 30,
+          "max_exclusive": 40,
+          "score": 4
+        },
+        {
+          "min": 25,
+          "max_exclusive": 30,
+          "score": 5
+        },
+        {
+          "min": 20,
+          "max_exclusive": 25,
+          "score": 6
+        },
+        {
+          "min": 10,
+          "max_exclusive": 20,
+          "score": 7
+        },
+        {
+          "min": null,
+          "max_exclusive": 10,
+          "score": 8
+        }
+      ]
+    },
+    "account_team_activity_count": {
+      "bucket": "gtm_propensity",
+      "type": "number",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "Account team activities (last 90d)",
+      "bands": [
+        {
+          "min": 40,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 30,
+          "max_exclusive": 40,
+          "score": 2
+        },
+        {
+          "min": 20,
+          "max_exclusive": 30,
+          "score": 3
+        },
+        {
+          "min": 15,
+          "max_exclusive": 20,
+          "score": 4
+        },
+        {
+          "min": 10,
+          "max_exclusive": 15,
+          "score": 5
+        },
+        {
+          "min": 5,
+          "max_exclusive": 10,
+          "score": 6
+        },
+        {
+          "min": 1,
+          "max_exclusive": 5,
+          "score": 7
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 8
+        }
+      ]
+    },
+    "event_attendance_count": {
+      "bucket": "marketing_programmatic_engagement",
+      "type": "number",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "Events/conferences/webinars attended (12m)",
+      "bands": [
+        {
+          "min": 8,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 6,
+          "max_exclusive": 8,
+          "score": 2
+        },
+        {
+          "min": 5,
+          "max_exclusive": 6,
+          "score": 3
+        },
+        {
+          "min": 4,
+          "max_exclusive": 5,
+          "score": 4
+        },
+        {
+          "min": 3,
+          "max_exclusive": 4,
+          "score": 5
+        },
+        {
+          "min": 2,
+          "max_exclusive": 3,
+          "score": 6
+        },
+        {
+          "min": 1,
+          "max_exclusive": 2,
+          "score": 7
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 8
+        }
+      ]
+    },
+    "webinar_nps": {
+      "bucket": "marketing_programmatic_engagement",
+      "type": "number",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "Webinar NPS / positive sentiment (-100..100)",
+      "bands": [
+        {
+          "min": 70,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 50,
+          "max_exclusive": 70,
+          "score": 2
+        },
+        {
+          "min": 30,
+          "max_exclusive": 50,
+          "score": 3
+        },
+        {
+          "min": 10,
+          "max_exclusive": 30,
+          "score": 4
+        },
+        {
+          "min": 0,
+          "max_exclusive": 10,
+          "score": 5
+        },
+        {
+          "min": -20,
+          "max_exclusive": 0,
+          "score": 6
+        },
+        {
+          "min": -50,
+          "max_exclusive": -20,
+          "score": 7
+        },
+        {
+          "min": null,
+          "max_exclusive": -50,
+          "score": 8
+        }
+      ]
+    },
+    "newsletter_subscribed": {
+      "bucket": "marketing_programmatic_engagement",
+      "type": "boolean",
+      "direction": "yes_is_better",
+      "weight": 1,
+      "description": "Newsletter subscribed",
+      "bands": [
+        {
+          "min": 1,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 7
+        }
+      ]
+    },
+    "newsletter_opens": {
+      "bucket": "marketing_programmatic_engagement",
+      "type": "number",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "Newsletter opens (90d)",
+      "bands": [
+        {
+          "min": 12,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 9,
+          "max_exclusive": 12,
+          "score": 2
+        },
+        {
+          "min": 7,
+          "max_exclusive": 9,
+          "score": 3
+        },
+        {
+          "min": 5,
+          "max_exclusive": 7,
+          "score": 4
+        },
+        {
+          "min": 3,
+          "max_exclusive": 5,
+          "score": 5
+        },
+        {
+          "min": 2,
+          "max_exclusive": 3,
+          "score": 6
+        },
+        {
+          "min": 1,
+          "max_exclusive": 2,
+          "score": 7
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 8
+        }
+      ]
+    },
+    "advocate_champion": {
+      "bucket": "marketing_programmatic_engagement",
+      "type": "boolean",
+      "direction": "yes_is_better",
+      "weight": 1,
+      "description": "Advocate / champion",
+      "bands": [
+        {
+          "min": 1,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 7
+        }
+      ]
+    },
+    "success_story_published": {
+      "bucket": "marketing_programmatic_engagement",
+      "type": "boolean",
+      "direction": "yes_is_better",
+      "weight": 1,
+      "description": "Success story published",
+      "bands": [
+        {
+          "min": 1,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 7
+        }
+      ]
+    },
+    "premium_success_plan": {
+      "bucket": "post_sales",
+      "type": "boolean",
+      "direction": "yes_is_better",
+      "weight": 1,
+      "description": "Premium success plan / elevated SLA",
+      "bands": [
+        {
+          "min": 1,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 7
+        }
+      ]
+    },
+    "csqls_generated": {
+      "bucket": "post_sales",
+      "type": "number",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "CSQLs generated (12m)",
+      "bands": [
+        {
+          "min": 10,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 8,
+          "max_exclusive": 10,
+          "score": 2
+        },
+        {
+          "min": 6,
+          "max_exclusive": 8,
+          "score": 3
+        },
+        {
+          "min": 4,
+          "max_exclusive": 6,
+          "score": 4
+        },
+        {
+          "min": 3,
+          "max_exclusive": 4,
+          "score": 5
+        },
+        {
+          "min": 2,
+          "max_exclusive": 3,
+          "score": 6
+        },
+        {
+          "min": 1,
+          "max_exclusive": 2,
+          "score": 7
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 8
+        }
+      ]
+    },
+    "csql_win_rate": {
+      "bucket": "post_sales",
+      "type": "number",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "CSQL win rate (%)",
+      "bands": [
+        {
+          "min": 60,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 50,
+          "max_exclusive": 60,
+          "score": 2
+        },
+        {
+          "min": 40,
+          "max_exclusive": 50,
+          "score": 3
+        },
+        {
+          "min": 30,
+          "max_exclusive": 40,
+          "score": 4
+        },
+        {
+          "min": 25,
+          "max_exclusive": 30,
+          "score": 5
+        },
+        {
+          "min": 20,
+          "max_exclusive": 25,
+          "score": 6
+        },
+        {
+          "min": 10,
+          "max_exclusive": 20,
+          "score": 7
+        },
+        {
+          "min": null,
+          "max_exclusive": 10,
+          "score": 8
+        }
+      ]
+    },
+    "onboarding_delivered": {
+      "bucket": "post_sales",
+      "type": "boolean",
+      "direction": "yes_is_better",
+      "weight": 1,
+      "description": "Onboarding delivered",
+      "bands": [
+        {
+          "min": 1,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 7
+        }
+      ]
+    },
+    "onboarding_completed": {
+      "bucket": "post_sales",
+      "type": "boolean",
+      "direction": "yes_is_better",
+      "weight": 1,
+      "description": "Onboarding completed",
+      "bands": [
+        {
+          "min": 1,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 7
+        }
+      ]
+    },
+    "adoption_achieved": {
+      "bucket": "post_sales",
+      "type": "boolean",
+      "direction": "yes_is_better",
+      "weight": 1,
+      "description": "Adoption achieved",
+      "bands": [
+        {
+          "min": 1,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 7
+        }
+      ]
+    },
+    "value_realized": {
+      "bucket": "post_sales",
+      "type": "boolean",
+      "direction": "yes_is_better",
+      "weight": 1,
+      "description": "Value realized",
+      "bands": [
+        {
+          "min": 1,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 7
+        }
+      ]
+    },
+    "csm_pulse_rag": {
+      "bucket": "post_sales",
+      "type": "ordinal",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "CSM pulse RAG (green=3, amber=2, red=1)",
+      "bands": [
+        {
+          "min": 3,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 2,
+          "max_exclusive": 3,
+          "score": 4
+        },
+        {
+          "min": null,
+          "max_exclusive": 2,
+          "score": 8
+        }
+      ],
+      "ordinal_map": {
+        "green": 3,
+        "amber": 2,
+        "red": 1
+      }
+    },
+    "csm_engaged": {
+      "bucket": "post_sales",
+      "type": "boolean",
+      "direction": "yes_is_better",
+      "weight": 1,
+      "description": "CSM engaged",
+      "bands": [
+        {
+          "min": 1,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 7
+        }
+      ]
+    },
+    "support_case_count": {
+      "bucket": "post_sales",
+      "type": "number",
+      "direction": "lower_is_better",
+      "weight": 1,
+      "description": "Support cases (90d; fewer = better)",
+      "bands": [
+        {
+          "min": null,
+          "max_exclusive": 3,
+          "score": 1
+        },
+        {
+          "min": 3,
+          "max_exclusive": 5,
+          "score": 2
+        },
+        {
+          "min": 5,
+          "max_exclusive": 7,
+          "score": 3
+        },
+        {
+          "min": 7,
+          "max_exclusive": 10,
+          "score": 4
+        },
+        {
+          "min": 10,
+          "max_exclusive": 13,
+          "score": 5
+        },
+        {
+          "min": 13,
+          "max_exclusive": 17,
+          "score": 6
+        },
+        {
+          "min": 17,
+          "max_exclusive": 21,
+          "score": 7
+        },
+        {
+          "min": 21,
+          "max_exclusive": null,
+          "score": 8
+        }
+      ]
+    },
+    "sla_breaches": {
+      "bucket": "post_sales",
+      "type": "number",
+      "direction": "lower_is_better",
+      "weight": 1,
+      "description": "SLA breaches (90d; 0=1, 1=3, 2=5, 3-4=6, 5+=8)",
+      "bands": [
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 1
+        },
+        {
+          "min": 1,
+          "max_exclusive": 2,
+          "score": 3
+        },
+        {
+          "min": 2,
+          "max_exclusive": 3,
+          "score": 5
+        },
+        {
+          "min": 3,
+          "max_exclusive": 5,
+          "score": 6
+        },
+        {
+          "min": 5,
+          "max_exclusive": null,
+          "score": 8
+        }
+      ]
+    },
+    "avg_days_to_resolve": {
+      "bucket": "post_sales",
+      "type": "number",
+      "direction": "lower_is_better",
+      "weight": 1,
+      "description": "Avg days to resolve (fewer = better)",
+      "bands": [
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 1
+        },
+        {
+          "min": 1,
+          "max_exclusive": 2,
+          "score": 2
+        },
+        {
+          "min": 2,
+          "max_exclusive": 3,
+          "score": 3
+        },
+        {
+          "min": 3,
+          "max_exclusive": 5,
+          "score": 4
+        },
+        {
+          "min": 5,
+          "max_exclusive": 7,
+          "score": 5
+        },
+        {
+          "min": 7,
+          "max_exclusive": 10,
+          "score": 6
+        },
+        {
+          "min": 10,
+          "max_exclusive": 14,
+          "score": 7
+        },
+        {
+          "min": 14,
+          "max_exclusive": null,
+          "score": 8
+        }
+      ]
+    },
+    "ps_hours_purchased": {
+      "bucket": "post_sales",
+      "type": "number",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "PS hours purchased",
+      "bands": [
+        {
+          "min": 500,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 300,
+          "max_exclusive": 500,
+          "score": 2
+        },
+        {
+          "min": 200,
+          "max_exclusive": 300,
+          "score": 3
+        },
+        {
+          "min": 100,
+          "max_exclusive": 200,
+          "score": 4
+        },
+        {
+          "min": 50,
+          "max_exclusive": 100,
+          "score": 5
+        },
+        {
+          "min": 20,
+          "max_exclusive": 50,
+          "score": 6
+        },
+        {
+          "min": 1,
+          "max_exclusive": 20,
+          "score": 7
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 8
+        }
+      ]
+    },
+    "ps_hours_used": {
+      "bucket": "post_sales",
+      "type": "number",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "PS hours used, scored as % of purchased",
+      "bands": [
+        {
+          "min": 90,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 75,
+          "max_exclusive": 90,
+          "score": 2
+        },
+        {
+          "min": 60,
+          "max_exclusive": 75,
+          "score": 3
+        },
+        {
+          "min": 45,
+          "max_exclusive": 60,
+          "score": 4
+        },
+        {
+          "min": 30,
+          "max_exclusive": 45,
+          "score": 5
+        },
+        {
+          "min": 15,
+          "max_exclusive": 30,
+          "score": 6
+        },
+        {
+          "min": 1,
+          "max_exclusive": 15,
+          "score": 7
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 8
+        }
+      ],
+      "transform": {
+        "percent_of": "ps_hours_purchased"
+      }
+    },
+    "feature_requests_count": {
+      "bucket": "product",
+      "type": "number",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "Feature requests submitted (12m)",
+      "bands": [
+        {
+          "min": 15,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 10,
+          "max_exclusive": 15,
+          "score": 2
+        },
+        {
+          "min": 7,
+          "max_exclusive": 10,
+          "score": 3
+        },
+        {
+          "min": 5,
+          "max_exclusive": 7,
+          "score": 4
+        },
+        {
+          "min": 3,
+          "max_exclusive": 5,
+          "score": 5
+        },
+        {
+          "min": 2,
+          "max_exclusive": 3,
+          "score": 6
+        },
+        {
+          "min": 1,
+          "max_exclusive": 2,
+          "score": 7
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 8
+        }
+      ]
+    },
+    "days_to_next_renewal": {
+      "bucket": "down_and_distance",
+      "type": "number",
+      "direction": "lower_is_better",
+      "weight": 1,
+      "description": "Days to next renewal (closer = better)",
+      "bands": [
+        {
+          "min": null,
+          "max_exclusive": 90,
+          "score": 1
+        },
+        {
+          "min": 90,
+          "max_exclusive": 150,
+          "score": 2
+        },
+        {
+          "min": 150,
+          "max_exclusive": 210,
+          "score": 3
+        },
+        {
+          "min": 210,
+          "max_exclusive": 270,
+          "score": 4
+        },
+        {
+          "min": 270,
+          "max_exclusive": 365,
+          "score": 5
+        },
+        {
+          "min": 365,
+          "max_exclusive": 540,
+          "score": 6
+        },
+        {
+          "min": 540,
+          "max_exclusive": 730,
+          "score": 7
+        },
+        {
+          "min": 730,
+          "max_exclusive": null,
+          "score": 8
+        }
+      ]
+    },
+    "key_stakeholder_alignment": {
+      "bucket": "down_and_distance",
+      "type": "ordinal",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "Key stakeholder alignment (strong=4, partial=3, weak=2, none=1)",
+      "bands": [
+        {
+          "min": 4,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 3,
+          "max_exclusive": 4,
+          "score": 3
+        },
+        {
+          "min": 2,
+          "max_exclusive": 3,
+          "score": 6
+        },
+        {
+          "min": null,
+          "max_exclusive": 2,
+          "score": 8
+        }
+      ],
+      "ordinal_map": {
+        "strong": 4,
+        "partial": 3,
+        "weak": 2,
+        "none": 1
+      }
+    },
+    "years_as_customer": {
+      "bucket": "down_and_distance",
+      "type": "number",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "Years as customer",
+      "bands": [
+        {
+          "min": 20,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 15,
+          "max_exclusive": 20,
+          "score": 2
+        },
+        {
+          "min": 10,
+          "max_exclusive": 15,
+          "score": 3
+        },
+        {
+          "min": 7,
+          "max_exclusive": 10,
+          "score": 4
+        },
+        {
+          "min": 5,
+          "max_exclusive": 7,
+          "score": 5
+        },
+        {
+          "min": 3,
+          "max_exclusive": 5,
+          "score": 6
+        },
+        {
+          "min": 1,
+          "max_exclusive": 3,
+          "score": 7
+        },
+        {
+          "min": null,
+          "max_exclusive": 1,
+          "score": 8
+        }
+      ]
+    },
+    "tenk_signal": {
+      "bucket": "down_and_distance",
+      "type": "ordinal",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "10-K signal (growth=4, hiring=3, flat=2, firing=1)",
+      "bands": [
+        {
+          "min": 4,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 3,
+          "max_exclusive": 4,
+          "score": 2
+        },
+        {
+          "min": 2,
+          "max_exclusive": 3,
+          "score": 5
+        },
+        {
+          "min": null,
+          "max_exclusive": 2,
+          "score": 8
+        }
+      ],
+      "ordinal_map": {
+        "growth": 4,
+        "hiring": 3,
+        "flat": 2,
+        "firing": 1
+      }
+    },
+    "customer_sentiment": {
+      "bucket": "down_and_distance",
+      "type": "ordinal",
+      "direction": "higher_is_better",
+      "weight": 1,
+      "description": "Customer sentiment (positive=3, neutral=2, negative=1)",
+      "bands": [
+        {
+          "min": 3,
+          "max_exclusive": null,
+          "score": 1
+        },
+        {
+          "min": 2,
+          "max_exclusive": 3,
+          "score": 4
+        },
+        {
+          "min": null,
+          "max_exclusive": 2,
+          "score": 8
+        }
+      ],
+      "ordinal_map": {
+        "positive": 3,
+        "neutral": 2,
+        "negative": 1
+      }
+    }
+  }
+}
