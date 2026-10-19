@@ -77,7 +77,7 @@ export default {
     if (url.pathname === "/" && (request.method === "GET" || request.method === "HEAD"))
       return new Response(landingPage(`${url.origin}/mcp`), { headers: {
         "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=300",
-        "content-security-policy": "default-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'unsafe-inline'; img-src data:",
+        "content-security-policy": "default-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'unsafe-inline'; img-src 'self' data:; media-src 'self'",
       } });
     if (url.pathname === "/health") return Response.json({ ok: true, name: NAME });
     return new Response("Not found", { status: 404 });

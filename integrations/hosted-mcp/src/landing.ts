@@ -27,6 +27,7 @@ button{background:none;border:0;padding:0;cursor:pointer;color:var(--text)}butto
 .n{font-family:var(--d);font-weight:700;font-size:2.5rem;line-height:1}
 .chips{display:flex;gap:.5rem;margin:1.5rem 0}.chips span{font-family:var(--d);font-weight:700;letter-spacing:.1em;width:3rem;height:3rem;display:grid;place-items:center}
 ul{color:var(--muted);padding-left:1.1rem}
+.two{color:var(--muted);max-width:70ch}.two b{color:var(--text)}.demo{width:100%;max-width:960px;display:block;border:1px solid var(--border)}
 footer{padding:2rem 0;border-top:1px solid var(--border);color:var(--muted);font-size:.85rem}
 </style></head><body><div class="c">
 <header><a href="https://26-w.com">26-W / Notes</a><span>Christian Wagar</span></header>
@@ -36,7 +37,12 @@ footer{padding:2rem 0;border-top:1px solid var(--border);color:var(--muted);font
 <div class="chips"><span style="background:#000;color:#fff">P1</span><span style="background:#444;color:#fff">P2</span><span style="background:#999;color:#fff">P3</span><span style="border:1px solid #000">P4</span></div>
 <span class="label">Add this one URL</span>
 <div class="url"><code id="u">${u}</code><button id="b" type="button">Copy</button></div>
+<p class="two"><b>Two ways in.</b> No setup? Use the <a class="cta" style="margin:0" href="https://github.com/christianwagar/agps/blob/main/integrations/any-llm/PROMPT.md">Copy-paste prompt</a> in any AI chat. Want the exact calculator inside your AI app? Add this link.</p>
 </section>
+<section><span class="label">See it in 15 seconds</span>
+<video class="demo" autoplay muted loop playsinline preload="metadata" poster="/agps-walkthrough-poster.png" aria-label="Walkthrough: copy the link, add it to your AI app, ask it to score your accounts, get P1 to P4 and a focus-this-week list">
+<source src="/agps-walkthrough.webm" type="video/webm"><source src="/agps-walkthrough.mp4" type="video/mp4">
+<img src="/agps-walkthrough.gif" alt="A-GPS walkthrough"></video></section>
 <section><span class="label">Three steps</span><h2>Two minutes, no code</h2><div class="g">
 <div class="card"><div class="n">1</div><span class="label">Copy the URL</span><p>Hit [ COPY ] above.</p></div>
 <div class="card"><div class="n">2</div><span class="label">Add it to your AI</span><p><b>Claude:</b> Settings → Connectors → Add custom connector.<br><b>ChatGPT:</b> Settings → Connectors (developer mode) → Create.<br><b>Cursor:</b> Settings → MCP → Add server.</p></div>

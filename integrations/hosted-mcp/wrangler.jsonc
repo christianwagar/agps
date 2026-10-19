@@ -7,5 +7,6 @@
   "workers_dev": false,
   // Privacy: no Workers Logs / payload logging. Turn on only if you need debugging, and never log request bodies.
   "observability": { "enabled": false },
+  "assets": { "directory": "./public" },
   "routes": [{ "pattern": "mcp.26-w.com", "custom_domain": true }]
 }

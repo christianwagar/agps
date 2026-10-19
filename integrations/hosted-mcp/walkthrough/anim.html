@@ -1,0 +1,82 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;width:960px;height:540px;background:#fff;font-family:"IBM Plex Sans",sans-serif;color:#000;overflow:hidden}
+.top{display:flex;justify-content:space-between;align-items:center;padding:22px 40px 14px;border-bottom:1px solid #000;font-family:"Barlow Condensed";font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:14px}
+.dots{display:flex;gap:8px}.dots i{width:28px;height:4px;background:#e5e5e5}.dots i.on{background:#000}
+.stage{position:relative;height:470px}
+.scene{position:absolute;inset:0;padding:30px 40px;opacity:0}
+.k{font-family:"Barlow Condensed";font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:14px;color:#666}
+h1{font-family:"Barlow Condensed";font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:54px;line-height:1;margin:6px 0 22px}
+.url{display:flex;align-items:center;justify-content:space-between;background:#f7f7f7;border:1px solid #e5e5e5;padding:22px 26px;font-family:"IBM Plex Mono",monospace;font-size:24px}
+.br{font-family:"Barlow Condensed";font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:18px}
+.br:before{content:"[ "}.br:after{content:" ]"}
+.cursor{position:absolute;width:22px;height:22px;z-index:9}
+.cursor svg{width:22px;height:22px}
+.toast{margin-top:16px;font-size:16px;color:#666}
+.win{border:1px solid #000;background:#fff;height:330px;display:flex;flex-direction:column}
+.bar{display:flex;align-items:center;gap:10px;border-bottom:1px solid #e5e5e5;padding:10px 16px;font-family:"Barlow Condensed";font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:#666}
+.bar b{width:10px;height:10px;border:1px solid #999;border-radius:50%;display:inline-block}
+.set{display:flex;flex:1}.side{width:200px;border-right:1px solid #e5e5e5;padding:16px;font-size:15px;color:#666;line-height:2.1}
+.side .on{color:#000;font-weight:600;background:#f7f7f7;margin:0 -8px;padding:0 8px}
+.pane{flex:1;padding:20px 24px}.field{border:1px solid #000;padding:12px 14px;font-family:"IBM Plex Mono";font-size:17px;height:48px;margin:10px 0 16px}
+.btn{display:inline-block;background:#000;color:#fff;padding:8px 16px;font-family:"Barlow Condensed";font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:15px}
+.chat{flex:1;padding:18px 22px;display:flex;flex-direction:column;gap:12px;overflow:hidden}
+.msg{align-self:flex-end;background:#000;color:#fff;padding:10px 14px;font-size:17px;max-width:70%}
+.att{align-self:flex-end;border:1px solid #000;padding:6px 12px;font-family:"IBM Plex Mono";font-size:14px}
+.ai{align-self:flex-start;font-size:15px;color:#666}
+.input{border-top:1px solid #e5e5e5;padding:12px 18px;font-size:17px;display:flex;justify-content:space-between;color:#000}
+table{border-collapse:collapse;width:100%;font-size:15px}td,th{text-align:left;padding:5px 8px;border-bottom:1px solid #e5e5e5}
+th{font-family:"Barlow Condensed";letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:#666}
+.c{font-family:"Barlow Condensed";font-weight:700;letter-spacing:.08em;display:inline-block;width:38px;text-align:center;padding:1px 0}
+.P1{background:#000;color:#fff}.P2{background:#444;color:#fff}.P3{background:#999;color:#fff}.P4{border:1px solid #000;padding:0}
+.focus{display:flex;gap:18px;margin-top:6px}.fc{flex:1;border-top:2px solid #000;padding-top:12px}
+.fc .n{font-family:"Barlow Condensed";font-weight:700;font-size:34px;text-transform:uppercase;letter-spacing:.04em}
+.fc .m{color:#666;font-size:15px}
+.foot{position:absolute;bottom:14px;left:40px;right:40px;display:flex;justify-content:space-between;color:#666;font-size:13px}
+</style></head><body>
+<div class="top"><span>A-GPS · How to use it</span><span class="dots"><i></i><i></i><i></i><i></i><i></i></span></div>
+<div class="stage">
+ <div class="scene" id="s0"><div class="k">Step 1</div><h1>Copy this link</h1>
+  <div class="url"><span>https://mcp.26-w.com/mcp</span><span class="br" id="copy">Copy</span></div>
+  <div class="toast" id="toast">&nbsp;</div></div>
+ <div class="scene" id="s1"><div class="k">Step 2 · Claude, ChatGPT, Cursor</div><h1 style="font-size:44px;margin-bottom:14px">Add it to your AI app</h1>
+  <div class="win" style="height:300px"><div class="bar"><b></b><b></b><b></b>&nbsp; Your AI app · Settings</div>
+  <div class="set"><div class="side"><div>General</div><div class="on">Connectors</div><div>Privacy</div></div>
+  <div class="pane"><div class="k" id="crumb">Settings → Connectors → Add custom connector</div>
+  <div class="field" id="paste"></div><span class="btn" id="add">Add</span> <span class="toast" id="added"></span></div></div></div></div>
+ <div class="scene" id="s2"><div class="k">Step 3</div><h1 style="font-size:44px;margin-bottom:14px">Ask it</h1>
+  <div class="win" style="height:300px"><div class="bar"><b></b><b></b><b></b>&nbsp; New chat · A-GPS connected</div>
+  <div class="chat" id="chat2"></div><div class="input"><span id="typed"></span><span class="br">Send</span></div></div></div>
+ <div class="scene" id="s3"><div class="k">Step 4 · Your ranked accounts</div><h1 style="font-size:40px;margin-bottom:10px">P1 to P4, lower is better</h1>
+  <table id="tbl"><tr><th>#</th><th>Account</th><th>ARR</th><th>Score</th><th>Cluster</th></tr></table></div>
+ <div class="scene" id="s4"><div class="k">Step 5</div><h1>Focus this week</h1>
+  <div class="focus" id="focus"></div>
+  <div style="margin-top:34px" class="br">Get it at mcp.26-w.com</div></div>
+ <div class="cursor" id="cur"><svg viewBox="0 0 24 24"><path d="M3 2l7 19 2.5-7.5L20 11z" fill="#000" stroke="#fff" stroke-width="1.5"/></svg></div>
+</div>
+<div class="foot"><span>Built by Christian Wagar · 26-W</span><span>Sample data is fictional</span></div>
+<script>
+const rows=[["Northwind","$1.25M",1.698,"P1"],["Litware","$880K",2.353,"P1"],["Woodgrove","$1.6M",2.814,"P2"],["Contoso","$640K",3.269,"P2"],["Proseware","$330K",5.259,"P3"],["Fabrikam","$210K",6.152,"P3"],["Tailspin","$95K",7.107,"P4"],["Adatum","$150K",7.164,"P4"]];
+const focus=[["Northwind","P1 · 1.698 · renews in 75 days"],["Woodgrove","P2 · 2.814 · renews in 30 days"],["Fabrikam","P3 · 6.152 · renews in 20 days"]];
+const L=3,N=5,T=L*N; const $=id=>document.getElementById(id);
+const cl=x=>Math.max(0,Math.min(1,x)); const ease=x=>x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;
+function cur(x,y,show){const c=$("cur");c.style.display=show?"block":"none";c.style.left=x+"px";c.style.top=y+"px"}
+function render(t){t=((t%T)+T)%T;const s=Math.floor(t/L),u=t-s*L;
+ for(let i=0;i<N;i++){const e=$("s"+i);let o=0;if(i===s)o=Math.min(cl(u/.3),cl((L-u)/.3));e.style.opacity=o;e.style.transform=`translateY(${(1-o)*8}px)`;
+  document.querySelectorAll(".dots i")[i].className=i<=s?"on":""}
+ cur(0,0,false);
+ if(s===0){const p=ease(cl((u-.4)/.9));cur(300+p*(800-300),300-p*(300-140),true);const clicked=u>1.4;
+  $("copy").textContent=clicked?"Copied":"Copy";$("toast").textContent=clicked?"✓ Copied to clipboard":"\u00a0"}
+ if(s===1){const p=ease(cl((u-.3)/.7));cur(520+p*(-120),380-p*(180),u<2.4);
+  $("paste").textContent=u>1.1?"https://mcp.26-w.com/mcp":"";if(u>1.7){cur(450,282,true)}$("added").textContent=u>2.0?"✓ A-GPS connected":""}
+ if(s===2){const msg="Score my accounts";const k=Math.floor(cl((u-.3)/1.0)*msg.length);let h="";
+  if(u>1.5)h+=`<div class="att">📎 accounts.csv</div><div class="msg">${msg}</div>`;
+  if(u>2.1)h+=`<div class="ai">Scoring 8 accounts with A-GPS…</div>`;
+  $("chat2").innerHTML=h;$("typed").textContent=u>1.5?"":(k?msg.slice(0,k):"Attach accounts.csv and type…");if(u>.25&&u<.6)$("typed").textContent="📎 accounts.csv  ";}
+ if(s===3){const n=Math.floor(cl((u-.2)/1.4)*rows.length+.001);let h='<tr><th>#</th><th>Account</th><th>ARR</th><th>Score</th><th>Cluster</th></tr>';
+  rows.slice(0,n).forEach((r,i)=>h+=`<tr><td>${i+1}</td><td><b>${r[0]}</b></td><td>${r[1]}</td><td>${r[2].toFixed(3)}</td><td><span class="c ${r[3]}">${r[3]}</span></td></tr>`);$("tbl").innerHTML=h}
+ if(s===4){const n=Math.floor(cl((u-.2)/1.0)*3+.001);$("focus").innerHTML=focus.slice(0,n).map(f=>`<div class="fc"><div class="n">${f[0]}</div><div class="m">${f[1]}</div></div>`).join("")}
+}
+window.render=render;render(0);
+</script></body></html>
