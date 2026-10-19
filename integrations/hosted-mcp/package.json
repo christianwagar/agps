@@ -1,0 +1,33 @@
+{
+  "name": "agps-hosted-mcp",
+  "version": "1.0.0",
+  "description": "A-GPS hosted MCP server for Cloudflare Workers",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "test": "vitest run",
+    "typecheck": "tsc",
+    "deploy": "wrangler deploy",
+    "smoke": "node test/smoke.mjs",
+    "fixtures": "python3 test/make_fixtures.py"
+  },
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/client": "^2.3.1",
+    "@modelcontextprotocol/server": "^2.3.1",
+    "agents": "^0.28.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260702.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.12",
+    "wrangler": "^4.86.0"
+  },
+  "private": true
+}

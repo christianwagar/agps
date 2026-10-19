@@ -1,0 +1,25 @@
+// Smoke test against a running server: node test/smoke.mjs [url]   (default http://127.0.0.1:8787/mcp)
+import { Client, StreamableHTTPClientTransport } from "@modelcontextprotocol/client";
+import { readFileSync } from "node:fs";
+const url = process.argv[2] ?? "http://127.0.0.1:8787/mcp";
+const csv = readFileSync(new URL("../../../examples/v2_small_accounts.csv", import.meta.url), "utf8");
+const client = new Client({ name: "agps-smoke", version: "1.0.0" });
+await client.connect(new StreamableHTTPClientTransport(new URL(url)));
+const fail = (m) => { console.error("FAIL:", m); process.exit(1); };
+const tools = (await client.listTools()).tools.map((t) => t.name).sort();
+console.log("server:", client.getServerVersion?.()?.title ?? client.getServerVersion?.()?.name);
+console.log("tools:", tools.join(", "));
+for (const t of ["explain_account", "get_default_settings", "get_focus_list", "score_accounts"]) if (!tools.includes(t)) fail(`missing ${t}`);
+const call = async (name, args) => { const r = await client.callTool({ name, arguments: args }); if (r.isError) fail(`${name}: ${r.content[0].text}`); return JSON.parse(r.content[0].text); };
+const s = await call("score_accounts", { csv });
+console.log(`score_accounts: ${s.scored} scored; top = ${s.accounts[0].account_name} (${s.accounts[0].overall_score}, ${s.accounts[0].cluster}); focus = ${s.focus_this_week.map((f) => f.account).join(", ")}`);
+const t = await call("score_accounts", { csv, settings: { bucket_weights: { gtm_propensity: 0.25, marketing_programmatic_engagement: 0.15 } } });
+console.log(`score_accounts (25/15): top = ${t.accounts[0].account_name} (${t.accounts[0].overall_score})`);
+const e = await call("explain_account", { csv, account_name: s.accounts[0].account_name });
+console.log(`explain_account: ${e.account} ${e.cluster}, strongest ${e.strongest_bucket}, weakest ${e.weakest_bucket}`);
+const f = await call("get_focus_list", { csv, count: 2 });
+console.log("get_focus_list:", f.map((x) => x.account).join(", "));
+const d = await call("get_default_settings", {});
+console.log("get_default_settings:", d.name, JSON.stringify(d.bucket_weights));
+await client.close();
+console.log("SMOKE OK");
