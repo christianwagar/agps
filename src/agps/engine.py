@@ -152,9 +152,18 @@ def _percentile_scores(rows, field, seg_field):
     return out
 
 
+def _fsum_ltr(xs):
+    # Plain left-to-right addition. Python 3.12+ sum() compensates float error, which the
+    # TypeScript port does not, so use one order everywhere to keep the two engines identical.
+    t = 0.0
+    for x in xs:
+        t += x
+    return t
+
+
 def _wavg(pairs):
-    tw = sum(w for _, w in pairs)
-    return sum(s * w for s, w in pairs) / tw if tw else None
+    tw = _fsum_ltr(w for _, w in pairs)
+    return _fsum_ltr(s * w for s, w in pairs) / tw if tw else None
 
 
 def score_rows(cfg: dict, rows: list[dict], method: str | None = None) -> list[dict]:
@@ -187,6 +196,7 @@ def score_rows(cfg: dict, rows: list[dict], method: str | None = None) -> list[d
                 b[bk] = float(missing)
             bx[bk] = _wavg(ex) if ex else b[bk]
         r["_buckets"] = b
+        r["_bx"] = bx
         for bk in W:
             r[f"{bk}_score"] = "" if b[bk] is None else round(b[bk], rd["bucket_scores"])
         live = [(b[k], wt) for k, wt in W.items() if b[k] is not None]
@@ -217,8 +227,48 @@ def assign_clusters(cfg, rows, method=None):
             g = r["_growth_ex_arr"] <= med
             a = r["_fields"].get("arr") not in (None, NA) and r["_fields"]["arr"] <= c["arr_high_max_band"]
             r["cluster"] = {(True, True): "P1", (True, False): "P2", (False, True): "P3", (False, False): "P4"}[(g, a)]
+    elif method == "median_2x2":
+        # Growth potential (A-GPS without ARR, lower is better) vs spend (ARR), both cut at the median.
+        gmed = statistics.median(r["_growth_ex_arr"] for r in rows)
+        arrs = [num(r.get("arr")) for r in rows if num(r.get("arr")) is not None]
+        amed = statistics.median(arrs) if arrs else 0
+        for r in rows:
+            g = r["_growth_ex_arr"] <= gmed
+            a = (num(r.get("arr")) or 0) > amed
+            r["cluster"] = {(True, True): "P1", (True, False): "P2", (False, True): "P3", (False, False): "P4"}[(g, a)]
     else:
         raise ValueError(f"unknown cluster method {method!r}")
+    for r in rows:
+        r["_method"] = method
+    w = {**WATCH_DEFAULT, **(cl.get("watch") or {})}
+    for r in rows:
+        nrr = num(r.get("nrr"))
+        r["_watch"] = (nrr is not None and nrr < w["nrr_below"]) or r["_growth_ex_arr"] > w["growth_worse_than"]
+
+
+WATCH_DEFAULT = {"nrr_below": 90, "growth_worse_than": 6.0}
+# Plain-language strength per bucket. Rank penalty keeps product requests from dominating.
+INDICATOR = {
+    "gtm_propensity": ("Strong sales activity and win rate", "sales activity and win rate", 0.0),
+    "post_sales": ("Strong adoption and CSM pulse", "adoption and CSM pulse", 0.05),
+    "down_and_distance": ("Aligned stakeholders, good renewal timing", "stakeholders and renewal timing", 0.1),
+    "marketing_programmatic_engagement": ("Shows up to events and advocates", "events and advocacy", 0.4),
+    "product": ("Asking for more from the product", "product requests", 0.9),
+}
+
+
+def indicator(r):
+    """One plain-words growth indicator. P4 and WATCH accounts get a softer 'Best signal: ...'."""
+    nrr = num(r.get("nrr"))
+    soft = r.get("cluster") == "P4" or r.get("_watch")
+    if nrr is not None and nrr >= 110:
+        txt = f"spend up {round(nrr - 100)}% this year"
+        return f"Best signal: {txt}" if soft else txt[0].upper() + txt[1:]
+    gx = {k: v for k, v in (r.get("_bx") or {}).items() if v is not None and k in INDICATOR}
+    if not gx:
+        return None
+    k = min(gx, key=lambda k: gx[k] + INDICATOR[k][2])
+    return f"Best signal: {INDICATOR[k][1]}" if soft else INDICATOR[k][0]
 
 
 def renewal_days(cfg, r):
@@ -231,10 +281,15 @@ def focus_list(cfg, rows, count=None, window_days=None):
     win = window_days if window_days is not None else f.get("window_days", 120)
     ren = lambda r: renewal_days(cfg, r)
     key = lambda r: (r["overall_score"], ren(r), str(r.get("account_name", "")))
-    inw = sorted([r for r in rows if ren(r) is not None and ren(r) <= win], key=key)
+    pool = rows
+    if rows and all(r.get("_method") == "median_2x2" for r in rows):
+        # P1 + P3 (the spend worth expanding or protecting), best growth first; WATCH only from P3.
+        key = lambda r: (r["_growth_ex_arr"], ren(r), str(r.get("account_name", "")))
+        pool = [r for r in rows if r.get("cluster") in ("P1", "P3") and (not r.get("_watch") or r["cluster"] == "P3")]
+    inw = sorted([r for r in pool if ren(r) is not None and ren(r) <= win], key=key)
     if len(inw) >= n:
         return inw[:n]
-    later = sorted([r for r in rows if ren(r) is not None and ren(r) > win], key=lambda r: (ren(r),) + key(r))
+    later = sorted([r for r in pool if ren(r) is not None and ren(r) > win], key=lambda r: (ren(r),) + key(r))
     return (inw + later)[:n]
 
 
@@ -247,6 +302,9 @@ def explain(cfg, r):
         "account": r.get("account_name"),
         "cluster": r["cluster"],
         "overall_score": r["overall_score"],
+        "growth_score": round(r["_growth_ex_arr"], 3),
+        "watch": bool(r.get("_watch")),
+        "indicator": indicator(r),
         "bucket_scores": {k: (None if r["_buckets"][k] is None else round(r["_buckets"][k], 2)) for k in W},
         "strongest_bucket": ranked[0] if ranked else None,
         "weakest_bucket": ranked[-1] if ranked else None,

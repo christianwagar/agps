@@ -35,7 +35,7 @@
     "overall_score": 3
   },
   "cluster": {
-    "method": "quartile",
+    "method": "median_2x2",
     "quartile": {
       "order": "overall_score ascending",
       "tiebreak": "higher arr first, then input order",
@@ -51,6 +51,10 @@
       "arr_high_max_band": 4,
       "growth_split": "median",
       "note": "Growth = overall excluding the arr field. P1 high growth+high ARR, P2 high growth, P3 high ARR, P4 neither."
+    },
+    "watch": {
+      "nrr_below": 90,
+      "growth_worse_than": 6.0
     }
   },
   "focus": {

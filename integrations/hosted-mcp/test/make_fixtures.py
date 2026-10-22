@@ -19,6 +19,7 @@ CASES = [
   ("v1_demo", "config/agps.v1-compat.json", None, "examples/demo_accounts.csv", None),
   ("v1_demo_25_15", "config/agps.v1-compat.json", W2515, "examples/demo_accounts.csv", None),
   ("v1_demo_2x2", "config/agps.v1-compat.json", None, "examples/demo_accounts.csv", "growth_arr_2x2"),
+  ("v1_demo_quartile", "config/agps.v1-compat.json", None, "examples/demo_accounts.csv", "quartile"),
   ("v2_sample", "config/agps.v2.json", None, "examples/sample_accounts.csv", None),
   ("v2_small", "config/agps.v2.json", None, "examples/v2_small_accounts.csv", None),
   ("v2_small_options", "config/agps.v2.json", {"options": {"renewal_direction": "runway_is_better", "not_applicable": "score_missing",

@@ -174,7 +174,7 @@ def build():
                            "marketing_programmatic_engagement": 0.10, "product": 0.10},
         "section_to_bucket": SECTIONS,
         "rounding": {"bucket_scores": 2, "overall_score": 3},
-        "cluster": {"method": "quartile",
+        "cluster": {"method": "median_2x2", "watch": {"nrr_below": 90, "growth_worse_than": 6.0},
                     "quartile": {"labels": ["P1", "P2", "P3", "P4"]},
                     "growth_arr_2x2": {"arr_high_max_band": 4}},
         "focus": {"count": 3, "window_days": 120, "renewal_field": "days_to_next_event"},

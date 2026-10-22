@@ -9,8 +9,10 @@ Generated from `config/agps.v2.json` by `tools/gen_methodology.py`. Do not edit 
 - Every field scores 1 (best) to 8 (worst), like strokes in golf. Blank = 8.
 - N/A (the field doesn't apply, e.g. no onboarding purchased) is excluded from the bucket average by default (`not_applicable: exclude`).
 - Bucket score = average of its fields (per-field weights only if `use_field_weights: true`).
-- Overall = weighted average of buckets. Clusters: quartiles of overall (P1 = best 25%), ties to higher ARR. Optional growth × ARR 2×2.
-- Focus this week: lowest overall among accounts with the next commercial event within 120 days; next-soonest fill in if fewer than 3.
+- Overall = weighted average of buckets.
+- Clusters (default `median_2x2`): growth potential = the A-GPS score with ARR taken out (GTM without ARR = (7 × GTM − ARR band) / 6, then the weighted buckets), so size never counts twice. Split the book at the median growth score and the median ARR: P1 = high growth + high spend, P2 = high growth + lower spend, P3 = lower growth + high spend, P4 = lower on both. The split rebalances every time the data changes. Legacy `quartile` and `growth_arr_2x2` remain available.
+- WATCH flag (separate guardrail): NRR under 90% or growth score worse than 6.0, wherever the account lands. Both thresholds are configurable under `cluster.watch`.
+- Focus this week (median 2×2): P1 and P3 accounts renewing within 120 days, best growth score first (WATCH accounts only from P3); next-soonest P1/P3 renewals fill in if fewer than 3. Other methods: lowest overall within 120 days.
 
 ## Buckets
 

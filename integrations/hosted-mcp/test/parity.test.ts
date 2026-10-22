@@ -23,12 +23,20 @@ describe.each(cases.map((c: any) => [c.name, c]))("parity: %s", (_n, c: any) => 
 describe("live-site anchors", () => {
   const cfg = load("config/agps.v1-compat.json");
   const csv = readFileSync(resolve(ROOT, "examples/demo_accounts.csv"), "utf8");
-  it("40 accounts, 10 per cluster, Stripe first, focus Delta/Coca-Cola/Canva", () => {
-    const r = scoreAccounts(cfg, { csv });
+  it("legacy quartile: 40 accounts, 10 per cluster, Stripe first, focus Delta/Coca-Cola/Canva", () => {
+    const r = scoreAccounts(cfg, { csv, cluster_method: "quartile" });
     expect(r.scored).toBe(40);
     expect(Object.values(r.clusters).map((x: any) => x.accounts)).toEqual([10, 10, 10, 10]);
     expect(r.accounts[0].account_name).toBe("Stripe");
     expect(r.focus_this_week.map((x) => x.account)).toEqual(["Delta", "Coca-Cola", "Canva"]);
+  });
+  it("default median 2x2 matches the 26-W preview: 14/6/6/14, WATCH floor, focus", () => {
+    const r = scoreAccounts(cfg, { csv });
+    expect(Object.values(r.clusters).map((x: any) => x.accounts)).toEqual([14, 6, 6, 14]);
+    expect(r.focus_this_week.map((x) => x.account)).toEqual(["Delta", "Coca-Cola", "Canva"]);
+    const t = explainAccount(cfg, { csv }, "Tesla");
+    expect(t.watch).toBe(true);
+    expect(t.indicator!.startsWith("Best signal: ")).toBe(true);
   });
   it("accounts given as JSON rows score the same as CSV text", () => {
     expect(scoreAccounts(cfg, { accounts: parseCsv(csv).rows })).toEqual(scoreAccounts(cfg, { csv }));

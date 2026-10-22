@@ -11,8 +11,8 @@
    "missing_fields": [],
    "clusters": {
     "P1": {
-     "accounts": 10,
-     "total_arr": 15273000.0,
+     "accounts": 14,
+     "total_arr": 21597000.0,
      "top": [
       "Stripe",
       "GoPro",
@@ -21,32 +21,32 @@
      "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE"
     },
     "P2": {
-     "accounts": 10,
-     "total_arr": 7991500.0,
+     "accounts": 6,
+     "total_arr": 587000.0,
      "top": [
+      "Airbnb",
       "Disney",
-      "Canva",
-      "Glossier"
+      "Shopify"
      ],
      "play": "Grow into it: land-and-expand motions, programs, scale CS"
     },
     "P3": {
-     "accounts": 10,
-     "total_arr": 2483000.0,
+     "accounts": 6,
+     "total_arr": 4484500.0,
      "top": [
-      "Bose",
+      "iPhone",
       "Adidas",
-      "Red Bull"
+      "HubSpot"
      ],
      "play": "Protect & re-ignite: retention-first, fix health, find the next use case"
     },
     "P4": {
-     "accounts": 10,
-     "total_arr": 2140000.0,
+     "accounts": 14,
+     "total_arr": 1219000.0,
      "top": [
-      "Slack",
-      "Liquid Death",
-      "PlayStation"
+      "Red Bull",
+      "Dropbox",
+      "Zoom"
      ],
      "play": "Scale & monitor: digital/pooled CS, watch for signals"
     }
@@ -68,7 +68,7 @@
     },
     {
      "account": "Canva",
-     "cluster": "P2",
+     "cluster": "P1",
      "overall_score": 3.03,
      "days_to_renewal": 30.0,
      "arr": 1813000.0
@@ -150,7 +150,7 @@
      "product_score": 1.0,
      "down_and_distance_score": 3.2,
      "overall_score": 2.312,
-     "cluster": "P1"
+     "cluster": "P2"
     },
     {
      "account_name": "Apple",
@@ -205,7 +205,7 @@
      "product_score": 6.0,
      "down_and_distance_score": 2.8,
      "overall_score": 3.03,
-     "cluster": "P2"
+     "cluster": "P1"
     },
     {
      "account_name": "Glossier",
@@ -216,7 +216,7 @@
      "product_score": 2.0,
      "down_and_distance_score": 3.8,
      "overall_score": 3.096,
-     "cluster": "P2"
+     "cluster": "P1"
     },
     {
      "account_name": "Chewy",
@@ -227,7 +227,7 @@
      "product_score": 4.0,
      "down_and_distance_score": 3.8,
      "overall_score": 3.321,
-     "cluster": "P2"
+     "cluster": "P1"
     },
     {
      "account_name": "Shopify",
@@ -271,7 +271,7 @@
      "product_score": 8.0,
      "down_and_distance_score": 2.0,
      "overall_score": 3.599,
-     "cluster": "P2"
+     "cluster": "P1"
     },
     {
      "account_name": "iPhone",
@@ -282,7 +282,7 @@
      "product_score": 2.0,
      "down_and_distance_score": 2.0,
      "overall_score": 4.031,
-     "cluster": "P2"
+     "cluster": "P3"
     },
     {
      "account_name": "Netflix",
@@ -293,7 +293,7 @@
      "product_score": 8.0,
      "down_and_distance_score": 4.2,
      "overall_score": 4.058,
-     "cluster": "P2"
+     "cluster": "P1"
     },
     {
      "account_name": "Bose",
@@ -304,7 +304,7 @@
      "product_score": 1.0,
      "down_and_distance_score": 3.2,
      "overall_score": 4.307,
-     "cluster": "P3"
+     "cluster": "P2"
     },
     {
      "account_name": "Adidas",
@@ -326,7 +326,7 @@
      "product_score": 4.0,
      "down_and_distance_score": 5.2,
      "overall_score": 4.587,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "Dropbox",
@@ -337,7 +337,7 @@
      "product_score": 4.0,
      "down_and_distance_score": 4.8,
      "overall_score": 4.606,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "HubSpot",
@@ -359,7 +359,7 @@
      "product_score": 3.0,
      "down_and_distance_score": 4.0,
      "overall_score": 4.682,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "Notion",
@@ -370,7 +370,7 @@
      "product_score": 4.0,
      "down_and_distance_score": 5.2,
      "overall_score": 4.706,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "Peloton",
@@ -381,7 +381,7 @@
      "product_score": 7.0,
      "down_and_distance_score": 2.4,
      "overall_score": 4.844,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "Oatly",
@@ -403,7 +403,7 @@
      "product_score": 5.0,
      "down_and_distance_score": 5.4,
      "overall_score": 5.596,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "Slack",
@@ -436,7 +436,7 @@
      "product_score": 4.0,
      "down_and_distance_score": 7.0,
      "overall_score": 5.621,
-     "cluster": "P4"
+     "cluster": "P3"
     },
     {
      "account_name": "Mailchimp",
@@ -447,7 +447,7 @@
      "product_score": 6.0,
      "down_and_distance_score": 7.0,
      "overall_score": 5.739,
-     "cluster": "P4"
+     "cluster": "P3"
     },
     {
      "account_name": "Lego",
@@ -522,6 +522,9 @@
     "account": "Stripe",
     "cluster": "P1",
     "overall_score": 1.802,
+    "growth_score": 1.817,
+    "watch": false,
+    "indicator": "Spend up 36% this year",
     "bucket_scores": {
      "gtm_propensity": 1.29,
      "marketing_programmatic_engagement": 2.17,
@@ -567,6 +570,9 @@
     "account": "GoPro",
     "cluster": "P1",
     "overall_score": 1.857,
+    "growth_score": 1.864,
+    "watch": false,
+    "indicator": "Spend up 34% this year",
     "bucket_scores": {
      "gtm_propensity": 1.14,
      "marketing_programmatic_engagement": 2.0,
@@ -612,6 +618,9 @@
     "account": "Atlassian",
     "cluster": "P1",
     "overall_score": 1.896,
+    "growth_score": 1.911,
+    "watch": false,
+    "indicator": "Spend up 37% this year",
     "bucket_scores": {
      "gtm_propensity": 1.29,
      "marketing_programmatic_engagement": 1.0,
@@ -657,6 +666,9 @@
     "account": "Delta",
     "cluster": "P1",
     "overall_score": 2.183,
+    "growth_score": 2.219,
+    "watch": false,
+    "indicator": "Spend up 38% this year",
     "bucket_scores": {
      "gtm_propensity": 1.71,
      "marketing_programmatic_engagement": 1.83,
@@ -702,6 +714,9 @@
     "account": "Patagonia",
     "cluster": "P1",
     "overall_score": 2.255,
+    "growth_score": 2.305,
+    "watch": false,
+    "indicator": "Shows up to events and advocates",
     "bucket_scores": {
      "gtm_propensity": 2.0,
      "marketing_programmatic_engagement": 1.33,
@@ -747,6 +762,9 @@
     "account": "Lululemon",
     "cluster": "P1",
     "overall_score": 2.307,
+    "growth_score": 2.35,
+    "watch": false,
+    "indicator": "Shows up to events and advocates",
     "bucket_scores": {
      "gtm_propensity": 1.86,
      "marketing_programmatic_engagement": 1.5,
@@ -790,8 +808,11 @@
    },
    "Airbnb": {
     "account": "Airbnb",
-    "cluster": "P1",
+    "cluster": "P2",
     "overall_score": 2.312,
+    "growth_score": 2.198,
+    "watch": false,
+    "indicator": "Spend up 30% this year",
     "bucket_scores": {
      "gtm_propensity": 2.71,
      "marketing_programmatic_engagement": 1.33,
@@ -830,13 +851,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
+    "play": "Grow into it: land-and-expand motions, programs, scale CS",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Apple": {
     "account": "Apple",
     "cluster": "P1",
     "overall_score": 2.314,
+    "growth_score": 2.371,
+    "watch": false,
+    "indicator": "Spend up 30% this year",
     "bucket_scores": {
      "gtm_propensity": 2.14,
      "marketing_programmatic_engagement": 2.5,
@@ -882,6 +906,9 @@
     "account": "Coca-Cola",
     "cluster": "P1",
     "overall_score": 2.435,
+    "growth_score": 2.363,
+    "watch": false,
+    "indicator": "Spend up 31% this year",
     "bucket_scores": {
      "gtm_propensity": 2.57,
      "marketing_programmatic_engagement": 1.67,
@@ -927,6 +954,9 @@
     "account": "Allbirds",
     "cluster": "P1",
     "overall_score": 2.789,
+    "growth_score": 2.854,
+    "watch": false,
+    "indicator": "Spend up 28% this year",
     "bucket_scores": {
      "gtm_propensity": 2.29,
      "marketing_programmatic_engagement": 3.0,
@@ -972,6 +1002,9 @@
     "account": "Disney",
     "cluster": "P2",
     "overall_score": 2.845,
+    "growth_score": 2.624,
+    "watch": false,
+    "indicator": "Spend up 23% this year",
     "bucket_scores": {
      "gtm_propensity": 3.57,
      "marketing_programmatic_engagement": 2.17,
@@ -1015,8 +1048,11 @@
    },
    "Canva": {
     "account": "Canva",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.03,
+    "growth_score": 3.065,
+    "watch": false,
+    "indicator": "Spend up 22% this year",
     "bucket_scores": {
      "gtm_propensity": 1.71,
      "marketing_programmatic_engagement": 2.33,
@@ -1055,13 +1091,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Glossier": {
     "account": "Glossier",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.096,
+    "growth_score": 3.168,
+    "watch": false,
+    "indicator": "Spend up 36% this year",
     "bucket_scores": {
      "gtm_propensity": 2.43,
      "marketing_programmatic_engagement": 4.5,
@@ -1100,13 +1139,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Chewy": {
     "account": "Chewy",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.321,
+    "growth_score": 3.314,
+    "watch": false,
+    "indicator": "Spend up 20% this year",
     "bucket_scores": {
      "gtm_propensity": 2.86,
      "marketing_programmatic_engagement": 4.0,
@@ -1145,13 +1187,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Shopify": {
     "account": "Shopify",
     "cluster": "P2",
     "overall_score": 3.435,
+    "growth_score": 3.32,
+    "watch": false,
+    "indicator": "Spend up 29% this year",
     "bucket_scores": {
      "gtm_propensity": 3.71,
      "marketing_programmatic_engagement": 3.17,
@@ -1197,6 +1242,9 @@
     "account": "Nike",
     "cluster": "P2",
     "overall_score": 3.481,
+    "growth_score": 3.26,
+    "watch": false,
+    "indicator": "Strong adoption and CSM pulse",
     "bucket_scores": {
      "gtm_propensity": 3.57,
      "marketing_programmatic_engagement": 2.67,
@@ -1242,6 +1290,9 @@
     "account": "Figma",
     "cluster": "P2",
     "overall_score": 3.55,
+    "growth_score": 3.414,
+    "watch": false,
+    "indicator": "Spend up 19% this year",
     "bucket_scores": {
      "gtm_propensity": 4.29,
      "marketing_programmatic_engagement": 1.5,
@@ -1285,8 +1336,11 @@
    },
    "Yeti": {
     "account": "Yeti",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.599,
+    "growth_score": 3.563,
+    "watch": false,
+    "indicator": "Spend up 41% this year",
     "bucket_scores": {
      "gtm_propensity": 3.29,
      "marketing_programmatic_engagement": 3.67,
@@ -1325,13 +1379,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
     "note": "Generated from the scores; not an AI judgement."
    },
    "iPhone": {
     "account": "iPhone",
-    "cluster": "P2",
+    "cluster": "P3",
     "overall_score": 4.031,
+    "growth_score": 4.245,
+    "watch": false,
+    "indicator": "Spend up 18% this year",
     "bucket_scores": {
      "gtm_propensity": 5.29,
      "marketing_programmatic_engagement": 3.17,
@@ -1370,13 +1427,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Netflix": {
     "account": "Netflix",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 4.058,
+    "growth_score": 4.137,
+    "watch": false,
+    "indicator": "Strong sales activity and win rate",
     "bucket_scores": {
      "gtm_propensity": 2.57,
      "marketing_programmatic_engagement": 6.33,
@@ -1415,13 +1475,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Bose": {
     "account": "Bose",
-    "cluster": "P3",
+    "cluster": "P2",
     "overall_score": 4.307,
+    "growth_score": 4.207,
+    "watch": false,
+    "indicator": "Asking for more from the product",
     "bucket_scores": {
      "gtm_propensity": 5.0,
      "marketing_programmatic_engagement": 5.5,
@@ -1460,13 +1523,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "play": "Grow into it: land-and-expand motions, programs, scale CS",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Adidas": {
     "account": "Adidas",
     "cluster": "P3",
     "overall_score": 4.525,
+    "growth_score": 4.525,
+    "watch": false,
+    "indicator": "Spend up 17% this year",
     "bucket_scores": {
      "gtm_propensity": 4.0,
      "marketing_programmatic_engagement": 3.0,
@@ -1510,8 +1576,11 @@
    },
    "Red Bull": {
     "account": "Red Bull",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 4.587,
+    "growth_score": 4.63,
+    "watch": false,
+    "indicator": "Best signal: spend up 20% this year",
     "bucket_scores": {
      "gtm_propensity": 5.86,
      "marketing_programmatic_engagement": 4.33,
@@ -1550,13 +1619,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Dropbox": {
     "account": "Dropbox",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 4.606,
+    "growth_score": 4.542,
+    "watch": false,
+    "indicator": "Best signal: spend up 20% this year",
     "bucket_scores": {
      "gtm_propensity": 4.71,
      "marketing_programmatic_engagement": 4.67,
@@ -1595,13 +1667,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "HubSpot": {
     "account": "HubSpot",
     "cluster": "P3",
     "overall_score": 4.674,
+    "growth_score": 4.752,
+    "watch": false,
+    "indicator": "Spend up 34% this year",
     "bucket_scores": {
      "gtm_propensity": 3.57,
      "marketing_programmatic_engagement": 5.17,
@@ -1645,8 +1720,11 @@
    },
    "Zoom": {
     "account": "Zoom",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 4.682,
+    "growth_score": 4.718,
+    "watch": false,
+    "indicator": "Best signal: spend up 23% this year",
     "bucket_scores": {
      "gtm_propensity": 5.71,
      "marketing_programmatic_engagement": 6.5,
@@ -1685,13 +1763,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Notion": {
     "account": "Notion",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 4.706,
+    "growth_score": 4.663,
+    "watch": false,
+    "indicator": "Best signal: spend up 12% this year",
     "bucket_scores": {
      "gtm_propensity": 4.14,
      "marketing_programmatic_engagement": 5.67,
@@ -1730,13 +1811,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Peloton": {
     "account": "Peloton",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 4.844,
+    "growth_score": 4.73,
+    "watch": false,
+    "indicator": "Best signal: stakeholders and renewal timing",
     "bucket_scores": {
      "gtm_propensity": 5.71,
      "marketing_programmatic_engagement": 3.83,
@@ -1775,13 +1859,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Oatly": {
     "account": "Oatly",
     "cluster": "P3",
     "overall_score": 4.901,
+    "growth_score": 4.915,
+    "watch": false,
+    "indicator": "Spend up 12% this year",
     "bucket_scores": {
      "gtm_propensity": 5.29,
      "marketing_programmatic_engagement": 4.33,
@@ -1825,8 +1912,11 @@
    },
    "Tesla": {
     "account": "Tesla",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 5.596,
+    "growth_score": 5.489,
+    "watch": true,
+    "indicator": "Best signal: adoption and CSM pulse",
     "bucket_scores": {
      "gtm_propensity": 5.86,
      "marketing_programmatic_engagement": 6.5,
@@ -1865,13 +1955,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Slack": {
     "account": "Slack",
     "cluster": "P4",
     "overall_score": 5.602,
+    "growth_score": 5.481,
+    "watch": false,
+    "indicator": "Best signal: sales activity and win rate",
     "bucket_scores": {
      "gtm_propensity": 4.57,
      "marketing_programmatic_engagement": 5.67,
@@ -1917,6 +2010,9 @@
     "account": "Liquid Death",
     "cluster": "P4",
     "overall_score": 5.615,
+    "growth_score": 5.53,
+    "watch": true,
+    "indicator": "Best signal: product requests",
     "bucket_scores": {
      "gtm_propensity": 6.29,
      "marketing_programmatic_engagement": 5.83,
@@ -1960,8 +2056,11 @@
    },
    "PlayStation": {
     "account": "PlayStation",
-    "cluster": "P4",
+    "cluster": "P3",
     "overall_score": 5.621,
+    "growth_score": 5.571,
+    "watch": false,
+    "indicator": "Strong sales activity and win rate",
     "bucket_scores": {
      "gtm_propensity": 4.0,
      "marketing_programmatic_engagement": 7.0,
@@ -2000,13 +2099,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Scale & monitor: digital/pooled CS, watch for signals",
+    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Mailchimp": {
     "account": "Mailchimp",
-    "cluster": "P4",
+    "cluster": "P3",
     "overall_score": 5.739,
+    "growth_score": 5.925,
+    "watch": false,
+    "indicator": "Strong sales activity and win rate",
     "bucket_scores": {
      "gtm_propensity": 4.71,
      "marketing_programmatic_engagement": 6.0,
@@ -2045,13 +2147,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Scale & monitor: digital/pooled CS, watch for signals",
+    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Lego": {
     "account": "Lego",
     "cluster": "P4",
     "overall_score": 5.807,
+    "growth_score": 5.714,
+    "watch": false,
+    "indicator": "Best signal: product requests",
     "bucket_scores": {
      "gtm_propensity": 6.14,
      "marketing_programmatic_engagement": 5.5,
@@ -2097,6 +2202,9 @@
     "account": "Starbucks",
     "cluster": "P4",
     "overall_score": 5.844,
+    "growth_score": 5.73,
+    "watch": true,
+    "indicator": "Best signal: product requests",
     "bucket_scores": {
      "gtm_propensity": 5.71,
      "marketing_programmatic_engagement": 5.83,
@@ -2142,6 +2250,9 @@
     "account": "Warby Parker",
     "cluster": "P4",
     "overall_score": 6.036,
+    "growth_score": 5.957,
+    "watch": false,
+    "indicator": "Best signal: stakeholders and renewal timing",
     "bucket_scores": {
      "gtm_propensity": 6.43,
      "marketing_programmatic_engagement": 7.0,
@@ -2187,6 +2298,9 @@
     "account": "Spotify",
     "cluster": "P4",
     "overall_score": 6.137,
+    "growth_score": 6.065,
+    "watch": true,
+    "indicator": "Best signal: stakeholders and renewal timing",
     "bucket_scores": {
      "gtm_propensity": 6.57,
      "marketing_programmatic_engagement": 5.83,
@@ -2232,6 +2346,9 @@
     "account": "Sonos",
     "cluster": "P4",
     "overall_score": 6.821,
+    "growth_score": 6.786,
+    "watch": true,
+    "indicator": "Best signal: stakeholders and renewal timing",
     "bucket_scores": {
      "gtm_propensity": 7.29,
      "marketing_programmatic_engagement": 6.5,
@@ -2277,6 +2394,9 @@
     "account": "Salesforce",
     "cluster": "P4",
     "overall_score": 7.139,
+    "growth_score": 7.104,
+    "watch": true,
+    "indicator": "Best signal: adoption and CSM pulse",
     "bucket_scores": {
      "gtm_propensity": 7.29,
      "marketing_programmatic_engagement": 7.0,
@@ -2329,31 +2449,31 @@
    },
    {
     "account": "Canva",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.03,
     "days_to_renewal": 30.0,
     "arr": 1813000.0
    },
    {
-    "account": "Figma",
-    "cluster": "P2",
-    "overall_score": 3.55,
-    "days_to_renewal": 44.0,
-    "arr": 87000.0
-   },
-   {
     "account": "iPhone",
-    "cluster": "P2",
+    "cluster": "P3",
     "overall_score": 4.031,
     "days_to_renewal": 26.0,
     "arr": 1177500.0
    },
    {
-    "account": "Spotify",
-    "cluster": "P4",
-    "overall_score": 6.137,
-    "days_to_renewal": 72.0,
-    "arr": 40000.0
+    "account": "Delta",
+    "cluster": "P1",
+    "overall_score": 2.183,
+    "days_to_renewal": 74.0,
+    "arr": 1867500.0
+   },
+   {
+    "account": "Oatly",
+    "cluster": "P3",
+    "overall_score": 4.901,
+    "days_to_renewal": 128.0,
+    "arr": 227500.0
    }
   ]
  },
@@ -2374,8 +2494,8 @@
    "missing_fields": [],
    "clusters": {
     "P1": {
-     "accounts": 10,
-     "total_arr": 13332500.0,
+     "accounts": 14,
+     "total_arr": 20940000.0,
      "top": [
       "Stripe",
       "Atlassian",
@@ -2384,32 +2504,32 @@
      "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE"
     },
     "P2": {
-     "accounts": 10,
-     "total_arr": 9932000.0,
+     "accounts": 6,
+     "total_arr": 587000.0,
      "top": [
-      "Allbirds",
-      "Canva",
-      "Glossier"
+      "Airbnb",
+      "Disney",
+      "Shopify"
      ],
      "play": "Grow into it: land-and-expand motions, programs, scale CS"
     },
     "P3": {
-     "accounts": 10,
-     "total_arr": 2454000.0,
+     "accounts": 6,
+     "total_arr": 5141500.0,
      "top": [
-      "Bose",
+      "Netflix",
       "Adidas",
-      "Red Bull"
+      "HubSpot"
      ],
      "play": "Protect & re-ignite: retention-first, fix health, find the next use case"
     },
     "P4": {
-     "accounts": 10,
-     "total_arr": 2169000.0,
+     "accounts": 14,
+     "total_arr": 1219000.0,
      "top": [
-      "Tesla",
-      "Slack",
-      "PlayStation"
+      "Red Bull",
+      "Dropbox",
+      "Zoom"
      ],
      "play": "Scale & monitor: digital/pooled CS, watch for signals"
     }
@@ -2431,7 +2551,7 @@
     },
     {
      "account": "Canva",
-     "cluster": "P2",
+     "cluster": "P1",
      "overall_score": 3.061,
      "days_to_renewal": 30.0,
      "arr": 1813000.0
@@ -2502,7 +2622,7 @@
      "product_score": 1.0,
      "down_and_distance_score": 3.2,
      "overall_score": 2.243,
-     "cluster": "P1"
+     "cluster": "P2"
     },
     {
      "account_name": "Lululemon",
@@ -2546,7 +2666,7 @@
      "product_score": 1.0,
      "down_and_distance_score": 2.4,
      "overall_score": 2.775,
-     "cluster": "P1"
+     "cluster": "P2"
     },
     {
      "account_name": "Allbirds",
@@ -2557,7 +2677,7 @@
      "product_score": 1.0,
      "down_and_distance_score": 4.6,
      "overall_score": 2.825,
-     "cluster": "P2"
+     "cluster": "P1"
     },
     {
      "account_name": "Canva",
@@ -2568,7 +2688,7 @@
      "product_score": 6.0,
      "down_and_distance_score": 2.8,
      "overall_score": 3.061,
-     "cluster": "P2"
+     "cluster": "P1"
     },
     {
      "account_name": "Glossier",
@@ -2579,7 +2699,7 @@
      "product_score": 2.0,
      "down_and_distance_score": 3.8,
      "overall_score": 3.2,
-     "cluster": "P2"
+     "cluster": "P1"
     },
     {
      "account_name": "Chewy",
@@ -2590,7 +2710,7 @@
      "product_score": 4.0,
      "down_and_distance_score": 3.8,
      "overall_score": 3.379,
-     "cluster": "P2"
+     "cluster": "P1"
     },
     {
      "account_name": "Shopify",
@@ -2634,7 +2754,7 @@
      "product_score": 8.0,
      "down_and_distance_score": 2.0,
      "overall_score": 3.618,
-     "cluster": "P2"
+     "cluster": "P1"
     },
     {
      "account_name": "iPhone",
@@ -2645,7 +2765,7 @@
      "product_score": 2.0,
      "down_and_distance_score": 2.0,
      "overall_score": 3.925,
-     "cluster": "P2"
+     "cluster": "P1"
     },
     {
      "account_name": "Netflix",
@@ -2656,7 +2776,7 @@
      "product_score": 8.0,
      "down_and_distance_score": 4.2,
      "overall_score": 4.246,
-     "cluster": "P2"
+     "cluster": "P3"
     },
     {
      "account_name": "Bose",
@@ -2667,7 +2787,7 @@
      "product_score": 1.0,
      "down_and_distance_score": 3.2,
      "overall_score": 4.332,
-     "cluster": "P3"
+     "cluster": "P2"
     },
     {
      "account_name": "Adidas",
@@ -2689,7 +2809,7 @@
      "product_score": 4.0,
      "down_and_distance_score": 5.2,
      "overall_score": 4.511,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "Dropbox",
@@ -2700,7 +2820,7 @@
      "product_score": 4.0,
      "down_and_distance_score": 4.8,
      "overall_score": 4.604,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "Zoom",
@@ -2711,7 +2831,7 @@
      "product_score": 3.0,
      "down_and_distance_score": 4.0,
      "overall_score": 4.721,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "Peloton",
@@ -2722,7 +2842,7 @@
      "product_score": 7.0,
      "down_and_distance_score": 2.4,
      "overall_score": 4.75,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "HubSpot",
@@ -2744,7 +2864,7 @@
      "product_score": 4.0,
      "down_and_distance_score": 5.2,
      "overall_score": 4.782,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "Oatly",
@@ -2766,7 +2886,7 @@
      "product_score": 3.0,
      "down_and_distance_score": 5.6,
      "overall_score": 5.593,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "Tesla",
@@ -2799,7 +2919,7 @@
      "product_score": 4.0,
      "down_and_distance_score": 7.0,
      "overall_score": 5.771,
-     "cluster": "P4"
+     "cluster": "P3"
     },
     {
      "account_name": "Lego",
@@ -2821,7 +2941,7 @@
      "product_score": 6.0,
      "down_and_distance_score": 7.0,
      "overall_score": 5.804,
-     "cluster": "P4"
+     "cluster": "P3"
     },
     {
      "account_name": "Starbucks",
@@ -2885,6 +3005,9 @@
     "account": "Stripe",
     "cluster": "P1",
     "overall_score": 1.846,
+    "growth_score": 1.858,
+    "watch": false,
+    "indicator": "Spend up 36% this year",
     "bucket_scores": {
      "gtm_propensity": 1.29,
      "marketing_programmatic_engagement": 2.17,
@@ -2930,6 +3053,9 @@
     "account": "Atlassian",
     "cluster": "P1",
     "overall_score": 1.882,
+    "growth_score": 1.894,
+    "watch": false,
+    "indicator": "Spend up 37% this year",
     "bucket_scores": {
      "gtm_propensity": 1.29,
      "marketing_programmatic_engagement": 1.0,
@@ -2975,6 +3101,9 @@
     "account": "GoPro",
     "cluster": "P1",
     "overall_score": 1.9,
+    "growth_score": 1.906,
+    "watch": false,
+    "indicator": "Spend up 34% this year",
     "bucket_scores": {
      "gtm_propensity": 1.14,
      "marketing_programmatic_engagement": 2.0,
@@ -3020,6 +3149,9 @@
     "account": "Delta",
     "cluster": "P1",
     "overall_score": 2.189,
+    "growth_score": 2.219,
+    "watch": false,
+    "indicator": "Spend up 38% this year",
     "bucket_scores": {
      "gtm_propensity": 1.71,
      "marketing_programmatic_engagement": 1.83,
@@ -3065,6 +3197,9 @@
     "account": "Patagonia",
     "cluster": "P1",
     "overall_score": 2.221,
+    "growth_score": 2.263,
+    "watch": false,
+    "indicator": "Shows up to events and advocates",
     "bucket_scores": {
      "gtm_propensity": 2.0,
      "marketing_programmatic_engagement": 1.33,
@@ -3108,8 +3243,11 @@
    },
    "Airbnb": {
     "account": "Airbnb",
-    "cluster": "P1",
+    "cluster": "P2",
     "overall_score": 2.243,
+    "growth_score": 2.148,
+    "watch": false,
+    "indicator": "Spend up 30% this year",
     "bucket_scores": {
      "gtm_propensity": 2.71,
      "marketing_programmatic_engagement": 1.33,
@@ -3148,13 +3286,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
+    "play": "Grow into it: land-and-expand motions, programs, scale CS",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Lululemon": {
     "account": "Lululemon",
     "cluster": "P1",
     "overall_score": 2.289,
+    "growth_score": 2.325,
+    "watch": false,
+    "indicator": "Shows up to events and advocates",
     "bucket_scores": {
      "gtm_propensity": 1.86,
      "marketing_programmatic_engagement": 1.5,
@@ -3200,6 +3341,9 @@
     "account": "Apple",
     "cluster": "P1",
     "overall_score": 2.332,
+    "growth_score": 2.38,
+    "watch": false,
+    "indicator": "Spend up 30% this year",
     "bucket_scores": {
      "gtm_propensity": 2.14,
      "marketing_programmatic_engagement": 2.5,
@@ -3245,6 +3389,9 @@
     "account": "Coca-Cola",
     "cluster": "P1",
     "overall_score": 2.389,
+    "growth_score": 2.33,
+    "watch": false,
+    "indicator": "Spend up 31% this year",
     "bucket_scores": {
      "gtm_propensity": 2.57,
      "marketing_programmatic_engagement": 1.67,
@@ -3288,8 +3435,11 @@
    },
    "Disney": {
     "account": "Disney",
-    "cluster": "P1",
+    "cluster": "P2",
     "overall_score": 2.775,
+    "growth_score": 2.59,
+    "watch": false,
+    "indicator": "Spend up 23% this year",
     "bucket_scores": {
      "gtm_propensity": 3.57,
      "marketing_programmatic_engagement": 2.17,
@@ -3328,13 +3478,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
+    "play": "Grow into it: land-and-expand motions, programs, scale CS",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Allbirds": {
     "account": "Allbirds",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 2.825,
+    "growth_score": 2.879,
+    "watch": false,
+    "indicator": "Spend up 28% this year",
     "bucket_scores": {
      "gtm_propensity": 2.29,
      "marketing_programmatic_engagement": 3.0,
@@ -3373,13 +3526,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Canva": {
     "account": "Canva",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.061,
+    "growth_score": 3.09,
+    "watch": false,
+    "indicator": "Spend up 22% this year",
     "bucket_scores": {
      "gtm_propensity": 1.71,
      "marketing_programmatic_engagement": 2.33,
@@ -3418,13 +3574,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Glossier": {
     "account": "Glossier",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.2,
+    "growth_score": 3.26,
+    "watch": false,
+    "indicator": "Spend up 36% this year",
     "bucket_scores": {
      "gtm_propensity": 2.43,
      "marketing_programmatic_engagement": 4.5,
@@ -3463,13 +3622,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Chewy": {
     "account": "Chewy",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.379,
+    "growth_score": 3.373,
+    "watch": false,
+    "indicator": "Spend up 20% this year",
     "bucket_scores": {
      "gtm_propensity": 2.86,
      "marketing_programmatic_engagement": 4.0,
@@ -3508,13 +3670,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Shopify": {
     "account": "Shopify",
     "cluster": "P2",
     "overall_score": 3.407,
+    "growth_score": 3.312,
+    "watch": false,
+    "indicator": "Spend up 29% this year",
     "bucket_scores": {
      "gtm_propensity": 3.71,
      "marketing_programmatic_engagement": 3.17,
@@ -3560,6 +3725,9 @@
     "account": "Figma",
     "cluster": "P2",
     "overall_score": 3.411,
+    "growth_score": 3.298,
+    "watch": false,
+    "indicator": "Spend up 19% this year",
     "bucket_scores": {
      "gtm_propensity": 4.29,
      "marketing_programmatic_engagement": 1.5,
@@ -3605,6 +3773,9 @@
     "account": "Nike",
     "cluster": "P2",
     "overall_score": 3.436,
+    "growth_score": 3.251,
+    "watch": false,
+    "indicator": "Strong adoption and CSM pulse",
     "bucket_scores": {
      "gtm_propensity": 3.57,
      "marketing_programmatic_engagement": 2.67,
@@ -3648,8 +3819,11 @@
    },
    "Yeti": {
     "account": "Yeti",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.618,
+    "growth_score": 3.588,
+    "watch": false,
+    "indicator": "Spend up 41% this year",
     "bucket_scores": {
      "gtm_propensity": 3.29,
      "marketing_programmatic_engagement": 3.67,
@@ -3688,13 +3862,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
     "note": "Generated from the scores; not an AI judgement."
    },
    "iPhone": {
     "account": "iPhone",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.925,
+    "growth_score": 4.104,
+    "watch": false,
+    "indicator": "Spend up 18% this year",
     "bucket_scores": {
      "gtm_propensity": 5.29,
      "marketing_programmatic_engagement": 3.17,
@@ -3733,13 +3910,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Netflix": {
     "account": "Netflix",
-    "cluster": "P2",
+    "cluster": "P3",
     "overall_score": 4.246,
+    "growth_score": 4.312,
+    "watch": false,
+    "indicator": "Strong sales activity and win rate",
     "bucket_scores": {
      "gtm_propensity": 2.57,
      "marketing_programmatic_engagement": 6.33,
@@ -3778,13 +3958,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Bose": {
     "account": "Bose",
-    "cluster": "P3",
+    "cluster": "P2",
     "overall_score": 4.332,
+    "growth_score": 4.249,
+    "watch": false,
+    "indicator": "Asking for more from the product",
     "bucket_scores": {
      "gtm_propensity": 5.0,
      "marketing_programmatic_engagement": 5.5,
@@ -3823,13 +4006,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "play": "Grow into it: land-and-expand motions, programs, scale CS",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Adidas": {
     "account": "Adidas",
     "cluster": "P3",
     "overall_score": 4.475,
+    "growth_score": 4.475,
+    "watch": false,
+    "indicator": "Spend up 17% this year",
     "bucket_scores": {
      "gtm_propensity": 4.0,
      "marketing_programmatic_engagement": 3.0,
@@ -3873,8 +4059,11 @@
    },
    "Red Bull": {
     "account": "Red Bull",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 4.511,
+    "growth_score": 4.546,
+    "watch": false,
+    "indicator": "Best signal: spend up 20% this year",
     "bucket_scores": {
      "gtm_propensity": 5.86,
      "marketing_programmatic_engagement": 4.33,
@@ -3913,13 +4102,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Dropbox": {
     "account": "Dropbox",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 4.604,
+    "growth_score": 4.55,
+    "watch": false,
+    "indicator": "Best signal: spend up 20% this year",
     "bucket_scores": {
      "gtm_propensity": 4.71,
      "marketing_programmatic_engagement": 4.67,
@@ -3958,13 +4150,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Zoom": {
     "account": "Zoom",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 4.721,
+    "growth_score": 4.751,
+    "watch": false,
+    "indicator": "Best signal: spend up 23% this year",
     "bucket_scores": {
      "gtm_propensity": 5.71,
      "marketing_programmatic_engagement": 6.5,
@@ -4003,13 +4198,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Peloton": {
     "account": "Peloton",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 4.75,
+    "growth_score": 4.655,
+    "watch": false,
+    "indicator": "Best signal: stakeholders and renewal timing",
     "bucket_scores": {
      "gtm_propensity": 5.71,
      "marketing_programmatic_engagement": 3.83,
@@ -4048,13 +4246,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "HubSpot": {
     "account": "HubSpot",
     "cluster": "P3",
     "overall_score": 4.754,
+    "growth_score": 4.819,
+    "watch": false,
+    "indicator": "Spend up 34% this year",
     "bucket_scores": {
      "gtm_propensity": 3.57,
      "marketing_programmatic_engagement": 5.17,
@@ -4098,8 +4299,11 @@
    },
    "Notion": {
     "account": "Notion",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 4.782,
+    "growth_score": 4.746,
+    "watch": false,
+    "indicator": "Best signal: spend up 12% this year",
     "bucket_scores": {
      "gtm_propensity": 4.14,
      "marketing_programmatic_engagement": 5.67,
@@ -4138,13 +4342,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Oatly": {
     "account": "Oatly",
     "cluster": "P3",
     "overall_score": 4.854,
+    "growth_score": 4.865,
+    "watch": false,
+    "indicator": "Spend up 12% this year",
     "bucket_scores": {
      "gtm_propensity": 5.29,
      "marketing_programmatic_engagement": 4.33,
@@ -4188,8 +4395,11 @@
    },
    "Liquid Death": {
     "account": "Liquid Death",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 5.593,
+    "growth_score": 5.521,
+    "watch": true,
+    "indicator": "Best signal: product requests",
     "bucket_scores": {
      "gtm_propensity": 6.29,
      "marketing_programmatic_engagement": 5.83,
@@ -4228,13 +4438,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Tesla": {
     "account": "Tesla",
     "cluster": "P4",
     "overall_score": 5.629,
+    "growth_score": 5.539,
+    "watch": true,
+    "indicator": "Best signal: adoption and CSM pulse",
     "bucket_scores": {
      "gtm_propensity": 5.86,
      "marketing_programmatic_engagement": 6.5,
@@ -4280,6 +4493,9 @@
     "account": "Slack",
     "cluster": "P4",
     "overall_score": 5.657,
+    "growth_score": 5.556,
+    "watch": false,
+    "indicator": "Best signal: sales activity and win rate",
     "bucket_scores": {
      "gtm_propensity": 4.57,
      "marketing_programmatic_engagement": 5.67,
@@ -4323,8 +4539,11 @@
    },
    "PlayStation": {
     "account": "PlayStation",
-    "cluster": "P4",
+    "cluster": "P3",
     "overall_score": 5.771,
+    "growth_score": 5.73,
+    "watch": false,
+    "indicator": "Strong sales activity and win rate",
     "bucket_scores": {
      "gtm_propensity": 4.0,
      "marketing_programmatic_engagement": 7.0,
@@ -4363,13 +4582,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Scale & monitor: digital/pooled CS, watch for signals",
+    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Lego": {
     "account": "Lego",
     "cluster": "P4",
     "overall_score": 5.775,
+    "growth_score": 5.698,
+    "watch": false,
+    "indicator": "Best signal: product requests",
     "bucket_scores": {
      "gtm_propensity": 6.14,
      "marketing_programmatic_engagement": 5.5,
@@ -4413,8 +4635,11 @@
    },
    "Mailchimp": {
     "account": "Mailchimp",
-    "cluster": "P4",
+    "cluster": "P3",
     "overall_score": 5.804,
+    "growth_score": 5.958,
+    "watch": false,
+    "indicator": "Strong sales activity and win rate",
     "bucket_scores": {
      "gtm_propensity": 4.71,
      "marketing_programmatic_engagement": 6.0,
@@ -4453,13 +4678,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Scale & monitor: digital/pooled CS, watch for signals",
+    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Starbucks": {
     "account": "Starbucks",
     "cluster": "P4",
     "overall_score": 5.85,
+    "growth_score": 5.755,
+    "watch": true,
+    "indicator": "Best signal: product requests",
     "bucket_scores": {
      "gtm_propensity": 5.71,
      "marketing_programmatic_engagement": 5.83,
@@ -4505,6 +4733,9 @@
     "account": "Warby Parker",
     "cluster": "P4",
     "overall_score": 6.064,
+    "growth_score": 5.999,
+    "watch": false,
+    "indicator": "Best signal: stakeholders and renewal timing",
     "bucket_scores": {
      "gtm_propensity": 6.43,
      "marketing_programmatic_engagement": 7.0,
@@ -4550,6 +4781,9 @@
     "account": "Spotify",
     "cluster": "P4",
     "overall_score": 6.1,
+    "growth_score": 6.04,
+    "watch": true,
+    "indicator": "Best signal: stakeholders and renewal timing",
     "bucket_scores": {
      "gtm_propensity": 6.57,
      "marketing_programmatic_engagement": 5.83,
@@ -4595,6 +4829,9 @@
     "account": "Sonos",
     "cluster": "P4",
     "overall_score": 6.782,
+    "growth_score": 6.752,
+    "watch": true,
+    "indicator": "Best signal: stakeholders and renewal timing",
     "bucket_scores": {
      "gtm_propensity": 7.29,
      "marketing_programmatic_engagement": 6.5,
@@ -4640,6 +4877,9 @@
     "account": "Salesforce",
     "cluster": "P4",
     "overall_score": 7.125,
+    "growth_score": 7.095,
+    "watch": true,
+    "indicator": "Best signal: adoption and CSM pulse",
     "bucket_scores": {
      "gtm_propensity": 7.29,
      "marketing_programmatic_engagement": 7.0,
@@ -4692,31 +4932,31 @@
    },
    {
     "account": "Canva",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.061,
     "days_to_renewal": 30.0,
     "arr": 1813000.0
    },
    {
-    "account": "Figma",
-    "cluster": "P2",
-    "overall_score": 3.411,
-    "days_to_renewal": 44.0,
-    "arr": 87000.0
-   },
-   {
     "account": "iPhone",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.925,
     "days_to_renewal": 26.0,
     "arr": 1177500.0
    },
    {
-    "account": "Spotify",
-    "cluster": "P4",
-    "overall_score": 6.1,
-    "days_to_renewal": 72.0,
-    "arr": 40000.0
+    "account": "Delta",
+    "cluster": "P1",
+    "overall_score": 2.189,
+    "days_to_renewal": 74.0,
+    "arr": 1867500.0
+   },
+   {
+    "account": "Oatly",
+    "cluster": "P3",
+    "overall_score": 4.854,
+    "days_to_renewal": 128.0,
+    "arr": 227500.0
    }
   ]
  },
@@ -5243,6 +5483,9 @@
     "account": "Stripe",
     "cluster": "P1",
     "overall_score": 1.802,
+    "growth_score": 1.817,
+    "watch": false,
+    "indicator": "Spend up 36% this year",
     "bucket_scores": {
      "gtm_propensity": 1.29,
      "marketing_programmatic_engagement": 2.17,
@@ -5288,6 +5531,9 @@
     "account": "GoPro",
     "cluster": "P1",
     "overall_score": 1.857,
+    "growth_score": 1.864,
+    "watch": false,
+    "indicator": "Spend up 34% this year",
     "bucket_scores": {
      "gtm_propensity": 1.14,
      "marketing_programmatic_engagement": 2.0,
@@ -5333,6 +5579,9 @@
     "account": "Atlassian",
     "cluster": "P1",
     "overall_score": 1.896,
+    "growth_score": 1.911,
+    "watch": false,
+    "indicator": "Spend up 37% this year",
     "bucket_scores": {
      "gtm_propensity": 1.29,
      "marketing_programmatic_engagement": 1.0,
@@ -5378,6 +5627,9 @@
     "account": "Delta",
     "cluster": "P1",
     "overall_score": 2.183,
+    "growth_score": 2.219,
+    "watch": false,
+    "indicator": "Spend up 38% this year",
     "bucket_scores": {
      "gtm_propensity": 1.71,
      "marketing_programmatic_engagement": 1.83,
@@ -5423,6 +5675,9 @@
     "account": "Patagonia",
     "cluster": "P1",
     "overall_score": 2.255,
+    "growth_score": 2.305,
+    "watch": false,
+    "indicator": "Shows up to events and advocates",
     "bucket_scores": {
      "gtm_propensity": 2.0,
      "marketing_programmatic_engagement": 1.33,
@@ -5468,6 +5723,9 @@
     "account": "Lululemon",
     "cluster": "P1",
     "overall_score": 2.307,
+    "growth_score": 2.35,
+    "watch": false,
+    "indicator": "Shows up to events and advocates",
     "bucket_scores": {
      "gtm_propensity": 1.86,
      "marketing_programmatic_engagement": 1.5,
@@ -5513,6 +5771,9 @@
     "account": "Airbnb",
     "cluster": "P2",
     "overall_score": 2.312,
+    "growth_score": 2.198,
+    "watch": false,
+    "indicator": "Spend up 30% this year",
     "bucket_scores": {
      "gtm_propensity": 2.71,
      "marketing_programmatic_engagement": 1.33,
@@ -5558,6 +5819,9 @@
     "account": "Apple",
     "cluster": "P1",
     "overall_score": 2.314,
+    "growth_score": 2.371,
+    "watch": false,
+    "indicator": "Spend up 30% this year",
     "bucket_scores": {
      "gtm_propensity": 2.14,
      "marketing_programmatic_engagement": 2.5,
@@ -5603,6 +5867,9 @@
     "account": "Coca-Cola",
     "cluster": "P1",
     "overall_score": 2.435,
+    "growth_score": 2.363,
+    "watch": false,
+    "indicator": "Spend up 31% this year",
     "bucket_scores": {
      "gtm_propensity": 2.57,
      "marketing_programmatic_engagement": 1.67,
@@ -5648,6 +5915,9 @@
     "account": "Allbirds",
     "cluster": "P1",
     "overall_score": 2.789,
+    "growth_score": 2.854,
+    "watch": false,
+    "indicator": "Spend up 28% this year",
     "bucket_scores": {
      "gtm_propensity": 2.29,
      "marketing_programmatic_engagement": 3.0,
@@ -5693,6 +5963,9 @@
     "account": "Disney",
     "cluster": "P2",
     "overall_score": 2.845,
+    "growth_score": 2.624,
+    "watch": false,
+    "indicator": "Spend up 23% this year",
     "bucket_scores": {
      "gtm_propensity": 3.57,
      "marketing_programmatic_engagement": 2.17,
@@ -5738,6 +6011,9 @@
     "account": "Canva",
     "cluster": "P1",
     "overall_score": 3.03,
+    "growth_score": 3.065,
+    "watch": false,
+    "indicator": "Spend up 22% this year",
     "bucket_scores": {
      "gtm_propensity": 1.71,
      "marketing_programmatic_engagement": 2.33,
@@ -5783,6 +6059,9 @@
     "account": "Glossier",
     "cluster": "P1",
     "overall_score": 3.096,
+    "growth_score": 3.168,
+    "watch": false,
+    "indicator": "Spend up 36% this year",
     "bucket_scores": {
      "gtm_propensity": 2.43,
      "marketing_programmatic_engagement": 4.5,
@@ -5828,6 +6107,9 @@
     "account": "Chewy",
     "cluster": "P1",
     "overall_score": 3.321,
+    "growth_score": 3.314,
+    "watch": false,
+    "indicator": "Spend up 20% this year",
     "bucket_scores": {
      "gtm_propensity": 2.86,
      "marketing_programmatic_engagement": 4.0,
@@ -5873,6 +6155,9 @@
     "account": "Shopify",
     "cluster": "P2",
     "overall_score": 3.435,
+    "growth_score": 3.32,
+    "watch": false,
+    "indicator": "Spend up 29% this year",
     "bucket_scores": {
      "gtm_propensity": 3.71,
      "marketing_programmatic_engagement": 3.17,
@@ -5918,6 +6203,9 @@
     "account": "Nike",
     "cluster": "P2",
     "overall_score": 3.481,
+    "growth_score": 3.26,
+    "watch": false,
+    "indicator": "Strong adoption and CSM pulse",
     "bucket_scores": {
      "gtm_propensity": 3.57,
      "marketing_programmatic_engagement": 2.67,
@@ -5963,6 +6251,9 @@
     "account": "Figma",
     "cluster": "P2",
     "overall_score": 3.55,
+    "growth_score": 3.414,
+    "watch": false,
+    "indicator": "Spend up 19% this year",
     "bucket_scores": {
      "gtm_propensity": 4.29,
      "marketing_programmatic_engagement": 1.5,
@@ -6008,6 +6299,9 @@
     "account": "Yeti",
     "cluster": "P1",
     "overall_score": 3.599,
+    "growth_score": 3.563,
+    "watch": false,
+    "indicator": "Spend up 41% this year",
     "bucket_scores": {
      "gtm_propensity": 3.29,
      "marketing_programmatic_engagement": 3.67,
@@ -6053,6 +6347,9 @@
     "account": "iPhone",
     "cluster": "P3",
     "overall_score": 4.031,
+    "growth_score": 4.245,
+    "watch": false,
+    "indicator": "Spend up 18% this year",
     "bucket_scores": {
      "gtm_propensity": 5.29,
      "marketing_programmatic_engagement": 3.17,
@@ -6098,6 +6395,9 @@
     "account": "Netflix",
     "cluster": "P1",
     "overall_score": 4.058,
+    "growth_score": 4.137,
+    "watch": false,
+    "indicator": "Strong sales activity and win rate",
     "bucket_scores": {
      "gtm_propensity": 2.57,
      "marketing_programmatic_engagement": 6.33,
@@ -6143,6 +6443,9 @@
     "account": "Bose",
     "cluster": "P2",
     "overall_score": 4.307,
+    "growth_score": 4.207,
+    "watch": false,
+    "indicator": "Asking for more from the product",
     "bucket_scores": {
      "gtm_propensity": 5.0,
      "marketing_programmatic_engagement": 5.5,
@@ -6188,6 +6491,9 @@
     "account": "Adidas",
     "cluster": "P3",
     "overall_score": 4.525,
+    "growth_score": 4.525,
+    "watch": false,
+    "indicator": "Spend up 17% this year",
     "bucket_scores": {
      "gtm_propensity": 4.0,
      "marketing_programmatic_engagement": 3.0,
@@ -6233,6 +6539,9 @@
     "account": "Red Bull",
     "cluster": "P4",
     "overall_score": 4.587,
+    "growth_score": 4.63,
+    "watch": false,
+    "indicator": "Best signal: spend up 20% this year",
     "bucket_scores": {
      "gtm_propensity": 5.86,
      "marketing_programmatic_engagement": 4.33,
@@ -6278,6 +6587,9 @@
     "account": "Dropbox",
     "cluster": "P4",
     "overall_score": 4.606,
+    "growth_score": 4.542,
+    "watch": false,
+    "indicator": "Best signal: spend up 20% this year",
     "bucket_scores": {
      "gtm_propensity": 4.71,
      "marketing_programmatic_engagement": 4.67,
@@ -6323,6 +6635,9 @@
     "account": "HubSpot",
     "cluster": "P3",
     "overall_score": 4.674,
+    "growth_score": 4.752,
+    "watch": false,
+    "indicator": "Spend up 34% this year",
     "bucket_scores": {
      "gtm_propensity": 3.57,
      "marketing_programmatic_engagement": 5.17,
@@ -6368,6 +6683,9 @@
     "account": "Zoom",
     "cluster": "P4",
     "overall_score": 4.682,
+    "growth_score": 4.718,
+    "watch": false,
+    "indicator": "Best signal: spend up 23% this year",
     "bucket_scores": {
      "gtm_propensity": 5.71,
      "marketing_programmatic_engagement": 6.5,
@@ -6413,6 +6731,9 @@
     "account": "Notion",
     "cluster": "P4",
     "overall_score": 4.706,
+    "growth_score": 4.663,
+    "watch": false,
+    "indicator": "Best signal: spend up 12% this year",
     "bucket_scores": {
      "gtm_propensity": 4.14,
      "marketing_programmatic_engagement": 5.67,
@@ -6458,6 +6779,9 @@
     "account": "Peloton",
     "cluster": "P4",
     "overall_score": 4.844,
+    "growth_score": 4.73,
+    "watch": false,
+    "indicator": "Best signal: stakeholders and renewal timing",
     "bucket_scores": {
      "gtm_propensity": 5.71,
      "marketing_programmatic_engagement": 3.83,
@@ -6503,6 +6827,9 @@
     "account": "Oatly",
     "cluster": "P4",
     "overall_score": 4.901,
+    "growth_score": 4.915,
+    "watch": false,
+    "indicator": "Best signal: spend up 12% this year",
     "bucket_scores": {
      "gtm_propensity": 5.29,
      "marketing_programmatic_engagement": 4.33,
@@ -6548,6 +6875,9 @@
     "account": "Tesla",
     "cluster": "P4",
     "overall_score": 5.596,
+    "growth_score": 5.489,
+    "watch": true,
+    "indicator": "Best signal: adoption and CSM pulse",
     "bucket_scores": {
      "gtm_propensity": 5.86,
      "marketing_programmatic_engagement": 6.5,
@@ -6593,6 +6923,9 @@
     "account": "Slack",
     "cluster": "P4",
     "overall_score": 5.602,
+    "growth_score": 5.481,
+    "watch": false,
+    "indicator": "Best signal: sales activity and win rate",
     "bucket_scores": {
      "gtm_propensity": 4.57,
      "marketing_programmatic_engagement": 5.67,
@@ -6638,6 +6971,9 @@
     "account": "Liquid Death",
     "cluster": "P4",
     "overall_score": 5.615,
+    "growth_score": 5.53,
+    "watch": true,
+    "indicator": "Best signal: product requests",
     "bucket_scores": {
      "gtm_propensity": 6.29,
      "marketing_programmatic_engagement": 5.83,
@@ -6683,6 +7019,9 @@
     "account": "PlayStation",
     "cluster": "P4",
     "overall_score": 5.621,
+    "growth_score": 5.571,
+    "watch": false,
+    "indicator": "Best signal: sales activity and win rate",
     "bucket_scores": {
      "gtm_propensity": 4.0,
      "marketing_programmatic_engagement": 7.0,
@@ -6728,6 +7067,9 @@
     "account": "Mailchimp",
     "cluster": "P3",
     "overall_score": 5.739,
+    "growth_score": 5.925,
+    "watch": false,
+    "indicator": "Strong sales activity and win rate",
     "bucket_scores": {
      "gtm_propensity": 4.71,
      "marketing_programmatic_engagement": 6.0,
@@ -6773,6 +7115,9 @@
     "account": "Lego",
     "cluster": "P4",
     "overall_score": 5.807,
+    "growth_score": 5.714,
+    "watch": false,
+    "indicator": "Best signal: product requests",
     "bucket_scores": {
      "gtm_propensity": 6.14,
      "marketing_programmatic_engagement": 5.5,
@@ -6818,6 +7163,9 @@
     "account": "Starbucks",
     "cluster": "P4",
     "overall_score": 5.844,
+    "growth_score": 5.73,
+    "watch": true,
+    "indicator": "Best signal: product requests",
     "bucket_scores": {
      "gtm_propensity": 5.71,
      "marketing_programmatic_engagement": 5.83,
@@ -6863,6 +7211,9 @@
     "account": "Warby Parker",
     "cluster": "P4",
     "overall_score": 6.036,
+    "growth_score": 5.957,
+    "watch": false,
+    "indicator": "Best signal: stakeholders and renewal timing",
     "bucket_scores": {
      "gtm_propensity": 6.43,
      "marketing_programmatic_engagement": 7.0,
@@ -6908,6 +7259,9 @@
     "account": "Spotify",
     "cluster": "P4",
     "overall_score": 6.137,
+    "growth_score": 6.065,
+    "watch": true,
+    "indicator": "Best signal: stakeholders and renewal timing",
     "bucket_scores": {
      "gtm_propensity": 6.57,
      "marketing_programmatic_engagement": 5.83,
@@ -6953,6 +7307,9 @@
     "account": "Sonos",
     "cluster": "P4",
     "overall_score": 6.821,
+    "growth_score": 6.786,
+    "watch": true,
+    "indicator": "Best signal: stakeholders and renewal timing",
     "bucket_scores": {
      "gtm_propensity": 7.29,
      "marketing_programmatic_engagement": 6.5,
@@ -6998,6 +7355,9 @@
     "account": "Salesforce",
     "cluster": "P4",
     "overall_score": 7.139,
+    "growth_score": 7.104,
+    "watch": true,
+    "indicator": "Best signal: adoption and CSM pulse",
     "bucket_scores": {
      "gtm_propensity": 7.29,
      "marketing_programmatic_engagement": 7.0,
@@ -7079,6 +7439,2484 @@
   ]
  },
  {
+  "name": "v1_demo_quartile",
+  "config": "config/agps.v1-compat.json",
+  "settings": null,
+  "csv": "examples/demo_accounts.csv",
+  "cluster_method": "quartile",
+  "score": {
+   "config": "A-GPS (Account Growth Propensity Scoring)",
+   "scored": 40,
+   "missing_fields": [],
+   "clusters": {
+    "P1": {
+     "accounts": 10,
+     "total_arr": 15273000.0,
+     "top": [
+      "Stripe",
+      "GoPro",
+      "Atlassian"
+     ],
+     "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE"
+    },
+    "P2": {
+     "accounts": 10,
+     "total_arr": 7991500.0,
+     "top": [
+      "Disney",
+      "Canva",
+      "Glossier"
+     ],
+     "play": "Grow into it: land-and-expand motions, programs, scale CS"
+    },
+    "P3": {
+     "accounts": 10,
+     "total_arr": 2483000.0,
+     "top": [
+      "Bose",
+      "Adidas",
+      "Red Bull"
+     ],
+     "play": "Protect & re-ignite: retention-first, fix health, find the next use case"
+    },
+    "P4": {
+     "accounts": 10,
+     "total_arr": 2140000.0,
+     "top": [
+      "Slack",
+      "Liquid Death",
+      "PlayStation"
+     ],
+     "play": "Scale & monitor: digital/pooled CS, watch for signals"
+    }
+   },
+   "focus_this_week": [
+    {
+     "account": "Delta",
+     "cluster": "P1",
+     "overall_score": 2.183,
+     "days_to_renewal": 74.0,
+     "arr": 1867500.0
+    },
+    {
+     "account": "Coca-Cola",
+     "cluster": "P1",
+     "overall_score": 2.435,
+     "days_to_renewal": 28.0,
+     "arr": 267500.0
+    },
+    {
+     "account": "Canva",
+     "cluster": "P2",
+     "overall_score": 3.03,
+     "days_to_renewal": 30.0,
+     "arr": 1813000.0
+    }
+   ],
+   "accounts": [
+    {
+     "account_name": "Stripe",
+     "arr": "1219500",
+     "gtm_propensity_score": 1.29,
+     "marketing_programmatic_engagement_score": 2.17,
+     "post_sales_score": 2.0,
+     "product_score": 2.0,
+     "down_and_distance_score": 2.0,
+     "overall_score": 1.802,
+     "cluster": "P1"
+    },
+    {
+     "account_name": "GoPro",
+     "arr": "2000000",
+     "gtm_propensity_score": 1.14,
+     "marketing_programmatic_engagement_score": 2.0,
+     "post_sales_score": 1.86,
+     "product_score": 1.0,
+     "down_and_distance_score": 3.0,
+     "overall_score": 1.857,
+     "cluster": "P1"
+    },
+    {
+     "account_name": "Atlassian",
+     "arr": "1800500",
+     "gtm_propensity_score": 1.29,
+     "marketing_programmatic_engagement_score": 1.0,
+     "post_sales_score": 2.64,
+     "product_score": 1.0,
+     "down_and_distance_score": 2.6,
+     "overall_score": 1.896,
+     "cluster": "P1"
+    },
+    {
+     "account_name": "Delta",
+     "arr": "1867500",
+     "gtm_propensity_score": 1.71,
+     "marketing_programmatic_engagement_score": 1.83,
+     "post_sales_score": 3.14,
+     "product_score": 2.0,
+     "down_and_distance_score": 2.0,
+     "overall_score": 2.183,
+     "cluster": "P1"
+    },
+    {
+     "account_name": "Patagonia",
+     "arr": "2000000",
+     "gtm_propensity_score": 2.0,
+     "marketing_programmatic_engagement_score": 1.33,
+     "post_sales_score": 3.29,
+     "product_score": 1.0,
+     "down_and_distance_score": 2.4,
+     "overall_score": 2.255,
+     "cluster": "P1"
+    },
+    {
+     "account_name": "Lululemon",
+     "arr": "2000000",
+     "gtm_propensity_score": 1.86,
+     "marketing_programmatic_engagement_score": 1.5,
+     "post_sales_score": 2.0,
+     "product_score": 4.0,
+     "down_and_distance_score": 2.8,
+     "overall_score": 2.307,
+     "cluster": "P1"
+    },
+    {
+     "account_name": "Airbnb",
+     "arr": "158000",
+     "gtm_propensity_score": 2.71,
+     "marketing_programmatic_engagement_score": 1.33,
+     "post_sales_score": 1.86,
+     "product_score": 1.0,
+     "down_and_distance_score": 3.2,
+     "overall_score": 2.312,
+     "cluster": "P1"
+    },
+    {
+     "account_name": "Apple",
+     "arr": "1960000",
+     "gtm_propensity_score": 2.14,
+     "marketing_programmatic_engagement_score": 2.5,
+     "post_sales_score": 2.29,
+     "product_score": 2.0,
+     "down_and_distance_score": 2.6,
+     "overall_score": 2.314,
+     "cluster": "P1"
+    },
+    {
+     "account_name": "Coca-Cola",
+     "arr": "267500",
+     "gtm_propensity_score": 2.57,
+     "marketing_programmatic_engagement_score": 1.67,
+     "post_sales_score": 2.79,
+     "product_score": 2.0,
+     "down_and_distance_score": 2.4,
+     "overall_score": 2.435,
+     "cluster": "P1"
+    },
+    {
+     "account_name": "Allbirds",
+     "arr": "2000000",
+     "gtm_propensity_score": 2.29,
+     "marketing_programmatic_engagement_score": 3.0,
+     "post_sales_score": 2.21,
+     "product_score": 1.0,
+     "down_and_distance_score": 4.6,
+     "overall_score": 2.789,
+     "cluster": "P1"
+    },
+    {
+     "account_name": "Disney",
+     "arr": "59500",
+     "gtm_propensity_score": 3.57,
+     "marketing_programmatic_engagement_score": 2.17,
+     "post_sales_score": 3.43,
+     "product_score": 1.0,
+     "down_and_distance_score": 2.4,
+     "overall_score": 2.845,
+     "cluster": "P2"
+    },
+    {
+     "account_name": "Canva",
+     "arr": "1813000",
+     "gtm_propensity_score": 1.71,
+     "marketing_programmatic_engagement_score": 2.33,
+     "post_sales_score": 3.93,
+     "product_score": 6.0,
+     "down_and_distance_score": 2.8,
+     "overall_score": 3.03,
+     "cluster": "P2"
+    },
+    {
+     "account_name": "Glossier",
+     "arr": "1931000",
+     "gtm_propensity_score": 2.43,
+     "marketing_programmatic_engagement_score": 4.5,
+     "post_sales_score": 3.07,
+     "product_score": 2.0,
+     "down_and_distance_score": 3.8,
+     "overall_score": 3.096,
+     "cluster": "P2"
+    },
+    {
+     "account_name": "Chewy",
+     "arr": "625500",
+     "gtm_propensity_score": 2.86,
+     "marketing_programmatic_engagement_score": 4.0,
+     "post_sales_score": 2.86,
+     "product_score": 4.0,
+     "down_and_distance_score": 3.8,
+     "overall_score": 3.321,
+     "cluster": "P2"
+    },
+    {
+     "account_name": "Shopify",
+     "arr": "145500",
+     "gtm_propensity_score": 3.71,
+     "marketing_programmatic_engagement_score": 3.17,
+     "post_sales_score": 2.21,
+     "product_score": 2.0,
+     "down_and_distance_score": 5.0,
+     "overall_score": 3.435,
+     "cluster": "P2"
+    },
+    {
+     "account_name": "Nike",
+     "arr": "40000",
+     "gtm_propensity_score": 3.57,
+     "marketing_programmatic_engagement_score": 2.67,
+     "post_sales_score": 2.57,
+     "product_score": 2.0,
+     "down_and_distance_score": 5.2,
+     "overall_score": 3.481,
+     "cluster": "P2"
+    },
+    {
+     "account_name": "Figma",
+     "arr": "87000",
+     "gtm_propensity_score": 4.29,
+     "marketing_programmatic_engagement_score": 1.5,
+     "post_sales_score": 2.86,
+     "product_score": 3.0,
+     "down_and_distance_score": 4.4,
+     "overall_score": 3.55,
+     "cluster": "P2"
+    },
+    {
+     "account_name": "Yeti",
+     "arr": "278000",
+     "gtm_propensity_score": 3.29,
+     "marketing_programmatic_engagement_score": 3.67,
+     "post_sales_score": 3.79,
+     "product_score": 8.0,
+     "down_and_distance_score": 2.0,
+     "overall_score": 3.599,
+     "cluster": "P2"
+    },
+    {
+     "account_name": "iPhone",
+     "arr": "1177500",
+     "gtm_propensity_score": 5.29,
+     "marketing_programmatic_engagement_score": 3.17,
+     "post_sales_score": 5.71,
+     "product_score": 2.0,
+     "down_and_distance_score": 2.0,
+     "overall_score": 4.031,
+     "cluster": "P2"
+    },
+    {
+     "account_name": "Netflix",
+     "arr": "1834500",
+     "gtm_propensity_score": 2.57,
+     "marketing_programmatic_engagement_score": 6.33,
+     "post_sales_score": 3.21,
+     "product_score": 8.0,
+     "down_and_distance_score": 4.2,
+     "overall_score": 4.058,
+     "cluster": "P2"
+    },
+    {
+     "account_name": "Bose",
+     "arr": "97000",
+     "gtm_propensity_score": 5.0,
+     "marketing_programmatic_engagement_score": 5.5,
+     "post_sales_score": 5.43,
+     "product_score": 1.0,
+     "down_and_distance_score": 3.2,
+     "overall_score": 4.307,
+     "cluster": "P3"
+    },
+    {
+     "account_name": "Adidas",
+     "arr": "443500",
+     "gtm_propensity_score": 4.0,
+     "marketing_programmatic_engagement_score": 3.0,
+     "post_sales_score": 4.5,
+     "product_score": 6.0,
+     "down_and_distance_score": 5.2,
+     "overall_score": 4.525,
+     "cluster": "P3"
+    },
+    {
+     "account_name": "Red Bull",
+     "arr": "154000",
+     "gtm_propensity_score": 5.86,
+     "marketing_programmatic_engagement_score": 4.33,
+     "post_sales_score": 2.79,
+     "product_score": 4.0,
+     "down_and_distance_score": 5.2,
+     "overall_score": 4.587,
+     "cluster": "P3"
+    },
+    {
+     "account_name": "Dropbox",
+     "arr": "144000",
+     "gtm_propensity_score": 4.71,
+     "marketing_programmatic_engagement_score": 4.67,
+     "post_sales_score": 4.5,
+     "product_score": 4.0,
+     "down_and_distance_score": 4.8,
+     "overall_score": 4.606,
+     "cluster": "P3"
+    },
+    {
+     "account_name": "HubSpot",
+     "arr": "882500",
+     "gtm_propensity_score": 3.57,
+     "marketing_programmatic_engagement_score": 5.17,
+     "post_sales_score": 5.14,
+     "product_score": 2.0,
+     "down_and_distance_score": 6.4,
+     "overall_score": 4.674,
+     "cluster": "P3"
+    },
+    {
+     "account_name": "Zoom",
+     "arr": "178500",
+     "gtm_propensity_score": 5.71,
+     "marketing_programmatic_engagement_score": 6.5,
+     "post_sales_score": 4.07,
+     "product_score": 3.0,
+     "down_and_distance_score": 4.0,
+     "overall_score": 4.682,
+     "cluster": "P3"
+    },
+    {
+     "account_name": "Notion",
+     "arr": "223000",
+     "gtm_propensity_score": 4.14,
+     "marketing_programmatic_engagement_score": 5.67,
+     "post_sales_score": 4.79,
+     "product_score": 4.0,
+     "down_and_distance_score": 5.2,
+     "overall_score": 4.706,
+     "cluster": "P3"
+    },
+    {
+     "account_name": "Peloton",
+     "arr": "64000",
+     "gtm_propensity_score": 5.71,
+     "marketing_programmatic_engagement_score": 3.83,
+     "post_sales_score": 5.79,
+     "product_score": 7.0,
+     "down_and_distance_score": 2.4,
+     "overall_score": 4.844,
+     "cluster": "P3"
+    },
+    {
+     "account_name": "Oatly",
+     "arr": "227500",
+     "gtm_propensity_score": 5.29,
+     "marketing_programmatic_engagement_score": 4.33,
+     "post_sales_score": 4.93,
+     "product_score": 3.0,
+     "down_and_distance_score": 5.4,
+     "overall_score": 4.901,
+     "cluster": "P3"
+    },
+    {
+     "account_name": "Tesla",
+     "arr": "69000",
+     "gtm_propensity_score": 5.86,
+     "marketing_programmatic_engagement_score": 6.5,
+     "post_sales_score": 5.36,
+     "product_score": 5.0,
+     "down_and_distance_score": 5.4,
+     "overall_score": 5.596,
+     "cluster": "P3"
+    },
+    {
+     "account_name": "Slack",
+     "arr": "98500",
+     "gtm_propensity_score": 4.57,
+     "marketing_programmatic_engagement_score": 5.67,
+     "post_sales_score": 6.86,
+     "product_score": 5.0,
+     "down_and_distance_score": 5.8,
+     "overall_score": 5.602,
+     "cluster": "P4"
+    },
+    {
+     "account_name": "Liquid Death",
+     "arr": "40000",
+     "gtm_propensity_score": 6.29,
+     "marketing_programmatic_engagement_score": 5.83,
+     "post_sales_score": 5.79,
+     "product_score": 3.0,
+     "down_and_distance_score": 5.6,
+     "overall_score": 5.615,
+     "cluster": "P4"
+    },
+    {
+     "account_name": "PlayStation",
+     "arr": "235500",
+     "gtm_propensity_score": 4.0,
+     "marketing_programmatic_engagement_score": 7.0,
+     "post_sales_score": 6.29,
+     "product_score": 4.0,
+     "down_and_distance_score": 7.0,
+     "overall_score": 5.621,
+     "cluster": "P4"
+    },
+    {
+     "account_name": "Mailchimp",
+     "arr": "1518000",
+     "gtm_propensity_score": 4.71,
+     "marketing_programmatic_engagement_score": 6.0,
+     "post_sales_score": 5.5,
+     "product_score": 6.0,
+     "down_and_distance_score": 7.0,
+     "overall_score": 5.739,
+     "cluster": "P4"
+    },
+    {
+     "account_name": "Lego",
+     "arr": "40000",
+     "gtm_propensity_score": 6.14,
+     "marketing_programmatic_engagement_score": 5.5,
+     "post_sales_score": 5.86,
+     "product_score": 3.0,
+     "down_and_distance_score": 6.6,
+     "overall_score": 5.807,
+     "cluster": "P4"
+    },
+    {
+     "account_name": "Starbucks",
+     "arr": "40000",
+     "gtm_propensity_score": 5.71,
+     "marketing_programmatic_engagement_score": 5.83,
+     "post_sales_score": 5.79,
+     "product_score": 4.0,
+     "down_and_distance_score": 6.8,
+     "overall_score": 5.844,
+     "cluster": "P4"
+    },
+    {
+     "account_name": "Warby Parker",
+     "arr": "48000",
+     "gtm_propensity_score": 6.43,
+     "marketing_programmatic_engagement_score": 7.0,
+     "post_sales_score": 6.43,
+     "product_score": 5.0,
+     "down_and_distance_score": 5.2,
+     "overall_score": 6.036,
+     "cluster": "P4"
+    },
+    {
+     "account_name": "Spotify",
+     "arr": "40000",
+     "gtm_propensity_score": 6.57,
+     "marketing_programmatic_engagement_score": 5.83,
+     "post_sales_score": 5.93,
+     "product_score": 8.0,
+     "down_and_distance_score": 5.2,
+     "overall_score": 6.137,
+     "cluster": "P4"
+    },
+    {
+     "account_name": "Sonos",
+     "arr": "40000",
+     "gtm_propensity_score": 7.29,
+     "marketing_programmatic_engagement_score": 6.5,
+     "post_sales_score": 7.14,
+     "product_score": 8.0,
+     "down_and_distance_score": 5.6,
+     "overall_score": 6.821,
+     "cluster": "P4"
+    },
+    {
+     "account_name": "Salesforce",
+     "arr": "40000",
+     "gtm_propensity_score": 7.29,
+     "marketing_programmatic_engagement_score": 7.0,
+     "post_sales_score": 6.21,
+     "product_score": 8.0,
+     "down_and_distance_score": 7.6,
+     "overall_score": 7.139,
+     "cluster": "P4"
+    }
+   ]
+  },
+  "explain": {
+   "Stripe": {
+    "account": "Stripe",
+    "cluster": "P1",
+    "overall_score": 1.802,
+    "growth_score": 1.817,
+    "watch": false,
+    "indicator": "Spend up 36% this year",
+    "bucket_scores": {
+     "gtm_propensity": 1.29,
+     "marketing_programmatic_engagement": 2.17,
+     "post_sales": 2.0,
+     "product": 2.0,
+     "down_and_distance": 2.0
+    },
+    "strongest_bucket": "gtm_propensity",
+    "weakest_bucket": "marketing_programmatic_engagement",
+    "best_fields": [
+     {
+      "field": "arr",
+      "score": 1
+     },
+     {
+      "field": "nrr",
+      "score": 1
+     },
+     {
+      "field": "attach_dollars",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "webinar_nps",
+      "score": 7
+     },
+     {
+      "field": "ps_hours_used",
+      "score": 6
+     },
+     {
+      "field": "days_to_next_renewal",
+      "score": 6
+     }
+    ],
+    "not_applicable": [],
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "GoPro": {
+    "account": "GoPro",
+    "cluster": "P1",
+    "overall_score": 1.857,
+    "growth_score": 1.864,
+    "watch": false,
+    "indicator": "Spend up 34% this year",
+    "bucket_scores": {
+     "gtm_propensity": 1.14,
+     "marketing_programmatic_engagement": 2.0,
+     "post_sales": 1.86,
+     "product": 1.0,
+     "down_and_distance": 3.0
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "down_and_distance",
+    "best_fields": [
+     {
+      "field": "arr",
+      "score": 1
+     },
+     {
+      "field": "nrr",
+      "score": 1
+     },
+     {
+      "field": "nbec",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "success_story_published",
+      "score": 7
+     },
+     {
+      "field": "premium_success_plan",
+      "score": 7
+     },
+     {
+      "field": "days_to_next_renewal",
+      "score": 5
+     }
+    ],
+    "not_applicable": [],
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Atlassian": {
+    "account": "Atlassian",
+    "cluster": "P1",
+    "overall_score": 1.896,
+    "growth_score": 1.911,
+    "watch": false,
+    "indicator": "Spend up 37% this year",
+    "bucket_scores": {
+     "gtm_propensity": 1.29,
+     "marketing_programmatic_engagement": 1.0,
+     "post_sales": 2.64,
+     "product": 1.0,
+     "down_and_distance": 2.6
+    },
+    "strongest_bucket": "marketing_programmatic_engagement",
+    "weakest_bucket": "post_sales",
+    "best_fields": [
+     {
+      "field": "arr",
+      "score": 1
+     },
+     {
+      "field": "nrr",
+      "score": 1
+     },
+     {
+      "field": "nbec",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "csql_win_rate",
+      "score": 8
+     },
+     {
+      "field": "premium_success_plan",
+      "score": 7
+     },
+     {
+      "field": "sla_breaches",
+      "score": 5
+     }
+    ],
+    "not_applicable": [],
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Delta": {
+    "account": "Delta",
+    "cluster": "P1",
+    "overall_score": 2.183,
+    "growth_score": 2.219,
+    "watch": false,
+    "indicator": "Spend up 38% this year",
+    "bucket_scores": {
+     "gtm_propensity": 1.71,
+     "marketing_programmatic_engagement": 1.83,
+     "post_sales": 3.14,
+     "product": 2.0,
+     "down_and_distance": 2.0
+    },
+    "strongest_bucket": "gtm_propensity",
+    "weakest_bucket": "post_sales",
+    "best_fields": [
+     {
+      "field": "arr",
+      "score": 1
+     },
+     {
+      "field": "nrr",
+      "score": 1
+     },
+     {
+      "field": "attach_rate",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "csm_pulse_rag",
+      "score": 8
+     },
+     {
+      "field": "sla_breaches",
+      "score": 8
+     },
+     {
+      "field": "adoption_achieved",
+      "score": 7
+     }
+    ],
+    "not_applicable": [],
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Patagonia": {
+    "account": "Patagonia",
+    "cluster": "P1",
+    "overall_score": 2.255,
+    "growth_score": 2.305,
+    "watch": false,
+    "indicator": "Shows up to events and advocates",
+    "bucket_scores": {
+     "gtm_propensity": 2.0,
+     "marketing_programmatic_engagement": 1.33,
+     "post_sales": 3.29,
+     "product": 1.0,
+     "down_and_distance": 2.4
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "post_sales",
+    "best_fields": [
+     {
+      "field": "arr",
+      "score": 1
+     },
+     {
+      "field": "nbec",
+      "score": 1
+     },
+     {
+      "field": "pct_opps_closed_won",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "ps_hours_purchased",
+      "score": 8
+     },
+     {
+      "field": "ps_hours_used",
+      "score": 8
+     },
+     {
+      "field": "premium_success_plan",
+      "score": 7
+     }
+    ],
+    "not_applicable": [],
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Lululemon": {
+    "account": "Lululemon",
+    "cluster": "P1",
+    "overall_score": 2.307,
+    "growth_score": 2.35,
+    "watch": false,
+    "indicator": "Shows up to events and advocates",
+    "bucket_scores": {
+     "gtm_propensity": 1.86,
+     "marketing_programmatic_engagement": 1.5,
+     "post_sales": 2.0,
+     "product": 4.0,
+     "down_and_distance": 2.8
+    },
+    "strongest_bucket": "marketing_programmatic_engagement",
+    "weakest_bucket": "product",
+    "best_fields": [
+     {
+      "field": "arr",
+      "score": 1
+     },
+     {
+      "field": "nbec",
+      "score": 1
+     },
+     {
+      "field": "attach_dollars",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "premium_success_plan",
+      "score": 7
+     },
+     {
+      "field": "days_to_next_renewal",
+      "score": 7
+     },
+     {
+      "field": "support_case_count",
+      "score": 5
+     }
+    ],
+    "not_applicable": [],
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Airbnb": {
+    "account": "Airbnb",
+    "cluster": "P1",
+    "overall_score": 2.312,
+    "growth_score": 2.198,
+    "watch": false,
+    "indicator": "Spend up 30% this year",
+    "bucket_scores": {
+     "gtm_propensity": 2.71,
+     "marketing_programmatic_engagement": 1.33,
+     "post_sales": 1.86,
+     "product": 1.0,
+     "down_and_distance": 3.2
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "down_and_distance",
+    "best_fields": [
+     {
+      "field": "nrr",
+      "score": 1
+     },
+     {
+      "field": "nbec",
+      "score": 1
+     },
+     {
+      "field": "pct_opps_closed_won",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "premium_success_plan",
+      "score": 7
+     },
+     {
+      "field": "arr",
+      "score": 5
+     },
+     {
+      "field": "account_team_activity_count",
+      "score": 5
+     }
+    ],
+    "not_applicable": [],
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Apple": {
+    "account": "Apple",
+    "cluster": "P1",
+    "overall_score": 2.314,
+    "growth_score": 2.371,
+    "watch": false,
+    "indicator": "Spend up 30% this year",
+    "bucket_scores": {
+     "gtm_propensity": 2.14,
+     "marketing_programmatic_engagement": 2.5,
+     "post_sales": 2.29,
+     "product": 2.0,
+     "down_and_distance": 2.6
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "down_and_distance",
+    "best_fields": [
+     {
+      "field": "arr",
+      "score": 1
+     },
+     {
+      "field": "nrr",
+      "score": 1
+     },
+     {
+      "field": "attach_rate",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "ps_hours_purchased",
+      "score": 8
+     },
+     {
+      "field": "ps_hours_used",
+      "score": 8
+     },
+     {
+      "field": "advocate_champion",
+      "score": 7
+     }
+    ],
+    "not_applicable": [],
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Coca-Cola": {
+    "account": "Coca-Cola",
+    "cluster": "P1",
+    "overall_score": 2.435,
+    "growth_score": 2.363,
+    "watch": false,
+    "indicator": "Spend up 31% this year",
+    "bucket_scores": {
+     "gtm_propensity": 2.57,
+     "marketing_programmatic_engagement": 1.67,
+     "post_sales": 2.79,
+     "product": 2.0,
+     "down_and_distance": 2.4
+    },
+    "strongest_bucket": "marketing_programmatic_engagement",
+    "weakest_bucket": "post_sales",
+    "best_fields": [
+     {
+      "field": "nrr",
+      "score": 1
+     },
+     {
+      "field": "nbec",
+      "score": 1
+     },
+     {
+      "field": "attach_rate",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "years_as_customer",
+      "score": 8
+     },
+     {
+      "field": "adoption_achieved",
+      "score": 7
+     },
+     {
+      "field": "value_realized",
+      "score": 7
+     }
+    ],
+    "not_applicable": [],
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Allbirds": {
+    "account": "Allbirds",
+    "cluster": "P1",
+    "overall_score": 2.789,
+    "growth_score": 2.854,
+    "watch": false,
+    "indicator": "Spend up 28% this year",
+    "bucket_scores": {
+     "gtm_propensity": 2.29,
+     "marketing_programmatic_engagement": 3.0,
+     "post_sales": 2.21,
+     "product": 1.0,
+     "down_and_distance": 4.6
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "down_and_distance",
+    "best_fields": [
+     {
+      "field": "arr",
+      "score": 1
+     },
+     {
+      "field": "nbec",
+      "score": 1
+     },
+     {
+      "field": "attach_dollars",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "attach_rate",
+      "score": 8
+     },
+     {
+      "field": "advocate_champion",
+      "score": 7
+     },
+     {
+      "field": "success_story_published",
+      "score": 7
+     }
+    ],
+    "not_applicable": [],
+    "play": "Expand now: exec-aligned expansion plays, multi-thread, pull in AE + SE",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Disney": {
+    "account": "Disney",
+    "cluster": "P2",
+    "overall_score": 2.845,
+    "growth_score": 2.624,
+    "watch": false,
+    "indicator": "Spend up 23% this year",
+    "bucket_scores": {
+     "gtm_propensity": 3.57,
+     "marketing_programmatic_engagement": 2.17,
+     "post_sales": 3.43,
+     "product": 1.0,
+     "down_and_distance": 2.4
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "gtm_propensity",
+    "best_fields": [
+     {
+      "field": "attach_rate",
+      "score": 1
+     },
+     {
+      "field": "newsletter_subscribed",
+      "score": 1
+     },
+     {
+      "field": "newsletter_opens",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "arr",
+      "score": 8
+     },
+     {
+      "field": "ps_hours_purchased",
+      "score": 8
+     },
+     {
+      "field": "ps_hours_used",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Canva": {
+    "account": "Canva",
+    "cluster": "P2",
+    "overall_score": 3.03,
+    "growth_score": 3.065,
+    "watch": false,
+    "indicator": "Spend up 22% this year",
+    "bucket_scores": {
+     "gtm_propensity": 1.71,
+     "marketing_programmatic_engagement": 2.33,
+     "post_sales": 3.93,
+     "product": 6.0,
+     "down_and_distance": 2.8
+    },
+    "strongest_bucket": "gtm_propensity",
+    "weakest_bucket": "product",
+    "best_fields": [
+     {
+      "field": "arr",
+      "score": 1
+     },
+     {
+      "field": "attach_dollars",
+      "score": 1
+     },
+     {
+      "field": "pct_opps_closed_won",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "support_case_count",
+      "score": 8
+     },
+     {
+      "field": "ps_hours_purchased",
+      "score": 8
+     },
+     {
+      "field": "ps_hours_used",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Glossier": {
+    "account": "Glossier",
+    "cluster": "P2",
+    "overall_score": 3.096,
+    "growth_score": 3.168,
+    "watch": false,
+    "indicator": "Spend up 36% this year",
+    "bucket_scores": {
+     "gtm_propensity": 2.43,
+     "marketing_programmatic_engagement": 4.5,
+     "post_sales": 3.07,
+     "product": 2.0,
+     "down_and_distance": 3.8
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "marketing_programmatic_engagement",
+    "best_fields": [
+     {
+      "field": "arr",
+      "score": 1
+     },
+     {
+      "field": "nrr",
+      "score": 1
+     },
+     {
+      "field": "attach_dollars",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "days_to_next_renewal",
+      "score": 8
+     },
+     {
+      "field": "key_stakeholder_alignment",
+      "score": 8
+     },
+     {
+      "field": "advocate_champion",
+      "score": 7
+     }
+    ],
+    "not_applicable": [],
+    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Chewy": {
+    "account": "Chewy",
+    "cluster": "P2",
+    "overall_score": 3.321,
+    "growth_score": 3.314,
+    "watch": false,
+    "indicator": "Spend up 20% this year",
+    "bucket_scores": {
+     "gtm_propensity": 2.86,
+     "marketing_programmatic_engagement": 4.0,
+     "post_sales": 2.86,
+     "product": 4.0,
+     "down_and_distance": 3.8
+    },
+    "strongest_bucket": "gtm_propensity",
+    "weakest_bucket": "product",
+    "best_fields": [
+     {
+      "field": "account_team_activity_count",
+      "score": 1
+     },
+     {
+      "field": "newsletter_subscribed",
+      "score": 1
+     },
+     {
+      "field": "premium_success_plan",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "advocate_champion",
+      "score": 7
+     },
+     {
+      "field": "success_story_published",
+      "score": 7
+     },
+     {
+      "field": "csql_win_rate",
+      "score": 7
+     }
+    ],
+    "not_applicable": [],
+    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Shopify": {
+    "account": "Shopify",
+    "cluster": "P2",
+    "overall_score": 3.435,
+    "growth_score": 3.32,
+    "watch": false,
+    "indicator": "Spend up 29% this year",
+    "bucket_scores": {
+     "gtm_propensity": 3.71,
+     "marketing_programmatic_engagement": 3.17,
+     "post_sales": 2.21,
+     "product": 2.0,
+     "down_and_distance": 5.0
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "down_and_distance",
+    "best_fields": [
+     {
+      "field": "nbec",
+      "score": 1
+     },
+     {
+      "field": "account_team_activity_count",
+      "score": 1
+     },
+     {
+      "field": "webinar_nps",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "key_stakeholder_alignment",
+      "score": 8
+     },
+     {
+      "field": "advocate_champion",
+      "score": 7
+     },
+     {
+      "field": "csm_engaged",
+      "score": 7
+     }
+    ],
+    "not_applicable": [],
+    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Nike": {
+    "account": "Nike",
+    "cluster": "P2",
+    "overall_score": 3.481,
+    "growth_score": 3.26,
+    "watch": false,
+    "indicator": "Strong adoption and CSM pulse",
+    "bucket_scores": {
+     "gtm_propensity": 3.57,
+     "marketing_programmatic_engagement": 2.67,
+     "post_sales": 2.57,
+     "product": 2.0,
+     "down_and_distance": 5.2
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "down_and_distance",
+    "best_fields": [
+     {
+      "field": "nbec",
+      "score": 1
+     },
+     {
+      "field": "pct_opps_closed_won",
+      "score": 1
+     },
+     {
+      "field": "webinar_nps",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "arr",
+      "score": 8
+     },
+     {
+      "field": "customer_sentiment",
+      "score": 8
+     },
+     {
+      "field": "advocate_champion",
+      "score": 7
+     }
+    ],
+    "not_applicable": [],
+    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Figma": {
+    "account": "Figma",
+    "cluster": "P2",
+    "overall_score": 3.55,
+    "growth_score": 3.414,
+    "watch": false,
+    "indicator": "Spend up 19% this year",
+    "bucket_scores": {
+     "gtm_propensity": 4.29,
+     "marketing_programmatic_engagement": 1.5,
+     "post_sales": 2.86,
+     "product": 3.0,
+     "down_and_distance": 4.4
+    },
+    "strongest_bucket": "marketing_programmatic_engagement",
+    "weakest_bucket": "down_and_distance",
+    "best_fields": [
+     {
+      "field": "nbec",
+      "score": 1
+     },
+     {
+      "field": "event_attendance_count",
+      "score": 1
+     },
+     {
+      "field": "newsletter_subscribed",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "tenk_signal",
+      "score": 8
+     },
+     {
+      "field": "customer_sentiment",
+      "score": 8
+     },
+     {
+      "field": "arr",
+      "score": 7
+     }
+    ],
+    "not_applicable": [],
+    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Yeti": {
+    "account": "Yeti",
+    "cluster": "P2",
+    "overall_score": 3.599,
+    "growth_score": 3.563,
+    "watch": false,
+    "indicator": "Spend up 41% this year",
+    "bucket_scores": {
+     "gtm_propensity": 3.29,
+     "marketing_programmatic_engagement": 3.67,
+     "post_sales": 3.79,
+     "product": 8.0,
+     "down_and_distance": 2.0
+    },
+    "strongest_bucket": "down_and_distance",
+    "weakest_bucket": "product",
+    "best_fields": [
+     {
+      "field": "nrr",
+      "score": 1
+     },
+     {
+      "field": "account_team_activity_count",
+      "score": 1
+     },
+     {
+      "field": "newsletter_subscribed",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "csql_win_rate",
+      "score": 8
+     },
+     {
+      "field": "feature_requests_count",
+      "score": 8
+     },
+     {
+      "field": "attach_rate",
+      "score": 7
+     }
+    ],
+    "not_applicable": [],
+    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "iPhone": {
+    "account": "iPhone",
+    "cluster": "P2",
+    "overall_score": 4.031,
+    "growth_score": 4.245,
+    "watch": false,
+    "indicator": "Spend up 18% this year",
+    "bucket_scores": {
+     "gtm_propensity": 5.29,
+     "marketing_programmatic_engagement": 3.17,
+     "post_sales": 5.71,
+     "product": 2.0,
+     "down_and_distance": 2.0
+    },
+    "strongest_bucket": "down_and_distance",
+    "weakest_bucket": "post_sales",
+    "best_fields": [
+     {
+      "field": "arr",
+      "score": 1
+     },
+     {
+      "field": "event_attendance_count",
+      "score": 1
+     },
+     {
+      "field": "webinar_nps",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "attach_rate",
+      "score": 8
+     },
+     {
+      "field": "attach_dollars",
+      "score": 8
+     },
+     {
+      "field": "pct_opps_closed_won",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Netflix": {
+    "account": "Netflix",
+    "cluster": "P2",
+    "overall_score": 4.058,
+    "growth_score": 4.137,
+    "watch": false,
+    "indicator": "Strong sales activity and win rate",
+    "bucket_scores": {
+     "gtm_propensity": 2.57,
+     "marketing_programmatic_engagement": 6.33,
+     "post_sales": 3.21,
+     "product": 8.0,
+     "down_and_distance": 4.2
+    },
+    "strongest_bucket": "gtm_propensity",
+    "weakest_bucket": "product",
+    "best_fields": [
+     {
+      "field": "arr",
+      "score": 1
+     },
+     {
+      "field": "attach_rate",
+      "score": 1
+     },
+     {
+      "field": "account_team_activity_count",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "webinar_nps",
+      "score": 8
+     },
+     {
+      "field": "newsletter_opens",
+      "score": 8
+     },
+     {
+      "field": "feature_requests_count",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Grow into it: land-and-expand motions, programs, scale CS",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Bose": {
+    "account": "Bose",
+    "cluster": "P3",
+    "overall_score": 4.307,
+    "growth_score": 4.207,
+    "watch": false,
+    "indicator": "Asking for more from the product",
+    "bucket_scores": {
+     "gtm_propensity": 5.0,
+     "marketing_programmatic_engagement": 5.5,
+     "post_sales": 5.43,
+     "product": 1.0,
+     "down_and_distance": 3.2
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "marketing_programmatic_engagement",
+    "best_fields": [
+     {
+      "field": "advocate_champion",
+      "score": 1
+     },
+     {
+      "field": "csql_win_rate",
+      "score": 1
+     },
+     {
+      "field": "csm_engaged",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "event_attendance_count",
+      "score": 8
+     },
+     {
+      "field": "newsletter_opens",
+      "score": 8
+     },
+     {
+      "field": "ps_hours_purchased",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Adidas": {
+    "account": "Adidas",
+    "cluster": "P3",
+    "overall_score": 4.525,
+    "growth_score": 4.525,
+    "watch": false,
+    "indicator": "Spend up 17% this year",
+    "bucket_scores": {
+     "gtm_propensity": 4.0,
+     "marketing_programmatic_engagement": 3.0,
+     "post_sales": 4.5,
+     "product": 6.0,
+     "down_and_distance": 5.2
+    },
+    "strongest_bucket": "marketing_programmatic_engagement",
+    "weakest_bucket": "product",
+    "best_fields": [
+     {
+      "field": "newsletter_subscribed",
+      "score": 1
+     },
+     {
+      "field": "newsletter_opens",
+      "score": 1
+     },
+     {
+      "field": "success_story_published",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "csqls_generated",
+      "score": 8
+     },
+     {
+      "field": "csql_win_rate",
+      "score": 8
+     },
+     {
+      "field": "ps_hours_purchased",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Red Bull": {
+    "account": "Red Bull",
+    "cluster": "P3",
+    "overall_score": 4.587,
+    "growth_score": 4.63,
+    "watch": false,
+    "indicator": "Spend up 20% this year",
+    "bucket_scores": {
+     "gtm_propensity": 5.86,
+     "marketing_programmatic_engagement": 4.33,
+     "post_sales": 2.79,
+     "product": 4.0,
+     "down_and_distance": 5.2
+    },
+    "strongest_bucket": "post_sales",
+    "weakest_bucket": "gtm_propensity",
+    "best_fields": [
+     {
+      "field": "webinar_nps",
+      "score": 1
+     },
+     {
+      "field": "success_story_published",
+      "score": 1
+     },
+     {
+      "field": "onboarding_delivered",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "attach_rate",
+      "score": 8
+     },
+     {
+      "field": "pct_opps_closed_won",
+      "score": 8
+     },
+     {
+      "field": "newsletter_opens",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Dropbox": {
+    "account": "Dropbox",
+    "cluster": "P3",
+    "overall_score": 4.606,
+    "growth_score": 4.542,
+    "watch": false,
+    "indicator": "Spend up 20% this year",
+    "bucket_scores": {
+     "gtm_propensity": 4.71,
+     "marketing_programmatic_engagement": 4.67,
+     "post_sales": 4.5,
+     "product": 4.0,
+     "down_and_distance": 4.8
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "down_and_distance",
+    "best_fields": [
+     {
+      "field": "newsletter_subscribed",
+      "score": 1
+     },
+     {
+      "field": "onboarding_delivered",
+      "score": 1
+     },
+     {
+      "field": "onboarding_completed",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "attach_dollars",
+      "score": 8
+     },
+     {
+      "field": "csm_pulse_rag",
+      "score": 8
+     },
+     {
+      "field": "avg_days_to_resolve",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "HubSpot": {
+    "account": "HubSpot",
+    "cluster": "P3",
+    "overall_score": 4.674,
+    "growth_score": 4.752,
+    "watch": false,
+    "indicator": "Spend up 34% this year",
+    "bucket_scores": {
+     "gtm_propensity": 3.57,
+     "marketing_programmatic_engagement": 5.17,
+     "post_sales": 5.14,
+     "product": 2.0,
+     "down_and_distance": 6.4
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "down_and_distance",
+    "best_fields": [
+     {
+      "field": "nrr",
+      "score": 1
+     },
+     {
+      "field": "account_team_activity_count",
+      "score": 1
+     },
+     {
+      "field": "newsletter_subscribed",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "attach_rate",
+      "score": 8
+     },
+     {
+      "field": "event_attendance_count",
+      "score": 8
+     },
+     {
+      "field": "csm_pulse_rag",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Zoom": {
+    "account": "Zoom",
+    "cluster": "P3",
+    "overall_score": 4.682,
+    "growth_score": 4.718,
+    "watch": false,
+    "indicator": "Spend up 23% this year",
+    "bucket_scores": {
+     "gtm_propensity": 5.71,
+     "marketing_programmatic_engagement": 6.5,
+     "post_sales": 4.07,
+     "product": 3.0,
+     "down_and_distance": 4.0
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "marketing_programmatic_engagement",
+    "best_fields": [
+     {
+      "field": "premium_success_plan",
+      "score": 1
+     },
+     {
+      "field": "csqls_generated",
+      "score": 1
+     },
+     {
+      "field": "onboarding_delivered",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "attach_rate",
+      "score": 8
+     },
+     {
+      "field": "account_team_activity_count",
+      "score": 8
+     },
+     {
+      "field": "webinar_nps",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Notion": {
+    "account": "Notion",
+    "cluster": "P3",
+    "overall_score": 4.706,
+    "growth_score": 4.663,
+    "watch": false,
+    "indicator": "Spend up 12% this year",
+    "bucket_scores": {
+     "gtm_propensity": 4.14,
+     "marketing_programmatic_engagement": 5.67,
+     "post_sales": 4.79,
+     "product": 4.0,
+     "down_and_distance": 5.2
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "marketing_programmatic_engagement",
+    "best_fields": [
+     {
+      "field": "nbec",
+      "score": 1
+     },
+     {
+      "field": "attach_rate",
+      "score": 1
+     },
+     {
+      "field": "webinar_nps",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "pct_opps_closed_won",
+      "score": 8
+     },
+     {
+      "field": "newsletter_opens",
+      "score": 8
+     },
+     {
+      "field": "csm_pulse_rag",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Peloton": {
+    "account": "Peloton",
+    "cluster": "P3",
+    "overall_score": 4.844,
+    "growth_score": 4.73,
+    "watch": false,
+    "indicator": "Aligned stakeholders, good renewal timing",
+    "bucket_scores": {
+     "gtm_propensity": 5.71,
+     "marketing_programmatic_engagement": 3.83,
+     "post_sales": 5.79,
+     "product": 7.0,
+     "down_and_distance": 2.4
+    },
+    "strongest_bucket": "down_and_distance",
+    "weakest_bucket": "product",
+    "best_fields": [
+     {
+      "field": "newsletter_subscribed",
+      "score": 1
+     },
+     {
+      "field": "advocate_champion",
+      "score": 1
+     },
+     {
+      "field": "onboarding_delivered",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "arr",
+      "score": 8
+     },
+     {
+      "field": "pct_opps_closed_won",
+      "score": 8
+     },
+     {
+      "field": "csqls_generated",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Oatly": {
+    "account": "Oatly",
+    "cluster": "P3",
+    "overall_score": 4.901,
+    "growth_score": 4.915,
+    "watch": false,
+    "indicator": "Spend up 12% this year",
+    "bucket_scores": {
+     "gtm_propensity": 5.29,
+     "marketing_programmatic_engagement": 4.33,
+     "post_sales": 4.93,
+     "product": 3.0,
+     "down_and_distance": 5.4
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "down_and_distance",
+    "best_fields": [
+     {
+      "field": "newsletter_subscribed",
+      "score": 1
+     },
+     {
+      "field": "newsletter_opens",
+      "score": 1
+     },
+     {
+      "field": "premium_success_plan",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "attach_rate",
+      "score": 8
+     },
+     {
+      "field": "account_team_activity_count",
+      "score": 8
+     },
+     {
+      "field": "webinar_nps",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Tesla": {
+    "account": "Tesla",
+    "cluster": "P3",
+    "overall_score": 5.596,
+    "growth_score": 5.489,
+    "watch": true,
+    "indicator": "Best signal: adoption and CSM pulse",
+    "bucket_scores": {
+     "gtm_propensity": 5.86,
+     "marketing_programmatic_engagement": 6.5,
+     "post_sales": 5.36,
+     "product": 5.0,
+     "down_and_distance": 5.4
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "marketing_programmatic_engagement",
+    "best_fields": [
+     {
+      "field": "pct_opps_closed_won",
+      "score": 1
+     },
+     {
+      "field": "onboarding_delivered",
+      "score": 1
+     },
+     {
+      "field": "onboarding_completed",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "arr",
+      "score": 8
+     },
+     {
+      "field": "nrr",
+      "score": 8
+     },
+     {
+      "field": "attach_rate",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Protect & re-ignite: retention-first, fix health, find the next use case",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Slack": {
+    "account": "Slack",
+    "cluster": "P4",
+    "overall_score": 5.602,
+    "growth_score": 5.481,
+    "watch": false,
+    "indicator": "Best signal: sales activity and win rate",
+    "bucket_scores": {
+     "gtm_propensity": 4.57,
+     "marketing_programmatic_engagement": 5.67,
+     "post_sales": 6.86,
+     "product": 5.0,
+     "down_and_distance": 5.8
+    },
+    "strongest_bucket": "gtm_propensity",
+    "weakest_bucket": "post_sales",
+    "best_fields": [
+     {
+      "field": "pct_opps_closed_won",
+      "score": 1
+     },
+     {
+      "field": "newsletter_subscribed",
+      "score": 1
+     },
+     {
+      "field": "csm_engaged",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "attach_dollars",
+      "score": 8
+     },
+     {
+      "field": "csql_win_rate",
+      "score": 8
+     },
+     {
+      "field": "csm_pulse_rag",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Liquid Death": {
+    "account": "Liquid Death",
+    "cluster": "P4",
+    "overall_score": 5.615,
+    "growth_score": 5.53,
+    "watch": true,
+    "indicator": "Best signal: product requests",
+    "bucket_scores": {
+     "gtm_propensity": 6.29,
+     "marketing_programmatic_engagement": 5.83,
+     "post_sales": 5.79,
+     "product": 3.0,
+     "down_and_distance": 5.6
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "gtm_propensity",
+    "best_fields": [
+     {
+      "field": "onboarding_delivered",
+      "score": 1
+     },
+     {
+      "field": "nbec",
+      "score": 2
+     },
+     {
+      "field": "webinar_nps",
+      "score": 2
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "arr",
+      "score": 8
+     },
+     {
+      "field": "nrr",
+      "score": 8
+     },
+     {
+      "field": "attach_rate",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "PlayStation": {
+    "account": "PlayStation",
+    "cluster": "P4",
+    "overall_score": 5.621,
+    "growth_score": 5.571,
+    "watch": false,
+    "indicator": "Best signal: sales activity and win rate",
+    "bucket_scores": {
+     "gtm_propensity": 4.0,
+     "marketing_programmatic_engagement": 7.0,
+     "post_sales": 6.29,
+     "product": 4.0,
+     "down_and_distance": 7.0
+    },
+    "strongest_bucket": "gtm_propensity",
+    "weakest_bucket": "marketing_programmatic_engagement",
+    "best_fields": [
+     {
+      "field": "nbec",
+      "score": 1
+     },
+     {
+      "field": "csm_engaged",
+      "score": 1
+     },
+     {
+      "field": "csqls_generated",
+      "score": 3
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "newsletter_opens",
+      "score": 8
+     },
+     {
+      "field": "csm_pulse_rag",
+      "score": 8
+     },
+     {
+      "field": "sla_breaches",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Mailchimp": {
+    "account": "Mailchimp",
+    "cluster": "P4",
+    "overall_score": 5.739,
+    "growth_score": 5.925,
+    "watch": false,
+    "indicator": "Best signal: sales activity and win rate",
+    "bucket_scores": {
+     "gtm_propensity": 4.71,
+     "marketing_programmatic_engagement": 6.0,
+     "post_sales": 5.5,
+     "product": 6.0,
+     "down_and_distance": 7.0
+    },
+    "strongest_bucket": "gtm_propensity",
+    "weakest_bucket": "down_and_distance",
+    "best_fields": [
+     {
+      "field": "arr",
+      "score": 1
+     },
+     {
+      "field": "newsletter_subscribed",
+      "score": 1
+     },
+     {
+      "field": "onboarding_delivered",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "attach_dollars",
+      "score": 8
+     },
+     {
+      "field": "event_attendance_count",
+      "score": 8
+     },
+     {
+      "field": "webinar_nps",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Lego": {
+    "account": "Lego",
+    "cluster": "P4",
+    "overall_score": 5.807,
+    "growth_score": 5.714,
+    "watch": false,
+    "indicator": "Best signal: product requests",
+    "bucket_scores": {
+     "gtm_propensity": 6.14,
+     "marketing_programmatic_engagement": 5.5,
+     "post_sales": 5.86,
+     "product": 3.0,
+     "down_and_distance": 6.6
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "down_and_distance",
+    "best_fields": [
+     {
+      "field": "newsletter_subscribed",
+      "score": 1
+     },
+     {
+      "field": "csm_pulse_rag",
+      "score": 1
+     },
+     {
+      "field": "csm_engaged",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "arr",
+      "score": 8
+     },
+     {
+      "field": "attach_rate",
+      "score": 8
+     },
+     {
+      "field": "csqls_generated",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Starbucks": {
+    "account": "Starbucks",
+    "cluster": "P4",
+    "overall_score": 5.844,
+    "growth_score": 5.73,
+    "watch": true,
+    "indicator": "Best signal: product requests",
+    "bucket_scores": {
+     "gtm_propensity": 5.71,
+     "marketing_programmatic_engagement": 5.83,
+     "post_sales": 5.79,
+     "product": 4.0,
+     "down_and_distance": 6.8
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "down_and_distance",
+    "best_fields": [
+     {
+      "field": "pct_opps_closed_won",
+      "score": 1
+     },
+     {
+      "field": "onboarding_delivered",
+      "score": 1
+     },
+     {
+      "field": "onboarding_completed",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "arr",
+      "score": 8
+     },
+     {
+      "field": "nrr",
+      "score": 8
+     },
+     {
+      "field": "nbec",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Warby Parker": {
+    "account": "Warby Parker",
+    "cluster": "P4",
+    "overall_score": 6.036,
+    "growth_score": 5.957,
+    "watch": false,
+    "indicator": "Best signal: stakeholders and renewal timing",
+    "bucket_scores": {
+     "gtm_propensity": 6.43,
+     "marketing_programmatic_engagement": 7.0,
+     "post_sales": 6.43,
+     "product": 5.0,
+     "down_and_distance": 5.2
+    },
+    "strongest_bucket": "product",
+    "weakest_bucket": "marketing_programmatic_engagement",
+    "best_fields": [
+     {
+      "field": "csm_engaged",
+      "score": 1
+     },
+     {
+      "field": "years_as_customer",
+      "score": 2
+     },
+     {
+      "field": "nbec",
+      "score": 4
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "arr",
+      "score": 8
+     },
+     {
+      "field": "attach_dollars",
+      "score": 8
+     },
+     {
+      "field": "account_team_activity_count",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Spotify": {
+    "account": "Spotify",
+    "cluster": "P4",
+    "overall_score": 6.137,
+    "growth_score": 6.065,
+    "watch": true,
+    "indicator": "Best signal: stakeholders and renewal timing",
+    "bucket_scores": {
+     "gtm_propensity": 6.57,
+     "marketing_programmatic_engagement": 5.83,
+     "post_sales": 5.93,
+     "product": 8.0,
+     "down_and_distance": 5.2
+    },
+    "strongest_bucket": "down_and_distance",
+    "weakest_bucket": "product",
+    "best_fields": [
+     {
+      "field": "newsletter_subscribed",
+      "score": 1
+     },
+     {
+      "field": "csm_engaged",
+      "score": 1
+     },
+     {
+      "field": "days_to_next_renewal",
+      "score": 1
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "arr",
+      "score": 8
+     },
+     {
+      "field": "attach_rate",
+      "score": 8
+     },
+     {
+      "field": "attach_dollars",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Sonos": {
+    "account": "Sonos",
+    "cluster": "P4",
+    "overall_score": 6.821,
+    "growth_score": 6.786,
+    "watch": true,
+    "indicator": "Best signal: stakeholders and renewal timing",
+    "bucket_scores": {
+     "gtm_propensity": 7.29,
+     "marketing_programmatic_engagement": 6.5,
+     "post_sales": 7.14,
+     "product": 8.0,
+     "down_and_distance": 5.6
+    },
+    "strongest_bucket": "down_and_distance",
+    "weakest_bucket": "product",
+    "best_fields": [
+     {
+      "field": "customer_sentiment",
+      "score": 1
+     },
+     {
+      "field": "event_attendance_count",
+      "score": 2
+     },
+     {
+      "field": "nrr",
+      "score": 4
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "arr",
+      "score": 8
+     },
+     {
+      "field": "attach_rate",
+      "score": 8
+     },
+     {
+      "field": "attach_dollars",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
+    "note": "Generated from the scores; not an AI judgement."
+   },
+   "Salesforce": {
+    "account": "Salesforce",
+    "cluster": "P4",
+    "overall_score": 7.139,
+    "growth_score": 7.104,
+    "watch": true,
+    "indicator": "Best signal: adoption and CSM pulse",
+    "bucket_scores": {
+     "gtm_propensity": 7.29,
+     "marketing_programmatic_engagement": 7.0,
+     "post_sales": 6.21,
+     "product": 8.0,
+     "down_and_distance": 7.6
+    },
+    "strongest_bucket": "post_sales",
+    "weakest_bucket": "product",
+    "best_fields": [
+     {
+      "field": "premium_success_plan",
+      "score": 1
+     },
+     {
+      "field": "csqls_generated",
+      "score": 4
+     },
+     {
+      "field": "nrr",
+      "score": 5
+     }
+    ],
+    "weakest_fields": [
+     {
+      "field": "arr",
+      "score": 8
+     },
+     {
+      "field": "attach_rate",
+      "score": 8
+     },
+     {
+      "field": "attach_dollars",
+      "score": 8
+     }
+    ],
+    "not_applicable": [],
+    "play": "Scale & monitor: digital/pooled CS, watch for signals",
+    "note": "Generated from the scores; not an AI judgement."
+   }
+  },
+  "focus_5_60": [
+   {
+    "account": "Coca-Cola",
+    "cluster": "P1",
+    "overall_score": 2.435,
+    "days_to_renewal": 28.0,
+    "arr": 267500.0
+   },
+   {
+    "account": "Canva",
+    "cluster": "P2",
+    "overall_score": 3.03,
+    "days_to_renewal": 30.0,
+    "arr": 1813000.0
+   },
+   {
+    "account": "Figma",
+    "cluster": "P2",
+    "overall_score": 3.55,
+    "days_to_renewal": 44.0,
+    "arr": 87000.0
+   },
+   {
+    "account": "iPhone",
+    "cluster": "P2",
+    "overall_score": 4.031,
+    "days_to_renewal": 26.0,
+    "arr": 1177500.0
+   },
+   {
+    "account": "Spotify",
+    "cluster": "P4",
+    "overall_score": 6.137,
+    "days_to_renewal": 72.0,
+    "arr": 40000.0
+   }
+  ]
+ },
+ {
   "name": "v2_sample",
   "config": "config/agps.v2.json",
   "settings": null,
@@ -7090,38 +9928,34 @@
    "missing_fields": [],
    "clusters": {
     "P1": {
-     "accounts": 2,
-     "total_arr": 2130000.0,
+     "accounts": 4,
+     "total_arr": 4370000.0,
      "top": [
       "Northwind",
-      "Litware"
+      "Litware",
+      "Woodgrove"
      ],
      "play": "Expand now: exec-aligned expansion, multi-thread, bring in AE + SE"
     },
     "P2": {
-     "accounts": 2,
-     "total_arr": 2240000.0,
-     "top": [
-      "Woodgrove",
-      "Contoso"
-     ],
+     "accounts": 0,
+     "total_arr": 0,
+     "top": [],
      "play": "Grow into it: land-and-expand, programs, close the weakest bucket first"
     },
     "P3": {
-     "accounts": 2,
-     "total_arr": 540000.0,
-     "top": [
-      "Proseware",
-      "Fabrikam"
-     ],
+     "accounts": 0,
+     "total_arr": 0,
+     "top": [],
      "play": "Protect and re-ignite: retention first, fix health, find the next use case"
     },
     "P4": {
-     "accounts": 2,
-     "total_arr": 245000.0,
+     "accounts": 4,
+     "total_arr": 785000.0,
      "top": [
-      "Tailspin",
-      "Adatum"
+      "Proseware",
+      "Fabrikam",
+      "Tailspin"
      ],
      "play": "Scale and monitor: digital or pooled CS, watch for signals"
     }
@@ -7136,17 +9970,17 @@
     },
     {
      "account": "Woodgrove",
-     "cluster": "P2",
+     "cluster": "P1",
      "overall_score": 2.814,
      "days_to_renewal": 30.0,
      "arr": 1600000.0
     },
     {
-     "account": "Fabrikam",
-     "cluster": "P3",
-     "overall_score": 6.152,
-     "days_to_renewal": 20.0,
-     "arr": 210000.0
+     "account": "Contoso",
+     "cluster": "P1",
+     "overall_score": 3.269,
+     "days_to_renewal": 140.0,
+     "arr": 640000.0
     }
    ],
    "accounts": [
@@ -7181,7 +10015,7 @@
      "marketing_programmatic_engagement_score": 3.12,
      "product_score": 2.0,
      "overall_score": 2.814,
-     "cluster": "P2"
+     "cluster": "P1"
     },
     {
      "account_name": "Contoso",
@@ -7192,7 +10026,7 @@
      "marketing_programmatic_engagement_score": 3.12,
      "product_score": 3.0,
      "overall_score": 3.269,
-     "cluster": "P2"
+     "cluster": "P1"
     },
     {
      "account_name": "Proseware",
@@ -7203,7 +10037,7 @@
      "marketing_programmatic_engagement_score": 4.0,
      "product_score": 6.0,
      "overall_score": 5.259,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "Fabrikam",
@@ -7214,7 +10048,7 @@
      "marketing_programmatic_engagement_score": 5.88,
      "product_score": 5.0,
      "overall_score": 6.152,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "Tailspin",
@@ -7245,6 +10079,9 @@
     "account": "Northwind",
     "cluster": "P1",
     "overall_score": 1.698,
+    "growth_score": 1.803,
+    "watch": false,
+    "indicator": "Spend up 28% this year",
     "bucket_scores": {
      "gtm_propensity": 2.4,
      "post_sales": 1.56,
@@ -7290,6 +10127,9 @@
     "account": "Litware",
     "cluster": "P1",
     "overall_score": 2.353,
+    "growth_score": 2.412,
+    "watch": false,
+    "indicator": "Spend up 21% this year",
     "bucket_scores": {
      "gtm_propensity": 2.8,
      "post_sales": 1.75,
@@ -7333,8 +10173,11 @@
    },
    "Woodgrove": {
     "account": "Woodgrove",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 2.814,
+    "growth_score": 2.994,
+    "watch": false,
+    "indicator": "Aligned stakeholders, good renewal timing",
     "bucket_scores": {
      "gtm_propensity": 3.4,
      "post_sales": 3.38,
@@ -7373,13 +10216,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Grow into it: land-and-expand, programs, close the weakest bucket first",
+    "play": "Expand now: exec-aligned expansion, multi-thread, bring in AE + SE",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Contoso": {
     "account": "Contoso",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.269,
+    "growth_score": 3.344,
+    "watch": false,
+    "indicator": "Spend up 12% this year",
     "bucket_scores": {
      "gtm_propensity": 3.75,
      "post_sales": 3.62,
@@ -7420,13 +10266,16 @@
     "not_applicable": [
      "opp_win_rate"
     ],
-    "play": "Grow into it: land-and-expand, programs, close the weakest bucket first",
+    "play": "Expand now: exec-aligned expansion, multi-thread, bring in AE + SE",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Proseware": {
     "account": "Proseware",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 5.259,
+    "growth_score": 5.379,
+    "watch": false,
+    "indicator": "Best signal: events and advocacy",
     "bucket_scores": {
      "gtm_propensity": 5.6,
      "post_sales": 5.07,
@@ -7467,13 +10316,16 @@
     "not_applicable": [
      "ps_hours_used_pct"
     ],
-    "play": "Protect and re-ignite: retention first, fix health, find the next use case",
+    "play": "Scale and monitor: digital or pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Fabrikam": {
     "account": "Fabrikam",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 6.152,
+    "growth_score": 6.287,
+    "watch": true,
+    "indicator": "Best signal: stakeholders and renewal timing",
     "bucket_scores": {
      "gtm_propensity": 6.8,
      "post_sales": 6.85,
@@ -7517,13 +10369,16 @@
      "ps_hours_used_pct",
      "feature_requests_delivered_pct"
     ],
-    "play": "Protect and re-ignite: retention first, fix health, find the next use case",
+    "play": "Scale and monitor: digital or pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Tailspin": {
     "account": "Tailspin",
     "cluster": "P4",
     "overall_score": 7.107,
+    "growth_score": 7.062,
+    "watch": true,
+    "indicator": "Best signal: events and advocacy",
     "bucket_scores": {
      "gtm_propensity": 6.4,
      "post_sales": 7.21,
@@ -7576,6 +10431,9 @@
     "account": "Adatum",
     "cluster": "P4",
     "overall_score": 7.164,
+    "growth_score": 7.339,
+    "watch": true,
+    "indicator": "Best signal: product requests",
     "bucket_scores": {
      "gtm_propensity": 6.75,
      "post_sales": 7.86,
@@ -7626,24 +10484,10 @@
   "focus_5_60": [
    {
     "account": "Woodgrove",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 2.814,
     "days_to_renewal": 30.0,
     "arr": 1600000.0
-   },
-   {
-    "account": "Fabrikam",
-    "cluster": "P3",
-    "overall_score": 6.152,
-    "days_to_renewal": 20.0,
-    "arr": 210000.0
-   },
-   {
-    "account": "Tailspin",
-    "cluster": "P4",
-    "overall_score": 7.107,
-    "days_to_renewal": -10.0,
-    "arr": 95000.0
    },
    {
     "account": "Northwind",
@@ -7654,10 +10498,17 @@
    },
    {
     "account": "Contoso",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.269,
     "days_to_renewal": 140.0,
     "arr": 640000.0
+   },
+   {
+    "account": "Litware",
+    "cluster": "P1",
+    "overall_score": 2.353,
+    "days_to_renewal": 200.0,
+    "arr": 880000.0
    }
   ]
  },
@@ -7673,38 +10524,34 @@
    "missing_fields": [],
    "clusters": {
     "P1": {
-     "accounts": 2,
-     "total_arr": 2130000.0,
+     "accounts": 4,
+     "total_arr": 4370000.0,
      "top": [
       "Northwind",
-      "Litware"
+      "Litware",
+      "Woodgrove"
      ],
      "play": "Expand now: exec-aligned expansion, multi-thread, bring in AE + SE"
     },
     "P2": {
-     "accounts": 2,
-     "total_arr": 2240000.0,
-     "top": [
-      "Woodgrove",
-      "Contoso"
-     ],
+     "accounts": 0,
+     "total_arr": 0,
+     "top": [],
      "play": "Grow into it: land-and-expand, programs, close the weakest bucket first"
     },
     "P3": {
-     "accounts": 2,
-     "total_arr": 540000.0,
-     "top": [
-      "Proseware",
-      "Fabrikam"
-     ],
+     "accounts": 0,
+     "total_arr": 0,
+     "top": [],
      "play": "Protect and re-ignite: retention first, fix health, find the next use case"
     },
     "P4": {
-     "accounts": 2,
-     "total_arr": 245000.0,
+     "accounts": 4,
+     "total_arr": 785000.0,
      "top": [
-      "Tailspin",
-      "Adatum"
+      "Proseware",
+      "Fabrikam",
+      "Tailspin"
      ],
      "play": "Scale and monitor: digital or pooled CS, watch for signals"
     }
@@ -7719,17 +10566,17 @@
     },
     {
      "account": "Woodgrove",
-     "cluster": "P2",
+     "cluster": "P1",
      "overall_score": 2.814,
      "days_to_renewal": 30.0,
      "arr": 1600000.0
     },
     {
-     "account": "Fabrikam",
-     "cluster": "P3",
-     "overall_score": 6.152,
-     "days_to_renewal": 20.0,
-     "arr": 210000.0
+     "account": "Contoso",
+     "cluster": "P1",
+     "overall_score": 3.269,
+     "days_to_renewal": 140.0,
+     "arr": 640000.0
     }
    ],
    "accounts": [
@@ -7764,7 +10611,7 @@
      "marketing_programmatic_engagement_score": 3.12,
      "product_score": 2.0,
      "overall_score": 2.814,
-     "cluster": "P2"
+     "cluster": "P1"
     },
     {
      "account_name": "Contoso",
@@ -7775,7 +10622,7 @@
      "marketing_programmatic_engagement_score": 3.12,
      "product_score": 3.0,
      "overall_score": 3.269,
-     "cluster": "P2"
+     "cluster": "P1"
     },
     {
      "account_name": "Proseware",
@@ -7786,7 +10633,7 @@
      "marketing_programmatic_engagement_score": 4.0,
      "product_score": 6.0,
      "overall_score": 5.259,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "Fabrikam",
@@ -7797,7 +10644,7 @@
      "marketing_programmatic_engagement_score": 5.88,
      "product_score": 5.0,
      "overall_score": 6.152,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "Tailspin",
@@ -7828,6 +10675,9 @@
     "account": "Northwind",
     "cluster": "P1",
     "overall_score": 1.698,
+    "growth_score": 1.803,
+    "watch": false,
+    "indicator": "Spend up 28% this year",
     "bucket_scores": {
      "gtm_propensity": 2.4,
      "post_sales": 1.56,
@@ -7873,6 +10723,9 @@
     "account": "Litware",
     "cluster": "P1",
     "overall_score": 2.353,
+    "growth_score": 2.412,
+    "watch": false,
+    "indicator": "Spend up 21% this year",
     "bucket_scores": {
      "gtm_propensity": 2.8,
      "post_sales": 1.75,
@@ -7916,8 +10769,11 @@
    },
    "Woodgrove": {
     "account": "Woodgrove",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 2.814,
+    "growth_score": 2.994,
+    "watch": false,
+    "indicator": "Aligned stakeholders, good renewal timing",
     "bucket_scores": {
      "gtm_propensity": 3.4,
      "post_sales": 3.38,
@@ -7956,13 +10812,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Grow into it: land-and-expand, programs, close the weakest bucket first",
+    "play": "Expand now: exec-aligned expansion, multi-thread, bring in AE + SE",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Contoso": {
     "account": "Contoso",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.269,
+    "growth_score": 3.344,
+    "watch": false,
+    "indicator": "Spend up 12% this year",
     "bucket_scores": {
      "gtm_propensity": 3.75,
      "post_sales": 3.62,
@@ -8003,13 +10862,16 @@
     "not_applicable": [
      "opp_win_rate"
     ],
-    "play": "Grow into it: land-and-expand, programs, close the weakest bucket first",
+    "play": "Expand now: exec-aligned expansion, multi-thread, bring in AE + SE",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Proseware": {
     "account": "Proseware",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 5.259,
+    "growth_score": 5.379,
+    "watch": false,
+    "indicator": "Best signal: events and advocacy",
     "bucket_scores": {
      "gtm_propensity": 5.6,
      "post_sales": 5.07,
@@ -8050,13 +10912,16 @@
     "not_applicable": [
      "ps_hours_used_pct"
     ],
-    "play": "Protect and re-ignite: retention first, fix health, find the next use case",
+    "play": "Scale and monitor: digital or pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Fabrikam": {
     "account": "Fabrikam",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 6.152,
+    "growth_score": 6.287,
+    "watch": true,
+    "indicator": "Best signal: stakeholders and renewal timing",
     "bucket_scores": {
      "gtm_propensity": 6.8,
      "post_sales": 6.85,
@@ -8100,13 +10965,16 @@
      "ps_hours_used_pct",
      "feature_requests_delivered_pct"
     ],
-    "play": "Protect and re-ignite: retention first, fix health, find the next use case",
+    "play": "Scale and monitor: digital or pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Tailspin": {
     "account": "Tailspin",
     "cluster": "P4",
     "overall_score": 7.107,
+    "growth_score": 7.062,
+    "watch": true,
+    "indicator": "Best signal: events and advocacy",
     "bucket_scores": {
      "gtm_propensity": 6.4,
      "post_sales": 7.21,
@@ -8159,6 +11027,9 @@
     "account": "Adatum",
     "cluster": "P4",
     "overall_score": 7.164,
+    "growth_score": 7.339,
+    "watch": true,
+    "indicator": "Best signal: product requests",
     "bucket_scores": {
      "gtm_propensity": 6.75,
      "post_sales": 7.86,
@@ -8209,24 +11080,10 @@
   "focus_5_60": [
    {
     "account": "Woodgrove",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 2.814,
     "days_to_renewal": 30.0,
     "arr": 1600000.0
-   },
-   {
-    "account": "Fabrikam",
-    "cluster": "P3",
-    "overall_score": 6.152,
-    "days_to_renewal": 20.0,
-    "arr": 210000.0
-   },
-   {
-    "account": "Tailspin",
-    "cluster": "P4",
-    "overall_score": 7.107,
-    "days_to_renewal": -10.0,
-    "arr": 95000.0
    },
    {
     "account": "Northwind",
@@ -8237,10 +11094,17 @@
    },
    {
     "account": "Contoso",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.269,
     "days_to_renewal": 140.0,
     "arr": 640000.0
+   },
+   {
+    "account": "Litware",
+    "cluster": "P1",
+    "overall_score": 2.353,
+    "days_to_renewal": 200.0,
+    "arr": 880000.0
    }
   ]
  },
@@ -8265,38 +11129,34 @@
    "missing_fields": [],
    "clusters": {
     "P1": {
-     "accounts": 2,
-     "total_arr": 2130000.0,
+     "accounts": 4,
+     "total_arr": 4370000.0,
      "top": [
       "Northwind",
-      "Litware"
+      "Litware",
+      "Woodgrove"
      ],
      "play": "Expand now: exec-aligned expansion, multi-thread, bring in AE + SE"
     },
     "P2": {
-     "accounts": 2,
-     "total_arr": 2240000.0,
-     "top": [
-      "Woodgrove",
-      "Contoso"
-     ],
+     "accounts": 0,
+     "total_arr": 0,
+     "top": [],
      "play": "Grow into it: land-and-expand, programs, close the weakest bucket first"
     },
     "P3": {
-     "accounts": 2,
-     "total_arr": 540000.0,
-     "top": [
-      "Proseware",
-      "Fabrikam"
-     ],
+     "accounts": 0,
+     "total_arr": 0,
+     "top": [],
      "play": "Protect and re-ignite: retention first, fix health, find the next use case"
     },
     "P4": {
-     "accounts": 2,
-     "total_arr": 245000.0,
+     "accounts": 4,
+     "total_arr": 785000.0,
      "top": [
-      "Adatum",
-      "Tailspin"
+      "Proseware",
+      "Fabrikam",
+      "Adatum"
      ],
      "play": "Scale and monitor: digital or pooled CS, watch for signals"
     }
@@ -8311,17 +11171,17 @@
     },
     {
      "account": "Woodgrove",
-     "cluster": "P2",
+     "cluster": "P1",
      "overall_score": 3.121,
      "days_to_renewal": 30.0,
      "arr": 1600000.0
     },
     {
-     "account": "Fabrikam",
-     "cluster": "P3",
-     "overall_score": 6.804,
-     "days_to_renewal": 20.0,
-     "arr": 210000.0
+     "account": "Contoso",
+     "cluster": "P1",
+     "overall_score": 3.532,
+     "days_to_renewal": 140.0,
+     "arr": 640000.0
     }
    ],
    "accounts": [
@@ -8356,7 +11216,7 @@
      "marketing_programmatic_engagement_score": 3.12,
      "product_score": 2.0,
      "overall_score": 3.121,
-     "cluster": "P2"
+     "cluster": "P1"
     },
     {
      "account_name": "Contoso",
@@ -8367,7 +11227,7 @@
      "marketing_programmatic_engagement_score": 3.12,
      "product_score": 3.0,
      "overall_score": 3.532,
-     "cluster": "P2"
+     "cluster": "P1"
     },
     {
      "account_name": "Proseware",
@@ -8378,7 +11238,7 @@
      "marketing_programmatic_engagement_score": 4.0,
      "product_score": 6.0,
      "overall_score": 4.795,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "Fabrikam",
@@ -8389,7 +11249,7 @@
      "marketing_programmatic_engagement_score": 5.88,
      "product_score": 6.5,
      "overall_score": 6.804,
-     "cluster": "P3"
+     "cluster": "P4"
     },
     {
      "account_name": "Adatum",
@@ -8420,6 +11280,9 @@
     "account": "Northwind",
     "cluster": "P1",
     "overall_score": 1.865,
+    "growth_score": 1.88,
+    "watch": false,
+    "indicator": "Spend up 28% this year",
     "bucket_scores": {
      "gtm_propensity": 2.2,
      "post_sales": 1.47,
@@ -8465,6 +11328,9 @@
     "account": "Litware",
     "cluster": "P1",
     "overall_score": 2.127,
+    "growth_score": 2.097,
+    "watch": false,
+    "indicator": "Spend up 21% this year",
     "bucket_scores": {
      "gtm_propensity": 2.6,
      "post_sales": 1.59,
@@ -8508,8 +11374,11 @@
    },
    "Woodgrove": {
     "account": "Woodgrove",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.121,
+    "growth_score": 3.301,
+    "watch": false,
+    "indicator": "Asking for more from the product",
     "bucket_scores": {
      "gtm_propensity": 3.4,
      "post_sales": 3.35,
@@ -8548,13 +11417,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Grow into it: land-and-expand, programs, close the weakest bucket first",
+    "play": "Expand now: exec-aligned expansion, multi-thread, bring in AE + SE",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Contoso": {
     "account": "Contoso",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.532,
+    "growth_score": 3.562,
+    "watch": false,
+    "indicator": "Spend up 12% this year",
     "bucket_scores": {
      "gtm_propensity": 4.4,
      "post_sales": 3.65,
@@ -8593,13 +11465,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Grow into it: land-and-expand, programs, close the weakest bucket first",
+    "play": "Expand now: exec-aligned expansion, multi-thread, bring in AE + SE",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Proseware": {
     "account": "Proseware",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 4.795,
+    "growth_score": 4.81,
+    "watch": false,
+    "indicator": "Best signal: stakeholders and renewal timing",
     "bucket_scores": {
      "gtm_propensity": 5.2,
      "post_sales": 4.94,
@@ -8638,13 +11513,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Protect and re-ignite: retention first, fix health, find the next use case",
+    "play": "Scale and monitor: digital or pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Fabrikam": {
     "account": "Fabrikam",
-    "cluster": "P3",
+    "cluster": "P4",
     "overall_score": 6.804,
+    "growth_score": 6.879,
+    "watch": true,
+    "indicator": "Best signal: events and advocacy",
     "bucket_scores": {
      "gtm_propensity": 7.0,
      "post_sales": 7.12,
@@ -8683,13 +11561,16 @@
      }
     ],
     "not_applicable": [],
-    "play": "Protect and re-ignite: retention first, fix health, find the next use case",
+    "play": "Scale and monitor: digital or pooled CS, watch for signals",
     "note": "Generated from the scores; not an AI judgement."
    },
    "Adatum": {
     "account": "Adatum",
     "cluster": "P4",
     "overall_score": 6.943,
+    "growth_score": 6.958,
+    "watch": true,
+    "indicator": "Best signal: stakeholders and renewal timing",
     "bucket_scores": {
      "gtm_propensity": 7.2,
      "post_sales": 7.88,
@@ -8735,6 +11616,9 @@
     "account": "Tailspin",
     "cluster": "P4",
     "overall_score": 6.958,
+    "growth_score": 6.808,
+    "watch": true,
+    "indicator": "Best signal: sales activity and win rate",
     "bucket_scores": {
      "gtm_propensity": 6.0,
      "post_sales": 6.88,
@@ -8780,24 +11664,10 @@
   "focus_5_60": [
    {
     "account": "Woodgrove",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.121,
     "days_to_renewal": 30.0,
     "arr": 1600000.0
-   },
-   {
-    "account": "Fabrikam",
-    "cluster": "P3",
-    "overall_score": 6.804,
-    "days_to_renewal": 20.0,
-    "arr": 210000.0
-   },
-   {
-    "account": "Tailspin",
-    "cluster": "P4",
-    "overall_score": 6.958,
-    "days_to_renewal": -10.0,
-    "arr": 95000.0
    },
    {
     "account": "Northwind",
@@ -8808,10 +11678,17 @@
    },
    {
     "account": "Contoso",
-    "cluster": "P2",
+    "cluster": "P1",
     "overall_score": 3.532,
     "days_to_renewal": 140.0,
     "arr": 640000.0
+   },
+   {
+    "account": "Litware",
+    "cluster": "P1",
+    "overall_score": 2.127,
+    "days_to_renewal": 200.0,
+    "arr": 880000.0
    }
   ]
  },
@@ -8985,6 +11862,9 @@
     "account": "Northwind",
     "cluster": "P1",
     "overall_score": 1.641,
+    "growth_score": 1.728,
+    "watch": false,
+    "indicator": "Spend up 28% this year",
     "bucket_scores": {
      "gtm_propensity": 2.4,
      "post_sales": 1.56,
@@ -9030,6 +11910,9 @@
     "account": "Litware",
     "cluster": "P1",
     "overall_score": 2.319,
+    "growth_score": 2.369,
+    "watch": false,
+    "indicator": "Spend up 21% this year",
     "bucket_scores": {
      "gtm_propensity": 2.8,
      "post_sales": 1.75,
@@ -9075,6 +11958,9 @@
     "account": "Woodgrove",
     "cluster": "P1",
     "overall_score": 2.8,
+    "growth_score": 2.95,
+    "watch": false,
+    "indicator": "Aligned stakeholders, good renewal timing",
     "bucket_scores": {
      "gtm_propensity": 3.4,
      "post_sales": 3.38,
@@ -9120,6 +12006,9 @@
     "account": "Contoso",
     "cluster": "P1",
     "overall_score": 3.237,
+    "growth_score": 3.3,
+    "watch": false,
+    "indicator": "Spend up 12% this year",
     "bucket_scores": {
      "gtm_propensity": 3.75,
      "post_sales": 3.62,
@@ -9167,6 +12056,9 @@
     "account": "Proseware",
     "cluster": "P3",
     "overall_score": 5.179,
+    "growth_score": 5.279,
+    "watch": false,
+    "indicator": "Shows up to events and advocates",
     "bucket_scores": {
      "gtm_propensity": 5.6,
      "post_sales": 5.07,
@@ -9214,6 +12106,9 @@
     "account": "Fabrikam",
     "cluster": "P4",
     "overall_score": 6.105,
+    "growth_score": 6.218,
+    "watch": true,
+    "indicator": "Best signal: stakeholders and renewal timing",
     "bucket_scores": {
      "gtm_propensity": 6.8,
      "post_sales": 6.85,
@@ -9264,6 +12159,9 @@
     "account": "Tailspin",
     "cluster": "P4",
     "overall_score": 7.079,
+    "growth_score": 7.041,
+    "watch": true,
+    "indicator": "Best signal: events and advocacy",
     "bucket_scores": {
      "gtm_propensity": 6.4,
      "post_sales": 7.21,
@@ -9316,6 +12214,9 @@
     "account": "Adatum",
     "cluster": "P4",
     "overall_score": 7.177,
+    "growth_score": 7.323,
+    "watch": true,
+    "indicator": "Best signal: product requests",
     "bucket_scores": {
      "gtm_propensity": 6.75,
      "post_sales": 7.86,

@@ -189,6 +189,7 @@ export function scoreRows(cfg: Config, rows: Row[], method?: string | null) {
       bx[bk] = ex.length ? wavg(ex) : b[bk];
     }
     r._buckets = b;
+    r._bx = bx;
     for (const bk of Object.keys(W)) r[`${bk}_score`] = b[bk] === null ? "" : pyRound(b[bk]!, rd.bucket_scores);
     const live = Object.entries(W).filter(([k]) => b[k] !== null).map(([k, wt]) => [b[k]!, wt] as [number, number]);
     r._overall = live.length ? wavg(live) : missing;
@@ -224,7 +225,47 @@ export function assignClusters(cfg: Config, rows: Row[], method?: string | null)
       const a = fa !== undefined && fa !== null && fa !== NA && fa <= c.arr_high_max_band;
       r.cluster = g ? (a ? "P1" : "P2") : (a ? "P3" : "P4");
     }
+  } else if (method === "median_2x2") {
+    // Growth potential (A-GPS without ARR, lower is better) vs spend (ARR), both cut at the median.
+    const gmed = median(rows.map((r) => r._growth_ex_arr));
+    const arrs = rows.map((r) => num(r.arr)).filter((v): v is number => v !== null && v !== undefined);
+    const amed = arrs.length ? median(arrs) : 0;
+    for (const r of rows) {
+      const g = r._growth_ex_arr <= gmed;
+      const a = (num(r.arr) || 0) > amed;
+      r.cluster = g ? (a ? "P1" : "P2") : (a ? "P3" : "P4");
+    }
   } else throw new Error(`unknown cluster method '${method}'`);
+  const w = { ...WATCH_DEFAULT, ...(cl.watch ?? {}) };
+  for (const r of rows) {
+    r._method = method;
+    const nrr = num(r.nrr);
+    r._watch = (nrr !== null && nrr !== undefined && nrr < w.nrr_below) || r._growth_ex_arr > w.growth_worse_than;
+  }
+}
+
+export const WATCH_DEFAULT = { nrr_below: 90, growth_worse_than: 6.0 };
+// Plain-language strength per bucket. Rank penalty keeps product requests from dominating.
+const INDICATOR: Record<string, [string, string, number]> = {
+  gtm_propensity: ["Strong sales activity and win rate", "sales activity and win rate", 0.0],
+  post_sales: ["Strong adoption and CSM pulse", "adoption and CSM pulse", 0.05],
+  down_and_distance: ["Aligned stakeholders, good renewal timing", "stakeholders and renewal timing", 0.1],
+  marketing_programmatic_engagement: ["Shows up to events and advocates", "events and advocacy", 0.4],
+  product: ["Asking for more from the product", "product requests", 0.9],
+};
+
+export function indicator(r: Row): string | null {
+  const nrr = num(r.nrr);
+  const soft = r.cluster === "P4" || !!r._watch;
+  if (nrr !== null && nrr !== undefined && nrr >= 110) {
+    const txt = `spend up ${pyRound(nrr - 100, 0)}% this year`;
+    return soft ? `Best signal: ${txt}` : txt[0].toUpperCase() + txt.slice(1);
+  }
+  const gx = Object.entries<any>(r._bx ?? {}).filter(([k, v]) => v !== null && k in INDICATOR);
+  if (!gx.length) return null;
+  let best = gx[0];
+  for (const e of gx) if (e[1] + INDICATOR[e[0]][2] < best[1] + INDICATOR[best[0]][2]) best = e;
+  return soft ? `Best signal: ${INDICATOR[best[0]][1]}` : INDICATOR[best[0]][0];
 }
 
 export const renewalDays = (cfg: Config, r: Row) => num(r[cfg.focus?.renewal_field ?? "days_to_next_renewal"]);
@@ -234,10 +275,16 @@ export function focusList(cfg: Config, rows: Row[], count?: number | null, windo
   const n = count || f.count || 3;
   const win = windowDays ?? f.window_days ?? 120;
   const ren = (r: Row) => renewalDays(cfg, r);
-  const key = (r: Row) => [r.overall_score, ren(r), pyStr(r.account_name ?? "")];
-  const inw = rows.filter((r) => ren(r) !== null && ren(r)! <= win).sort((a, b) => cmpTuple(key(a), key(b)));
+  let key = (r: Row): any[] => [r.overall_score, ren(r), pyStr(r.account_name ?? "")];
+  let pool = rows;
+  if (rows.length && rows.every((r) => r._method === "median_2x2")) {
+    // P1 + P3 (the spend worth expanding or protecting), best growth first; WATCH only from P3.
+    key = (r: Row) => [r._growth_ex_arr, ren(r), pyStr(r.account_name ?? "")];
+    pool = rows.filter((r) => (r.cluster === "P1" || r.cluster === "P3") && (!r._watch || r.cluster === "P3"));
+  }
+  const inw = pool.filter((r) => ren(r) !== null && ren(r)! <= win).sort((a, b) => cmpTuple(key(a), key(b)));
   if (inw.length >= n) return inw.slice(0, n);
-  const later = rows.filter((r) => ren(r) !== null && ren(r)! > win).sort((a, b) => cmpTuple([ren(a), ...key(a)], [ren(b), ...key(b)]));
+  const later = pool.filter((r) => ren(r) !== null && ren(r)! > win).sort((a, b) => cmpTuple([ren(a), ...key(a)], [ren(b), ...key(b)]));
   return [...inw, ...later].slice(0, n);
 }
 
@@ -249,7 +296,8 @@ export function explain(cfg: Config, r: Row) {
   const bs: Record<string, number | null> = {};
   for (const k of Object.keys(W)) bs[k] = r._buckets[k] === null ? null : pyRound(r._buckets[k], 2);
   return {
-    account: r.account_name ?? null, cluster: r.cluster, overall_score: r.overall_score, bucket_scores: bs,
+    account: r.account_name ?? null, cluster: r.cluster, overall_score: r.overall_score,
+    growth_score: pyRound(r._growth_ex_arr, 3), watch: !!r._watch, indicator: indicator(r), bucket_scores: bs,
     strongest_bucket: ranked[0] ?? null, weakest_bucket: ranked.length ? ranked[ranked.length - 1] : null,
     best_fields: [...scored].sort((a, b) => a[1] - b[1]).slice(0, 3).map(([field, score]) => ({ field, score })),
     weakest_fields: [...scored].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([field, score]) => ({ field, score })),

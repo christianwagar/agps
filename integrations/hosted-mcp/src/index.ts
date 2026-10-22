@@ -18,8 +18,8 @@ const accountsInput = {
     .describe('Optional: rename your headers to A-GPS fields, e.g. {"Account Name": "account_name", "ARR": "arr"}.'),
   settings: z.record(z.string(), z.any()).optional()
     .describe('Optional tweaks merged over the defaults, in plain JSON. E.g. {"bucket_weights": {"gtm_propensity": 0.25, "marketing_programmatic_engagement": 0.15}} or {"options": {"renewal_direction": "runway_is_better"}} or new bands for a field under "fields".'),
-  cluster_method: z.enum(["quartile", "growth_arr_2x2"]).optional()
-    .describe("quartile (default): rank and split into four equal groups. growth_arr_2x2: growth vs ARR quadrant."),
+  cluster_method: z.enum(["median_2x2", "quartile", "growth_arr_2x2"]).optional()
+    .describe("median_2x2 (default): growth potential (score without ARR) vs spend (ARR), both split at the median; WATCH flags NRR < 90% or growth worse than 6.0. quartile: legacy four equal groups by overall score. growth_arr_2x2: legacy growth vs ARR-band quadrant."),
 };
 
 const ok = (data: unknown) => ({ content: [{ type: "text" as const, text: JSON.stringify(data, null, 2) }] });
@@ -27,7 +27,7 @@ const fail = (e: unknown) => ({ isError: true, content: [{ type: "text" as const
 
 function createServer() {
   const server = new McpServer({ name: "agps", title: NAME, version: "2.0.0" }, {
-    instructions: "A-GPS scores customer accounts golf-style: 1 is best, 8 is worst, lower overall is better. Accounts land in P1 (expand now) to P4 (protect / low touch). It's a framework: tune the weights and bands to your business. Nothing you send is stored.",
+    instructions: "A-GPS scores customer accounts golf-style: 1 is best, 8 is worst, lower overall is better. Accounts land on a median-split 2x2 of growth potential vs spend: P1 high growth + high spend, P2 high growth + lower spend, P3 lower growth + high spend, P4 lower on both; WATCH flags health risks. It's a framework: tune the weights and bands to your business. Nothing you send is stored.",
   });
 
   server.registerTool("score_accounts", {
