@@ -37,7 +37,7 @@
     "overall_score": 3
   },
   "cluster": {
-    "method": "quartile",
+    "method": "median_2x2",
     "quartile": {
       "labels": [
         "P1",
@@ -48,6 +48,10 @@
     },
     "growth_arr_2x2": {
       "arr_high_max_band": 4
+    },
+    "watch": {
+      "nrr_below": 90,
+      "growth_worse_than": 6.0
     }
   },
   "focus": {

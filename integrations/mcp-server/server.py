@@ -30,7 +30,7 @@ def _source(csv, csv_path):
 
 @mcp.tool()
 def score_accounts(csv: str = "", csv_path: str = "", config: str = "", mapping: dict | None = None,
-                   cluster_method: str = "quartile", limit: int = 50) -> dict:
+                   cluster_method: str = "", limit: int = 50) -> dict:
     """Score accounts with A-GPS (golf-style: 1 = best, 8 = worst) and group them into P1-P4.
     Returns cluster summaries, the focus-this-week list, and the top `limit` scored accounts."""
     res = agps.score_accounts(_source(csv, csv_path), config or DEFAULT_CONFIG, mapping, cluster_method)

@@ -16,7 +16,8 @@ COLS = ["gtm_propensity_score", "marketing_programmatic_engagement_score", "post
 
 @pytest.fixture(scope="module")
 def result():
-    return score_accounts(DEMO, config=V1)
+    # Legacy quartile split kept for exact parity with the original live site.
+    return score_accounts(DEMO, config=V1, cluster_method="quartile")
 
 
 def test_all_40_scores_match_exactly(result):
@@ -34,5 +35,31 @@ def test_clusters_are_quartiles(result):
     assert result["accounts"][0]["account_name"] == "Stripe"
 
 
-def test_focus_matches_live_site():
-    assert [x["account"] for x in get_focus_list(DEMO, config=V1)] == ["Delta", "Coca-Cola", "Canva"]
+def test_focus_matches_live_site_quartile():
+    assert [x["account"] for x in get_focus_list(DEMO, config=V1, cluster_method="quartile")] == ["Delta", "Coca-Cola", "Canva"]
+
+
+def test_default_is_median_2x2_matching_preview():
+    res = score_accounts(DEMO, config=V1)
+    assert {k: v["accounts"] for k, v in res["clusters"].items()} == {"P1": 14, "P2": 6, "P3": 6, "P4": 14}
+    c = {a["account_name"]: a["cluster"] for a in res["accounts"]}
+    assert c["Airbnb"] == "P2" and c["iPhone"] == "P3" and c["Tesla"] == "P4" and c["Stripe"] == "P1"
+
+
+def test_watch_floor_defaults_and_config():
+    from agps import explain_account
+    watch = sorted(n for n in ["Tesla", "Liquid Death", "Starbucks", "Spotify", "Sonos", "Salesforce", "Stripe"]
+                   if explain_account(DEMO, n, config=V1)["watch"])
+    assert watch == ["Liquid Death", "Salesforce", "Sonos", "Spotify", "Starbucks", "Tesla"]
+    import copy, json
+    cfg = json.load(open(V1)); cfg["cluster"]["watch"] = {"nrr_below": 0, "growth_worse_than": 7.0}
+    assert explain_account(DEMO, "Spotify", config=cfg)["watch"] is False
+    assert explain_account(DEMO, "Salesforce", config=cfg)["watch"] is True
+
+
+def test_indicator_wording():
+    from agps import explain_account
+    e = explain_account(DEMO, "Tesla", config=V1)
+    assert e["indicator"].startswith("Best signal: ") and "Strong" not in e["indicator"]
+    p1 = explain_account(DEMO, "Stripe", config=V1)
+    assert p1["growth_score"] < 4.3 and not p1["indicator"].startswith("Best signal")

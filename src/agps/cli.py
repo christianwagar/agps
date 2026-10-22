@@ -19,7 +19,7 @@ def _common(p):
     p.add_argument("input", help="accounts CSV")
     p.add_argument("-c", "--config", help="config .json or .yaml (default: bundled v2)")
     p.add_argument("-m", "--map", help="JSON mapping file or 'Header=field,...'")
-    p.add_argument("--cluster-method", choices=["quartile", "growth_arr_2x2"])
+    p.add_argument("--cluster-method", choices=["median_2x2", "quartile", "growth_arr_2x2"])
 
 
 def main(argv=None):
