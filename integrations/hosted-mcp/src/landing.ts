@@ -16,7 +16,7 @@ header{display:flex;justify-content:space-between;padding:1.5rem 0;border-bottom
 h1,h2{font-family:var(--d);font-weight:700;text-transform:uppercase;letter-spacing:.04em;line-height:1.05;margin:0 0 1rem}
 h1{font-size:clamp(3rem,9vw,6.5rem)}@media(max-width:600px){section{padding:2.5rem 0}.cta{display:inline-block;margin-bottom:.5rem}}h2{font-size:clamp(1.75rem,4vw,2.5rem)}
 .sub{font-family:var(--d);font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:1.1rem;margin:-.5rem 0 1rem}
-.intro{color:var(--muted);max-width:56ch}section{padding:3.5rem 0;border-top:1px solid var(--border)}
+.intro{color:var(--muted);max-width:none}section{padding:3.5rem 0;border-top:1px solid var(--border)}
 .cta,button{font-family:var(--d);font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-right:1.5rem;font-size:1rem}
 .cta:before,button:before{content:"[ "}.cta:after,button:after{content:" ]"}
 .url{display:flex;flex-wrap:wrap;gap:.75rem 1rem;align-items:center;justify-content:space-between;background:var(--bg-soft);border:1px solid var(--border);padding:1rem 1.1rem;margin:.75rem 0 0}
@@ -31,7 +31,7 @@ button{background:none;border:0;padding:0;cursor:pointer;color:var(--text)}butto
 .chip{flex:none;font-family:var(--d);font-weight:700;letter-spacing:.1em;width:3rem;height:3rem;display:grid;place-items:center;box-sizing:border-box}
 .links{margin-top:2rem}
 ul{color:var(--muted);padding-left:1.1rem}
-.two{color:var(--muted);max-width:70ch;margin-top:2.5rem}.two b{color:var(--text)}.demo{width:100%;max-width:960px;display:block;border:1px solid var(--border);margin:0 0 2.5rem}
+.two{color:var(--muted);max-width:none;margin-top:2.5rem}.two b{color:var(--text)}.demo{width:100%;max-width:960px;display:block;border:1px solid var(--border);margin:0 0 2.5rem}
 .card .label{position:relative;display:inline-block;padding-bottom:.3rem}
 .card .label{padding-bottom:.55rem}
 .ink{position:absolute;left:-2%;bottom:-.1rem;width:104%;height:.6rem;overflow:visible;fill:#1a1a1a;filter:url(#rough);clip-path:inset(0 100% 0 0);transition:clip-path .5s cubic-bezier(.6,.05,.3,1),opacity .5s ease;opacity:.0}
@@ -65,10 +65,10 @@ footer{padding:2rem 0;border-top:1px solid var(--border);color:var(--muted);font
 </div>
 <p class="two"><b>Two ways in.</b> No setup? Use the <a class="cta" style="margin:0" href="https://github.com/christianwagar/agps/blob/main/integrations/any-llm/PROMPT.md">Copy-paste prompt</a> in any AI chat. Want the exact calculator inside your AI app? Add this link.</p></section>
 <section><span class="label">The clusters</span><h2>P1 to P4</h2><div class="pg">
-<div class="p"><span class="chip" style="background:#000;color:#fff">P1</span><div><span class="label">Expand now</span><p>Exec-aligned expansion, multi-thread, bring in AE + SE.</p></div></div>
-<div class="p"><span class="chip" style="background:#444;color:#fff">P2</span><div><span class="label">Grow into it</span><p>Land-and-expand, programs, close the weakest bucket first.</p></div></div>
-<div class="p"><span class="chip" style="background:#999;color:#fff">P3</span><div><span class="label">Protect and re-ignite</span><p>Retention first, fix health, find the next use case.</p></div></div>
-<div class="p"><span class="chip" style="border:1px solid #000">P4</span><div><span class="label">Scale and monitor</span><p>Digital or pooled CS, watch for signals.</p></div></div>
+<div class="p"><span class="chip" style="background:#897d5d;color:#fff">P1</span><div><span class="label">Expand now</span><p>Exec-aligned expansion, multi-thread, bring in AE + SE.</p></div></div>
+<div class="p"><span class="chip" style="background:#d5ac50;color:#000">P2</span><div><span class="label">Grow into it</span><p>Land-and-expand, programs, close the weakest bucket first.</p></div></div>
+<div class="p"><span class="chip" style="background:#798ca5;color:#fff">P3</span><div><span class="label">Protect and re-ignite</span><p>Retention first, fix health, find the next use case.</p></div></div>
+<div class="p"><span class="chip" style="background:#000;color:#fff">P4</span><div><span class="label">Scale and monitor</span><p>Digital or pooled CS, watch for signals.</p></div></div>
 </div>
 <p class="links"><a class="cta" href="https://26-w.com/notes/account-growth-propensity/">Read the writeup</a><a class="cta" href="https://github.com/christianwagar/agps">View on GitHub</a></p></section>
 <footer>Built by <a href="https://26-w.com">Christian Wagar · 26-W</a> · MIT License · Sample data is fictional.</footer>
