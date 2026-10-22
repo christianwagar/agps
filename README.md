@@ -53,8 +53,8 @@ A-GPS scores like golf: **lower is better**.
 1. Every signal gets a band score from **1 (best) to 8 (worst)**. A blank value scores 8, so missing data never gets a free pass. A signal that doesn't apply (for example, onboarding was never purchased) is marked N/A and left out by default.
 2. Signals roll up into five buckets. Each bucket score is the average of its signals.
 3. The overall score is a weighted average of the buckets.
-4. Accounts are split into quartiles: **P1** = best 25%, down to **P4**. A growth × ARR 2×2 is also available.
-5. **Focus this week** = the lowest overall scores among accounts with a renewal or opportunity close within 120 days.
+4. Accounts land on a 2×2: **growth potential** (the score with ARR taken out, so size never counts twice) against **spend** (ARR), each split at the median of your book. **P1** = high growth, high spend · **P2** = high growth, lower spend · **P3** = lower growth, high spend · **P4** = lower on both. Because it splits at the median, the groups rebalance as your data changes. A separate **WATCH** flag marks NRR under 90% or a growth score worse than 6.0.
+5. **Focus this week** = P1 and P3 accounts renewing within 120 days, best growth score first.
 
 | Bucket | Weight | What it covers |
 |---|---|---|
