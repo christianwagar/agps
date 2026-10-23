@@ -16,8 +16,10 @@ V1 = os.path.abspath(os.path.join(ROOT, "config", "agps.v1-compat.json"))
 
 
 def _call(name, args):
-    _, structured = asyncio.run(server.mcp.call_tool(name, args))
-    return structured.get("result", structured) if isinstance(structured, dict) else structured
+    """Call a tool by name the way a client would and decode its JSON text content."""
+    res = asyncio.run(server.mcp.call_tool(name, args))
+    content = res[0] if isinstance(res, tuple) else res
+    return [json.loads(c.text) for c in content]
 
 
 def test_tools_listed_with_readonly_annotations():
@@ -29,12 +31,12 @@ def test_tools_listed_with_readonly_annotations():
 
 
 def test_score_accounts():
-    d = _call("score_accounts", {"csv_path": DEMO, "config": V1, "limit": 3})
+    d = _call("score_accounts", {"csv_path": DEMO, "config": V1, "limit": 3})[0]
     assert d["scored"] == 40 and len(d["accounts"]) == 3
 
 
 def test_explain_account():
-    assert _call("explain_account", {"csv_path": DEMO, "config": V1, "account_name": "Stripe"})["account"] == "Stripe"
+    assert _call("explain_account", {"csv_path": DEMO, "config": V1, "account_name": "Stripe"})[0]["account"] == "Stripe"
 
 
 def test_get_focus_list():

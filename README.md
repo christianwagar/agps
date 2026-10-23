@@ -1,5 +1,7 @@
 <p align="center"><img src="docs/assets/banner.svg" alt="A-GPS | Account Growth Propensity Scoring" width="100%"></p>
 
+[![M8ven Score](https://m8ven.ai/badge/mcp/christianwagar-agps-1bwc1w?v=d6fc19a3699b5da2e6b2deb8d8d98601)](https://m8ven.ai/mcp/christianwagar-agps-1bwc1w?s=readme)
+
 <p align="center">
 <a href="https://26-w.com/notes/account-growth-propensity/"><img src="https://img.shields.io/badge/LIVE_DEMO-26--W.COM-000000?style=flat-square" alt="Live demo"></a>
 <img src="https://img.shields.io/badge/TESTS-46_PASSING-000000?style=flat-square" alt="Tests">
