@@ -13,10 +13,14 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "..", "..", "src"))  # run from a repo checkout without installing
 
 from mcp.server.fastmcp import FastMCP  # noqa: E402
+from mcp.types import ToolAnnotations  # noqa: E402
 
 import agps  # noqa: E402
 
 mcp = FastMCP("agps")
+# Every tool is a pure calculation: it reads the CSV you pass (text, or a local file via csv_path),
+# writes nothing, stores nothing and makes no network calls. Same input -> same output.
+TOOL_ANNOTATIONS = ToolAnnotations(readOnlyHint=True, destructiveHint=False, idempotentHint=True, openWorldHint=False)
 DEFAULT_CONFIG = os.environ.get("AGPS_CONFIG")  # optional: point at your own config
 
 
@@ -28,7 +32,7 @@ def _source(csv, csv_path):
     raise ValueError("pass csv (CSV text) or csv_path (a file path)")
 
 
-@mcp.tool()
+@mcp.tool(annotations=TOOL_ANNOTATIONS)
 def score_accounts(csv: str = "", csv_path: str = "", config: str = "", mapping: dict | None = None,
                    cluster_method: str = "", limit: int = 50) -> dict:
     """Score accounts with A-GPS (golf-style: 1 = best, 8 = worst) and group them into P1-P4.
@@ -39,14 +43,14 @@ def score_accounts(csv: str = "", csv_path: str = "", config: str = "", mapping:
     return out
 
 
-@mcp.tool()
+@mcp.tool(annotations=TOOL_ANNOTATIONS)
 def explain_account(account_name: str, csv: str = "", csv_path: str = "", config: str = "",
                     mapping: dict | None = None) -> dict:
     """Explain one account: bucket scores, strongest/weakest bucket, best and worst fields, cluster play."""
     return agps.explain_account(_source(csv, csv_path), account_name, config or DEFAULT_CONFIG, mapping)
 
 
-@mcp.tool()
+@mcp.tool(annotations=TOOL_ANNOTATIONS)
 def get_focus_list(csv: str = "", csv_path: str = "", config: str = "", mapping: dict | None = None,
                    count: int = 3, window_days: int = 120) -> list:
     """Accounts to focus on this week: lowest overall score among renewals within window_days."""
