@@ -29,6 +29,9 @@ async def main():
             res = await s.call_tool("get_focus_list", {"csv_path": DEMO, "config": V1})
             print("get_focus_list:", [json.loads(c.text)["account"] for c in res.content])
             assert tools == ["explain_account", "get_focus_list", "score_accounts"]
+            for t in (await s.list_tools()).tools:
+                a = t.annotations
+                assert (a.readOnlyHint, a.destructiveHint, a.idempotentHint, a.openWorldHint) == (True, False, True, False), t.name
 
 
 asyncio.run(main())
